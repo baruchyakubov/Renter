@@ -1,6 +1,5 @@
 [
   {
-    "_id": "622f337a75c7d36e498aaaf8",
     "name": "Westin Kaanapali KORVN 2BR",
     "labels": ["Design" , "Tropical" , "OMG!"],
     "type": "National parks",
@@ -199,7 +198,6 @@
     "likedByUsers": []
   },
   {
-    "_id": "622f337a75c7d36e498aaaf9",
     "name": "Belle chambre à côté Metro Papineau",
     "labels": ["New" , "Top of the world" , "OMG!"],
     "type": "Campers",
@@ -300,7 +298,6 @@
     "likedByUsers": []
   },
   {
-    "_id": "622f337a75c7d36e498aaafa",
     "name": "M&M Space MM2  Apartamento no centro da cidade",
     "labels": ["Play" , "Top of the world" , "OMG!"],
     "type": "Campers",
@@ -594,7 +591,6 @@
     "likedByUsers": []
   },
   {
-    "_id": "622f337a75c7d36e498aaafb",
     "name": "Fresh and modern 1BR in Bed-Stuy",
     "labels": ["New" , "Top of the world"],
     "type": "National parks",
@@ -876,7 +872,6 @@
     "likedByUsers": []
   },
   {
-    "_id": "622f337a75c7d36e498aaaf9",
     "name": "Belle chambre à côté Metro Papineau",
     "labels": ["New"],
     "type": "Campers",
