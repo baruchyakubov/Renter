@@ -8,7 +8,7 @@
 </template>
 
 <script>
-
+import appFooter from './cmps/app-footer.vue'
 import { eventBus } from './services/event-bus.service'
 import { store } from './store/store'
 import appHeader from './cmps/app-header.vue'
@@ -24,7 +24,7 @@ export default {
       isUserModal: false,
       filterBy: {
         label: '',
-        country: ''
+        country: '',
       }
     }
   },
@@ -35,6 +35,10 @@ export default {
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
   },
+  mounted(){
+  },
+  computed:{
+  },
   methods: {
     closeModal() {
       this.isUserModal = false
@@ -43,16 +47,17 @@ export default {
       this.isUserModal = true
     },
     setFilterByLabel(label) {
-      const filterBy = {...this.filterBy}
+      const filterBy = { ...this.filterBy }
       filterBy.label = label
       this.$store.dispatch({ type: 'setFilterBy', filterBy })
     },
-   
+
   },
   components: {
     appHeader,
     userMsg,
-    userModal
+    userModal,
+    appFooter
   },
 }
 </script>

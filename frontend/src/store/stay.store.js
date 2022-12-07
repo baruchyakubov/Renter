@@ -34,7 +34,8 @@ export const stayStore = {
         currStay: null,
         filterBy:{
             label: '',
-            country:''
+            country:'',
+            page:0
         }
     },
     getters: {
@@ -46,6 +47,10 @@ export const stayStore = {
         }
     },
     mutations: {
+        incrementPage(state){
+            state.filterBy.page++
+            console.log(state.filterBy.page);
+        },
         setCurrStay(state, { stay }) {
             state.currStay = stay
         },
