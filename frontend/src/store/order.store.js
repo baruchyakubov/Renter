@@ -33,8 +33,8 @@ export const orderStore = {
     actions: {
         async sendForm(context, { form }) {
             try {
-                const currForm = await stayService.saveForm(form)
-                return currStay
+                const currForm = await orderService.save(form)
+                return currForm
             }
             catch {
                 console.log('Cannot send form', err)

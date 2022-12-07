@@ -12,7 +12,6 @@ export const stayService = {
   remove,
   getEmptyStay,
   addStayMsg,
-  saveForm,
   getEmptyForm
 }
 window.cs = stayService
@@ -75,29 +74,7 @@ async function addStayMsg(stayId, txt) {
 }
 
 
-async function saveForm(form) {
-  try {
-    await new Promise((resolve, reject) => {
-      form.status= 'pending'
-      form.createdAt = Date.now()
-      form._id = utilService.makeId()
-      let orders = utilService.loadFromStorage('Orders')
-      if (!orders || !orders.length) {
-        orders = []
-        orders.push(form)
-        resolve(utilService.saveToStorage('Orders', orders))
-      }
-      else {
-        orders.push(form)
-        resolve(utilService.saveToStorage('Orders', orders))
-      }
-    })
-    return form
-  }
-  catch {
-    throw err
-  }
-}
+
 
 function getEmptyForm() {
   return {
