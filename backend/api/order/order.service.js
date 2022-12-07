@@ -2,48 +2,35 @@ const dbService = require('../../services/db.service')
 const utilService = require('../../services/utilService.js')
 const ObjectId = require('mongodb').ObjectId
 
-async function query(loggedInUser) {
-  const criteria = _buildCriteria(loggedInUser)
-  console.log('hey');
-  const collection = await dbService.getCollection('stay')
-  var stays = await collection.find(criteria).toArray()
-  return stays
+async function query(loggedInUserId) {
+  const collection = await dbService.getCollection('order')
+  var orders = await collection.find({ hostId : { $eq : loggedInUserId } }).toArray()
+  return orders
 }
 
-async function getById(stayId) {
-  const collection = await dbService.getCollection('stay')
-  const stay = collection.findOne({ _id: ObjectId(stayId) })
-  console.log(stay);
-  return stay
-}
 
-async function remove(stayId) {
-  const collection = await dbService.getCollection('stay')
-  await collection.deleteOne({ _id: ObjectId(stayId) })
-  return stayId
-}
-
-async function add(stay) {
-  const collection = await dbService.getCollection('stay')
-  const { ops } = await collection.insertOne(stay)
+async function add(order) {
+  const collection = await dbService.getCollection('order')
+  const { ops } = await collection.insertOne(order)
   return ops[0]
 }
-async function update(stay) {
-  var id = ObjectId(stay._id)
-  delete stay._id
-  const collection = await dbService.getCollection('stay')
-  await collection.updateOne({ _id: id }, { $set: { ...stay } })
-  stay._id = id
-  return stay
+
+async function update(order) {
+  var id = ObjectId(order._id)
+  delete order._id
+  const collection = await dbService.getCollection('order')
+  await collection.updateOne({ _id: id }, { $set: { ...order } })
+  order._id = id
+  return order
 }
 
-async function addReview(review, stayId) {
+async function addReview(review, orderId) {
   try {
-    const collection = await dbService.getCollection('stay')
+    const collection = await dbService.getCollection('order')
     review.id = utilService.makeId()
     review.createdAt = Date.now()
     await collection.updateOne(
-      { _id: ObjectId(stayId) },
+      { _id: ObjectId(orderId) },
       { $push: { reviews: review } }
     )
     return review
@@ -53,11 +40,11 @@ async function addReview(review, stayId) {
   }
 }
 
-async function addMsg(stayId, msg) {
-  const stay = await getById(stayId)
-  stay.msgs = stay.msgs || []
-  stay.msgs.push(msg)
-  update(stay)
+async function addMsg(orderId, msg) {
+  const order = await getById(orderId)
+  order.msgs = order.msgs || []
+  order.msgs.push(msg)
+  update(order)
 }
 
 function _buildCriteria(filterBy) {
@@ -75,9 +62,7 @@ function _buildCriteria(filterBy) {
 }
 
 module.exports = {
-  remove,
   query,
-  getById,
   add,
   update,
   addReview,

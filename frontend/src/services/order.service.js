@@ -1,4 +1,5 @@
 import { storageService } from './async-storage.service'
+import { httpService } from './http.service'
 
 
 
@@ -10,16 +11,17 @@ export const orderService = {
 import { authService } from './auth.service'
 
 window.orderService = orderService
-const STORAGE_KEY = 'Orders'
+const STORAGE_KEY = '/Order'
 
 async function query() {
     try{
-        const orders = await storageService.query(STORAGE_KEY)
-        const loggedInUser = authService.getLoggedinUser()
-        const Orders = orders.filter(order =>{
-           return loggedInUser._id === order.hostId
-        })
-        return Orders
+       return httpService.get(STORAGE_KEY)
+        // const orders = await storageService.query(STORAGE_KEY)
+        // const loggedInUser = authService.getLoggedinUser()
+        // const Orders = orders.filter(order =>{
+        //    return loggedInUser._id === order.hostId
+        // })
+        // return Orders
     }
     catch(err) {
         throw err
@@ -28,17 +30,21 @@ async function query() {
 }
 
 async function save(order) {
-    var savedStay
+    var savedOrder
     if (order._id) {
-        savedStay = await storageService.put(STORAGE_KEY, order)
-        // savedStay = await httpService.put(`stay/${stay._id}`, stay)
+        // savedOrder = await storageService.put(STORAGE_KEY, order)
+        savedOrder = await httpService.put(`order/${order._id}`, order)
 
     } else {
-        savedStay = await storageService.post(STORAGE_KEY, order)
-        // savedStay = await httpService.post('stay', stay)
+        order.status= 'pending'
+        order.createdAt = Date.now()
+        // savedStay = await storageService.post(STORAGE_KEY, order)
+        savedOrder = await httpService.post(STORAGE_KEY, order)
     }
-    return savedStay
+    return savedOrder
 }
+
+
 
 
 
