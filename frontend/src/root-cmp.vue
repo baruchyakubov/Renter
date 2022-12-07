@@ -8,7 +8,7 @@
 </template>
 
 <script>
-
+import appFooter from './cmps/app-footer.vue'
 import { eventBus } from './services/event-bus.service'
 import { store } from './store/store'
 import appHeader from './cmps/app-header.vue'
@@ -24,7 +24,7 @@ export default {
       isUserModal: false,
       filterBy: {
         label: '',
-        country: ''
+        country: '',
       }
     }
   },
@@ -34,6 +34,10 @@ export default {
     console.log('Vue App created')
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
+  },
+  mounted(){
+  },
+  computed:{
   },
   methods: {
     closeModal() {
@@ -58,7 +62,8 @@ export default {
   components: {
     appHeader,
     userMsg,
-    userModal
+    userModal,
+    appFooter
   },
 }
 </script>
