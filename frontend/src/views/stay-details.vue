@@ -1,0 +1,76 @@
+<template>
+  <div v-if="stay" class="stay-details detailsContainer">
+    <stay-main :stay="stay"></stay-main>
+    <div class="detailsColumnsContainer">
+      <div class="column1">
+        <host-details :stay="stay"></host-details>
+        <stay-attributes />
+        <div class="stay-details-summary">
+          <p>{{ stay.summary }}</p>
+          <p class="showMoreBtn">Show more..</p>
+        </div>
+        <stay-amenities :amenities=stay.amenities></stay-amenities>
+      </div>
+      <reserve-form :stay="stay"></reserve-form>
+    </div>
+    <stay-reviews :stay="stay"></stay-reviews>
+  </div>
+</template>
+<script>
+
+import { eventBus } from '../services/event-bus.service'
+import stayAttributes from '../side-cmps/stay-preview-attributes.vue'
+import stayAmenities from '../side-cmps/amenities.vue'
+import stayMain from '../side-cmps/stay-main.vue'
+import reserveForm from '../side-cmps/stay-reserve-form.vue'
+import stayReviews from '../side-cmps/stay-reviews.vue'
+import calendar from '../side-cmps/calendar.vue'
+import hostDetails from '../side-cmps/stay-host-details.vue'
+export default {
+  data() {
+    return {
+      stay: null,
+      isSuperHost: false
+      //   review : {
+      //   txt: req.body.txt,
+      // }
+    }
+  },
+  mounted() {
+    eventBus.emit('toggleLayout', true)
+  },
+  async created() {
+    await this.setStay()
+    if (this.rating > 4.6 && this.stay.reviews.length > 3) this.isSuperHost = true
+  },
+  methods: {
+    async setStay() {
+      const stayId = this.$route.params.id
+      if (stayId) {
+        const currStay = await this.$store.dispatch({ type: 'setCurrStay', stayId })
+        var currStayCopy = JSON.parse(JSON.stringify(currStay))
+        this.stay = currStayCopy
+
+      } else {
+        this.stay = stayService.getEmptyStay()
+      }
+    },
+  },
+  computed: {
+
+  },
+  components: {
+    stayAttributes,
+    stayMain,
+    stayAmenities,
+    reserveForm,
+    stayReviews,
+    calendar,
+    hostDetails
+  }
+}
+</script>
+
+<style lang="">
+  
+</style>

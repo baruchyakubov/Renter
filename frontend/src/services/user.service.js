@@ -1,67 +1,57 @@
-import { utilService } from './util.service.js'
-import { httpService } from './http.service.js'
+import { storageService } from './async-storage.service'
+// import { httpService } from './http.service'
+import { store } from '../store/store'
+import { socketService, SOCKET_EVENT_USER_UPDATED, SOCKET_EMIT_USER_WATCH } from './socket.service'
+import { showSuccessMsg } from './event-bus.service'
+import { authService } from './auth.service'
 
-const USER_KEY = 'user'
 
-var gUser = null
 
-function getUser() {
-  return storageService.query(USER_KEY)
-    .then((users) => {
-      if (!users || !users.length) {
-        console.log('No user - creating new user!');
-        users = [_createUser('Puki Ben David')];
-        storageService.postMany(USER_KEY, users);
-      }
-      gUser = users[0];
-      // [gUser] = users;
-      return gUser;
-    })
+export const userService = {
+    getUsers,
+    getById,
+    remove,
+    update,
 }
 
-function updateUser(user) {
-  gUser = user;
-  return storageService.put(USER_KEY, user);
+window.userService = userService
+
+
+function getUsers() {
+    return storageService.query('user')
+    // return httpService.get(`user`)
 }
 
-function setUserActivities(txt, todo) {
-  var activity = {
-    txt,
-    todo,
-    at: Date.now()
-  }
-  const user = JSON.parse(JSON.stringify(gUser))
-  user.activities.push(activity)
-  // gUser.activities.push(activity)
-  // // TODO: Don't user gUser
-  return storageService.put(USER_KEY, user);
-  // storageService.store(USER_KEY, gUser);
-
+function onUserUpdate(user) {
+    showSuccessMsg(`This user ${user.fullname} just got updated from socket, new score: ${user.score}`)
+    store.dispatch({ type: 'setWatchedUser', user })
 }
 
-// function _loadUser() {
-//   var user = storageService.load(USER_KEY);
-//   if (!user) {
-//     user = _createUser('Puki Ben David')
-//     storageService.store(USER_KEY, user)
-//   }
-//   return user
-// }
+async function getById(userId) {
+    const user = await storageService.get('user', userId)
+    // const user = await httpService.get(`user/${userId}`)
 
-function _createUser(name) {
-  return {
-    _id: utilService.makeId(),
-    fullName: name,
-    activities: [],
-    prefs: {
-      color: '#303030',
-      bgc: '#e1e1e1'
-    }
-  }
+    // socketService.emit(SOCKET_EMIT_USER_WATCH, userId)
+    socketService.off(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
+    socketService.on(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
+
+    return user
+}
+function remove(userId) {
+    return storageService.remove('user', userId)
+    // return httpService.delete(`user/${userId}`)
 }
 
-export default {
-  setUserActivities,
-  getUser,
-  updateUser
+async function update(user) {
+    await storageService.put('user', user)
+    // user = await httpService.put(`user/${user._id}`, user)
+    // Handle case in which admin updates other user's details
+    if (authService.getLoggedinUser()._id === user._id) authService.saveLocalUser(user)
+    return user
 }
+
+
+
+
+
+

@@ -1,50 +1,70 @@
-import { httpService } from "./http.service";
+import { storageService } from './async-storage.service'
+import { stayService } from './stay.service.local'
 
-const BASE_URL = `auth/`
-const STORAGE_KEY_LOGGEDIN_USER = 'loggedInUser'
+export const authService = {
+    login,
+    logout,
+    signup,
+    getLoggedinUser
+}
 
-async function login( username , password ){
-    try{
-        console.log( username , password );
-        const user = await httpService.post(BASE_URL + 'login' , { username , password })
-        return _setLoggedinUser(user)
-    } catch (err){
+const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+
+async function login(userCred) {
+    const users = await storageService.query('user')
+    try {
+        const user = users.find(user => user.username === userCred.username)
+        // const user = await httpService.post('auth/login', userCred)
+        if (user) {
+             const User = await _checkIfAdmin(user)
+            console.log(User);
+            return saveLocalUser(User)
+        } else throw 'User does not match'
+
+    }
+    catch (err) {
         throw err
     }
 }
 
-async function signup( username, password, fullname ){
-    try{
-        const user = await httpService.post(BASE_URL + 'signup' , { username, password, fullname })
-        return _setLoggedinUser(user)
-    } catch (err){
-        throw err
-    }
+async function signup(userCred) {
+    if (!userCred.imgUrl) userCred.imgUrl = 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
+    const user = await storageService.post('user', userCred)
+    // const user = await httpService.post('auth/signup', userCred)
+    // socketService.login(user._id)
+    return saveLocalUser(user)
 }
 
-async function logout(){
-    try{
-        await httpService.post(BASE_URL + 'logout')
-        sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
-    } catch (err){
-        throw err
-    }
+async function logout() {
+    sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
+    socketService.logout()
+    // return await httpService.post('auth/logout')
 }
 
-function getLoggedInUser() {
+
+function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
 }
 
-
-function _setLoggedinUser(user) {
-    const userToSave = { _id: user._id, fullname: user.fullname }
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(userToSave))
-    return userToSave
+function saveLocalUser(user) {
+    user = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl ,isAdmin:user.isAdmin}
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    return user
 }
 
-export default {
-    login,
-    signup,
-    logout,
-    getLoggedInUser
+async function _checkIfAdmin(user) {
+    try {
+        const stays = await stayService.query()
+        console.log(stays);
+        var isAdmin = stays.find(stay => {
+            return stay.host._id === user._id
+        })
+        user.isAdmin = (isAdmin) ? true : false
+        console.log(user);
+        return user
+    }
+    catch (err) {
+        throw err
+    }
+
 }

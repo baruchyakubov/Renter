@@ -1,0 +1,117 @@
+.demo-date-picker {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.demo-date-picker .block {
+  padding: 30px 0;
+  text-align: center;
+  border-right: solid 1px var(--el-border-color);
+  flex: 1;
+}
+
+.demo-date-picker .block:last-child {
+  border-right: none;
+}
+
+.demo-date-picker .demonstration {
+  display: block;
+  color: var(--el-text-color-secondary);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.el-date-range-picker {
+  --el-datepicker-active-color: rgb(34, 34, 34);
+  --el-datepicker-hover-text-color: rgb(34, 34, 34);
+  --el-datepicker-hover-color: rgb(34, 34, 34);
+  --el-datepicker-inrange-bg-color: rgb(226, 226, 226);
+}
+
+.el-date-range-picker {
+  position: relative;
+  bottom: 0.7rem;
+  left: 0.02rem;
+}
+
+.el-date-editor .el-range__icon {
+  display: none;
+}
+
+.el-range-editor.el-input__wrapper {
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.el-date-editor .el-range__close-icon {
+  display: none;
+}
+
+.el-range-editor.el-input__wrapper {
+  justify-content: space-evenly;
+  height: 3.3rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.el-date-editor .el-range__close-icon--hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.el-date-editor .el-range-separator {
+  display: none;
+}
+
+.el-date-editor .el-range-input {
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+}
+
+.demo-date-picker {
+  z-index: 1;
+}
+
+.el-range-editor.el-input__wrapper {
+  width: 20.4rem;
+  opacity: 0;
+}
+
+
+
+.el-popper {
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 2rem 4rem !important;
+}
+
+.demo-date-picker.date-picker {
+  width: max-content;
+  z-index: 2000;
+  position: absolute;
+  margin-inline-start: 3rem !important;
+  width: 17rem !important;
+  overflow: hidden;
+
+  .block {
+    height: 8rem;
+  }
+  .el-range-input {
+    min-height:4rem !important;
+  }
+  .demo-date-picker {
+    width: max-content;
+
+
+    .el-date-editor {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      width: fit-content;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.stay-details-amenities-section{
+  width: 100%;
+  padding-bottom: 5rem;
+  h3{
+    position: relative;
+    right: 0.3rem;
+    font-family: cereal-light;
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 2.6rem;
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.2px;
+  }
+  .item {
+    font-size: 16px;
+    width: 50%;
+    margin-block:0.45rem ;
+  }
+  
+  .container {
+    flex-wrap: wrap;
+  }
+  
+  .container > div {
+    flex-basis: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+    /*demo*/
+    box-shadow: 0 0 0 1px black;
+    margin-bottom: 10px;
+  }
+  .amenitiesBtn{
+    position: relative;
+    top: 2.7rem;
+    right: 0.55rem;
+    font-family: cereal-medium;
+    font-size: 1rem;
+    border-radius: 0.45rem;
+    color: black;
+    background-color: white;
+    border: 1px black solid;
+    padding: 0.77rem 1.4rem;
+    cursor: pointer;
+    &:active{
+      scale: 0.97;
+    }
+     // width: 12.8rem; when removing padding inline
+  }
+}

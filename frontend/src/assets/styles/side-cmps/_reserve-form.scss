@@ -1,0 +1,336 @@
+.reserveFormAll{
+  position: sticky;
+  top: 6.2rem;
+}
+.order-container {
+  border: 1px solid #00000030;
+  border-radius: 13px;
+  padding: 20px;
+  max-width: 362px;
+  box-shadow: 0 0 5px 5px #00000015;
+  color: rgb(34, 34, 34);
+  .totalCalc {
+    margin-inline-start: 0.4rem;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.2rem;
+    justify-content: space-between;
+    padding-inline: 0.1rem;
+    font-family: cereal-medium;
+  }
+
+  .payout {
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    padding-bottom: 0.5rem;
+
+    .serviceFee,
+    .calcPrice {
+      text-decoration: underline;
+    }
+  }
+
+  .payoutFlex {
+    margin-bottom: 0.8rem;
+    padding-inline: 0.2rem;
+    justify-content: space-between;
+  }
+
+  .averageRate {
+    font-family: cereal-light;
+    color: black;
+    font-size: 0.85rem;
+    margin-right: 0.6rem;
+
+    .formStar {
+      width: 0.7rem;
+      margin-right: 0.2rem;
+    }
+  }
+
+  .chargeDisclaimer {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  span {
+    padding: 0 0;
+    margin: 0 0;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+
+    &.cost {
+      color: black;
+      font-size: 1.3em;
+    }
+
+    &.reviews {
+      color: #00000070;
+      font-size: 0.8em;
+      text-decoration: underline;
+    }
+  }
+
+  input {
+    border: none;
+    padding: 0 0;
+    width: 50%;
+    outline: none;
+  }
+
+  label {
+    color: black;
+    font-weight: 600;
+    font-size: 0.75em;
+  }
+}
+
+.guestsModal,.guestsModalSearch {
+  color: rgb(34, 34, 34);
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px;
+  z-index: 999 !important;
+  display: flex;
+  min-height: 25.625rem;
+  background-color: white;
+  // border: 1px solid black;
+  position: relative;
+  right: 0.23rem;
+  bottom: 26.5rem;
+  border-radius: 0.8rem;
+  width: 87%; 
+  // min-width: 227px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  .adultDiv, .childrenDiv ,.infantsDiv,.petsDiv{
+    letter-spacing: 0.4px;
+    padding-inline: 1.1rem;
+    margin-top: 1.44rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h4{
+      font-family: cereal-semi-light;
+      font-size: 1rem;
+      margin-bottom:0 ;
+      padding-bottom: 0.3rem;
+    }
+    p{
+      font-size: 0.87rem;
+    }
+    .counter{
+      display: flex;
+      align-items: center;
+      p{
+        position: relative;
+        bottom: 0.1rem;
+        font-size: 1rem;
+        color: rgb(34, 34, 34);
+      }
+      button{
+        cursor: pointer;
+        position: relative;
+        color:rgb(102, 102, 102) ;
+        border: 1px solid rgb(176, 176, 176);
+        background-color: white;
+        left: 0.05rem;
+        bottom: 0.09rem;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        justify-content: center;
+        margin-inline-start:0.9rem ;
+      }
+      .minusBtn{
+        font-size: 2rem;
+        font-family: cereal-light;
+        margin-inline-end:0.9rem ;
+        span{
+          position: relative;
+          bottom: 0.15rem;
+        }
+      }
+    }
+  }
+  .adultDiv{
+    margin-top: 2.1rem;
+  }
+  .petsDiv{
+    p{
+      text-decoration: underline;
+      font-family: cereal-semi-light;
+      color: black;
+    }
+  }
+  .disclaimer{
+    font-size: 0.71rem;
+    letter-spacing: 0.4px;
+    padding-inline: 1.1rem;
+    margin-top: 1.23rem;
+    line-height: 1rem;
+  }
+  .closeBtn{
+    letter-spacing: 0.3px;
+    font-family: cereal-semi-light;
+    text-decoration: underline;
+    position: absolute;
+    font-size: 0.95rem;
+    bottom: 2.4rem;
+    right: 1.4rem;
+    cursor: pointer;
+  }
+}
+
+.order-form-header {
+  margin-top: 0.45rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.order-data {
+  border: 1px solid #00000050;
+  border-radius: 13px;
+  margin-bottom: 15px;
+  max-width: 20.3rem;
+}
+
+.date-picker {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-input {
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px 12px;
+  color: gray;
+  font-size: 0.75rem;
+
+  &:last-of-type {
+    border-left: 1px solid #00000050;
+  }
+}
+
+.guest-input {
+  min-height: 3.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: 1px solid #00000050;
+  padding: 7px 12px;
+  color: gray;
+  font-size: 0.75rem;
+  cursor: pointer;
+  svg {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    right: 0;
+    transform: translatex(-12px) translatey(-50%);
+  }
+}
+
+.wholeOrder {
+
+  // position: absolute;
+  // top: 49.5rem;
+  // right: 22.5rem;
+  .OutsideCalendar {
+    position: relative;
+    bottom: 27.7rem;
+  }
+}
+
+.btn-container {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  padding: 0 0;
+  margin: 0 0;
+  cursor: pointer;
+  border: none;
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+
+  @for $i from 0 to 10 {
+    .cell:nth-child(10n + #{$i + 1}):hover~.content {
+      --positionX: #{$i};
+    }
+
+    .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
+      --positionY: #{$i};
+    }
+  }
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  // border: 1px solid rgba(128, 128, 128, 0.753);
+}
+
+.content {
+  --positionX: 0;
+  --positionY: 5;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 8px;
+
+  background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
+      rgb(241, 37, 75) 0%,
+      rgb(230, 30, 77) 27.5%,
+      rgb(227, 28, 95) 40%,
+      rgb(215, 4, 102) 57.5%,
+      rgb(189, 30, 89) 75%,
+      rgb(189, 30, 89) 100%);
+}
+
+.action-btn {
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+
+p.footer {
+  position: relative;
+  text-decoration: underline;
+  top: 4rem;
+  color: gray;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}

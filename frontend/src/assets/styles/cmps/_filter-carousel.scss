@@ -1,0 +1,30 @@
+.carousel__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__slide {
+    flex-shrink: none;
+}
+
+.carousel__prev,
+.carousel__next {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    border: 1px #717171 solid;
+    border-radius: 50%;
+    z-index: 10;
+    height: 25px;
+    width: 25px;
+    margin: 0;
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+    color: black;
+    box-shadow: 2px 2px 2px 2px rgb(218, 216, 216);
+}
+
+// .carousel__prev--disabled , .carousel__next--disabled{
+//     display: none;
+// }

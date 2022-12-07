@@ -1,0 +1,13 @@
+.stay-list {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
+    gap: 1.1vw;
+    padding: 0;
+    li{
+        width: 100%;
+    }
+}
+
+
+

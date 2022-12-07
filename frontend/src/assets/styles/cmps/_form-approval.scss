@@ -1,0 +1,200 @@
+.form-approval {
+  gap: 5.4rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  .backBtn {
+    cursor: pointer;
+  }
+  .header{
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: cereal-semi-light  ;
+    letter-spacing: 0.7px;
+    gap: 2rem;
+  }
+  .trip-details{
+    margin-top: 11rem;
+    font-size: 1.25rem;
+    .dates{
+      margin-top: 1.4rem;
+    }
+  }
+  .header {
+    margin-top: 5rem;
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: cereal-semi-light;
+    letter-spacing: 0.7px;
+    gap: 2rem;
+  }
+
+  .column1 {
+    width: 35.5rem;
+  }
+
+  .trip-details {
+    margin-top: 14rem;
+    font-size: 1.25rem;
+
+    .dates {
+      font-family: cereal-semi-light;
+      margin-top: 1.4rem;
+      color: black;
+    }
+
+    p {
+      font-size: 1rem;
+      font-family: cereal-semi-light;
+      margin-top: 0.66rem;
+      letter-spacing: 0.3px;
+      color: rgb(100, 100, 100);
+    }
+
+    .guests {
+      font-family: cereal-semi-light;
+      margin-top: 1.2rem;
+      color: black;
+    }
+  }
+
+  button {
+    margin-top: 3rem;
+    width: 100%;
+    height: 3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: cereal-medium;
+    cursor: pointer;
+    background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+  }
+
+  .column2 {
+    border: 1px rgb(222, 222, 222) solid;
+    border-radius: 1rem;
+    margin-top: 5.2rem;
+    width: 28.9rem;
+    height: 32.8rem;
+    padding-top: 1.6rem;
+    padding-inline: 1.3rem;
+    .price-details{
+      font-size: 0.95rem;
+      color: rgb(54,54,54);
+      .title{
+        color: rgb(54,54,54);
+        font-family: cereal-medium;
+        font-weight: 100;
+        font-size: 1.35rem;
+        letter-spacing: 0.5px;
+        margin-top: 1.63rem;
+      }
+      .price-specs{
+        border-bottom: rgb(222, 222, 222) solid 1px;
+        padding-bottom: 3.2rem;
+      }
+      .final-price{
+        margin-top: 1.53rem;
+      }
+      .final-price,.service,.total-price{
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      .service{
+        margin-top: 0.8rem;
+        font-size: 1rem;
+        align-items: center;
+        p{
+          text-decoration: underline;
+        }
+      }
+      .total-price{
+        font-size: 0.95rem;
+        font-family: cereal-semi-light;
+        padding-top: 1.3rem;
+        align-items: center;
+      }
+    }
+    .bookingProtection{
+      font-family: cereal-light;
+      font-weight: 200;
+      color: rgb(34,34,34);
+      padding-block: 1.65rem;
+      font-size: 1rem;
+      border-bottom: rgb(222, 222, 222) solid 1px;
+      .rent{
+        color:#ff385C
+      }
+      span{
+        font-family: cereal-medium;
+      }
+    }
+    .card {
+      max-height: 6.6rem;
+      max-width: 100%;
+      padding-bottom: 8rem;
+      border-bottom: rgb(222, 222, 222) solid 1px;
+      .desc {
+        display: flex;
+        flex-direction: column;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 3.3rem;
+      }
+
+      .cardImg {
+        width: 7.75rem;
+        height: 6.6rem;
+        border-radius: 0.3rem;
+      }
+
+      p {
+        color: rgb(119, 119, 119);
+        padding-inline: 0.8rem;
+        font-size: 0.8rem;
+      }
+
+      .summary {
+        color: black;
+        font-size: 0.86rem;
+        line-height: 1rem;
+      }
+      .cardRight{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 6.6rem;
+      }
+      .bottomDiv {
+        display: flex;
+        align-self: flex-start;
+        position: relative;
+        align-items: center;
+        left: 0.8rem;
+        .reviews{
+          color:  rgb(118, 118, 118);
+          font-size: 0.75rem;
+        }
+        p{
+          color: rgb(56, 56, 56);
+          position: relative;
+          top: 0.05rem;
+          margin: 0;
+          padding: 0.2rem;
+        }
+      }
+
+      .star {
+        width: 0.65rem;
+        height: 0.65rem;
+      }
+      .roomtype{
+        font-size: 0.74rem;
+      }
+    }
+
+  }
+}

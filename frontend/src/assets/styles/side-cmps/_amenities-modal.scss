@@ -1,0 +1,30 @@
+.amenitiesModal{
+  overflow-y: scroll;
+  overflow-x: hidden  ;
+  width: 48.6rem;
+  height: 58rem;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  top: 49.5%;
+  right: 50%;
+  box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px ;
+  transform: translate(50%, -50%);
+  border-radius: 0.8rem;
+  .closeBtn{
+    cursor: pointer;
+    position: relative;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  h3{
+    position: relative;
+    top: 2.1rem;
+    left: 1.6rem;
+  }
+  .container{
+    position: relative;
+    left: 6rem;
+    margin-top: 4rem;
+  }
+}

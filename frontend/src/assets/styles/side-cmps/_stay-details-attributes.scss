@@ -1,0 +1,32 @@
+.stay-preview-attributes{
+  flex-direction: column;
+  gap: 1.65rem;
+  margin-top: 1.95rem;
+  margin-bottom: 1.83rem;
+  border-bottom:1px solid rgb(210, 210, 210);
+  padding-bottom: 1rem;
+  max-width: 100%;
+  h4{
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+    font-family: cereal-semi-light;
+    margin-bottom: 0.34rem;
+  }
+  p{
+    max-width: fit-content;
+    font-size: 0.88rem;
+    color: rgb(113, 113, 113);
+  }
+  .workSpaceAttribute{ 
+    min-width: 100%;
+    .deskAttribute p{
+      max-width: 100%;
+    }
+  }
+  .svg{
+    position: relative;
+    bottom: 0.8rem;
+    margin-right: 1rem;
+    width: 1.5rem;
+  }
+}

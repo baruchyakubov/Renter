@@ -1,0 +1,23 @@
+
+
+.alert {
+    z-index: 10000;
+    background-color: lightgray;
+    position: fixed;
+    opacity: 0.2;
+    top: 7rem; 
+    right: 50%;
+    transform: translate(50%,-50%);
+    transition: all 0.2s;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    &.alert-success {
+        opacity: 0.8;
+        background-color: lightgreen;
+    }
+    &.alert-error {
+        opacity: 0.8;
+        background-color: lightcoral;
+    }
+}
+

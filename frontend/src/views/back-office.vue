@@ -1,0 +1,36 @@
+<template>
+  <section class="back-office main-container">
+    <h1>Orders status</h1>
+    <div class="back-office-layout">
+      <ul class="orders">
+        <li class="flex-box " v-for="order in orders" :key="order._id">
+          <order-preview :order="order"></order-preview>
+        </li>
+      </ul>
+      <hosting-summery :orders="orders"></hosting-summery>
+    </div>
+  </section>
+</template>
+
+<script>
+import { eventBus } from '../services/event-bus.service';
+import orderPreview from '../cmps/order-preview.vue';
+import hostingSummery from '../cmps/hosting-summery.vue';
+export default {
+  created() {
+    this.$store.dispatch({ type: 'loadOrders' })
+  },
+  mounted() {
+    eventBus.emit('toggleLayout', false)
+  },
+  computed: {
+    orders() {
+      return this.$store.getters.orders
+    }
+  },
+  components:{
+    orderPreview,
+    hostingSummery
+  }
+}
+</script>

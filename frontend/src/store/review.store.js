@@ -15,7 +15,6 @@ export const reviewStore = {
     mutations: {
         setReviews(state, { reviews }) {
             state.reviews = reviews
-            console.log(state.reviews);
         },
         addReview(state, { review }) {
             state.reviews.push(review)
@@ -29,6 +28,7 @@ export const reviewStore = {
             try {
                 review = await reviewService.add(review)
                 context.commit({ type: 'addReview', review })
+                context.dispatch({ type: 'increaseScore' })
 
                 return review
             } catch (err) {
@@ -36,10 +36,9 @@ export const reviewStore = {
                 throw err
             }
         },
-        async loadReviews(context , { filterBy }) {
+        async loadReviews(context) {
             try {
-                const reviews = await reviewService.query(filterBy)
-                console.log(reviews);
+                const reviews = await reviewService.query()
                 context.commit({ type: 'setReviews', reviews })
             } catch (err) {
                 console.log('reviewStore: Error in loadReviews', err)

@@ -1,0 +1,76 @@
+.stay-preview {
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    .preview-img {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1.0526;
+    }
+
+    h1 {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.2rem;
+    }
+
+    p {
+        font-size: 15px;
+
+        &:not(.price-preview) {
+            line-height: 1.4rem;
+            color: $clr7;
+            font-weight: 400;
+        }
+    }
+
+    .price-preview {
+        padding-top: 3px;
+        font-weight: 600;
+
+        span {
+            font-weight: lighter;
+        }
+    }
+
+    .rating {
+        p {
+            color: black;
+        }
+    }
+}
+
+.el-carousel__indicators {
+    display: flex;
+
+    .el-carousel__button {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+    }
+}
+
+.el-carousel__arrow--left,
+.el-carousel__arrow--right {
+    background-color: rgb(243, 237, 237);
+    color: black;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: white;
+        height: 37px;
+        width: 37px;
+    }
+}
+
+.el-carousel_item {
+    height: auto;
+    aspect-ratio: 1.0526 !important;
+}
+
+.el-carousel__container {
+    height: auto;
+    aspect-ratio: 1.0526 !important;
+}
