@@ -1,0 +1,18 @@
+.app-header{
+    background-color: rgb(73, 75, 74);
+}
+
+.app-header h1{
+    font-size: 50px;
+    color: beige;
+}
+
+.app-header .nav{
+    color: beige;
+    font-size: 40px;
+    gap: 20px;
+}
+
+.app-header .nav .router-link-active{
+    color: rgb(119, 119, 54);
+}

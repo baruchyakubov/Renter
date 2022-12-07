@@ -1,0 +1,13 @@
+.filter-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    >*{
+        font-size: 20px;
+    }
+    .search{
+        height: 40px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+}
