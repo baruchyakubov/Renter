@@ -3257,3 +3257,13 @@
 7.12.2022, 23:38:24 - DEBUG - auth.service - login with username: 80344827 
 7.12.2022, 23:38:24 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
 >>>>>>> 91691879a42f55a587a07113e0c7bb12a638bc86
+7.12.2022, 23:55:30 - DEBUG - auth.service - login with username: 60712702 
+7.12.2022, 23:55:31 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+7.12.2022, 23:58:09 - INFO - Server is running on port: 3030 
+8.12.2022, 0:02:24 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 0:02:25 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 0:04:49 - INFO - Server is running on port: 3030 
+8.12.2022, 0:06:12 - INFO - Server is running on port: 3030 
+8.12.2022, 0:06:25 - INFO - Server is running on port: 3030 
+8.12.2022, 0:08:10 - INFO - Server is running on port: 3030 
+8.12.2022, 0:08:25 - INFO - Server is running on port: 3030 

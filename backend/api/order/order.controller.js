@@ -5,6 +5,7 @@ const orderService = require('./order.service.js')
 
 async function getOrders(req, res) {
   try {
+    console.log('gett');
     const loggedInUser = authService.getLoginToken()
     const orders = await orderService.query(loggedInUser._id)
     res.json(orders)
@@ -15,6 +16,7 @@ async function getOrders(req, res) {
 
 async function addOrder(req, res) {
   const order = req.body
+  console.log(order);
   try {
     const addedOrder = await orderService.add(order)
     // const loggedinUser = authService.validateToken(req.cookies.loginToken)
