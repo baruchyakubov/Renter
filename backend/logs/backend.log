@@ -3257,3 +3257,13 @@
 7.12.2022, 23:38:24 - DEBUG - auth.service - login with username: 80344827 
 7.12.2022, 23:38:24 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
 >>>>>>> 91691879a42f55a587a07113e0c7bb12a638bc86
+7.12.2022, 23:45:35 - INFO - Server is running on port: 3030 
+7.12.2022, 23:46:09 - DEBUG - auth.service - login with username: what 
+7.12.2022, 23:46:09 - ERROR - Failed to Login Invalid username or password 
+7.12.2022, 23:47:37 - DEBUG - auth.service - login with username: 60712702 
+7.12.2022, 23:47:37 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+7.12.2022, 23:50:07 - INFO - Server is running on port: 3030 
+7.12.2022, 23:52:24 - INFO - Server is running on port: 3030 
+7.12.2022, 23:53:14 - INFO - Server is running on port: 3030 
+7.12.2022, 23:53:37 - INFO - Server is running on port: 3030 
+7.12.2022, 23:57:16 - INFO - Server is running on port: 3030 
