@@ -43,11 +43,17 @@ export default {
       this.isUserModal = true
     },
     setFilterByLabel(label) {
-      const filterBy = {...this.filterBy}
-      filterBy.label = label
-      this.$store.dispatch({ type: 'setFilterBy', filterBy })
+      // const filterBy = {...this.filterBy}
+      this.filterBy.label = label
+      console.log(this.filterBy);
+      this.$store.dispatch({ type: 'setFilterBy', filterBy:{ ...this.filterBy }})
     },
-   
+    setFilterByTxt(country){
+      // const filterBy = {...this.filterBy}
+
+      this.filterBy.country = country
+      this.$store.dispatch({ type: 'setFilterBy', filterBy:{ ...this.filterBy }})
+    }
   },
   components: {
     appHeader,

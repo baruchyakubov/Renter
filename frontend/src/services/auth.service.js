@@ -1,5 +1,5 @@
-import { storageService } from './async-storage.service'
-import { stayService } from './stay.service.local'
+import { stayService } from './stay.service'
+import { httpService } from './http.service'
 
 export const authService = {
     login,
@@ -11,10 +11,8 @@ export const authService = {
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 
 async function login(userCred) {
-    const users = await storageService.query('user')
     try {
-        const user = users.find(user => user.username === userCred.username)
-        // const user = await httpService.post('auth/login', userCred)
+        const user = await httpService.post('auth/login', userCred)
         if (user) {
              const User = await _checkIfAdmin(user)
             console.log(User);
@@ -29,8 +27,7 @@ async function login(userCred) {
 
 async function signup(userCred) {
     if (!userCred.imgUrl) userCred.imgUrl = 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
-    const user = await storageService.post('user', userCred)
-    // const user = await httpService.post('auth/signup', userCred)
+    const user = await httpService.post('auth/signup', userCred)
     // socketService.login(user._id)
     return saveLocalUser(user)
 }
@@ -38,7 +35,7 @@ async function signup(userCred) {
 async function logout() {
     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
     socketService.logout()
-    // return await httpService.post('auth/logout')
+    return await httpService.post('auth/logout')
 }
 
 

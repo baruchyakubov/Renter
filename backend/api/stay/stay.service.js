@@ -63,9 +63,13 @@ async function addMsg(stayId, msg) {
 function _buildCriteria(filterBy) {
   const criteria = {}
   console.log('filterBy', filterBy)
-  if (filterBy.name) {
-    const txtCriteria = { $regex: filterBy.name, $options: 'i' }
+  if (filterBy.country) {
+    const txtCriteria = { $regex: filterBy.country, $options: 'i' }
     criteria.name = txtCriteria
+  }
+  if(filterBy.label){
+    const labelCriteria = { $regex: filterBy.label, $options: 'i' }
+    criteria.type = labelCriteria
   }
   return criteria
 }
