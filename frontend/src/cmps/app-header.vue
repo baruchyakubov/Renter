@@ -3,7 +3,7 @@
   <header :class="{ detailsContainer: this.isDetailsLayout, big: this.isClicked }" class="main-container full">
     <div class="header-main flex-box">
       <div class="logo flex-box align-center">
-        <img style="height:40px;" src="public/logo.png" alt="">
+        <img style="height:40px;" src="/public/logo.png" alt="">
         <h1 @click="home"><span>R</span>enter</h1>
       </div>
       <section @click="toggleFilter" v-if="!isClicked" class="header-filter">
