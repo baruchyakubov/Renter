@@ -1,6 +1,6 @@
 <template>
     <div class="statistic">
-        <h1>Hosting Summery</h1>
+        <h1>Hosting Summary</h1>
         <div class="greetings">
             <h2>Fantastic job!</h2>
             <p>Guests love what you're doing, keep up the good work and review your orders stats</p>

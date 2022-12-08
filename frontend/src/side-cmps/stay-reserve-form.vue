@@ -197,7 +197,7 @@ export default {
       if (guests === 'childrenGuests') return this.guests.childrens++
     },
     decrement(guests) {
-      if (this.total <= 0) return
+      if (this.total <= 1 ) return
       // console.log('received guests',guests)
       // console.log('total ',this.total,'guests ',this.guests)
       if (guests === 'infantGuests' && this.guests.infants > 0) return this.guests.infants--; this.total--
