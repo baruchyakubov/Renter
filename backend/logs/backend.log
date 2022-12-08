@@ -3414,3 +3414,24 @@
 8.12.2022, 16:02:21 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
 8.12.2022, 16:02:21 - DEBUG - Setting (lex_62hl8QcMrANzAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
 >>>>>>> 4c63f5d6469d5f9781456f790e0a4de86c84da15
+8.12.2022, 16:07:11 - INFO - Server is running on port: 3030 
+8.12.2022, 16:07:17 - DEBUG - user logged out succesfully 
+8.12.2022, 16:07:30 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 16:07:30 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 16:07:30 - DEBUG - Setting (NTGVvpZ87lYaGA1xAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:11:38 - DEBUG - user logged out succesfully 
+8.12.2022, 16:18:51 - DEBUG - user logged out succesfully 
+8.12.2022, 16:19:00 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 16:19:00 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 16:19:00 - DEBUG - Setting (ZA-z9H_TEZ7_ECoHAAAC) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:21:17 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 16:21:17 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 16:21:17 - DEBUG - Setting (NTGVvpZ87lYaGA1xAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:25:17 - DEBUG - user logged out succesfully 
+8.12.2022, 16:30:02 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 16:30:02 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 16:30:02 - DEBUG - Setting (1RqkxSvCb1cBDJszAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 16:30:23 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 16:30:23 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 16:30:23 - DEBUG - Setting (NTGVvpZ87lYaGA1xAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:30:50 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
