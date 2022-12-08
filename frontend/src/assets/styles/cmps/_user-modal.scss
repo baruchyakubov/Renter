@@ -1,6 +1,8 @@
 .user-modal-container {
   width: 35.6rem;
-  height: 42.8rem;
+  height: fit-content;
+  padding-bottom: 2.5rem;
+  padding-top: 1rem;
   z-index: 5000;
   background-color: white;
   border: none;
@@ -29,12 +31,13 @@
     border: 1px rgb(175, 175, 175) solid;
     border-radius: 0.5rem;
     gap: 0;
-
     div {
       border: none;
       height: 4rem;
       margin: 0;
+    &:not(:first-child){
       border-top: 1px rgb(175, 175, 175) solid;
+    }
 
       input {
         width: 90%;
@@ -49,14 +52,6 @@
           outline: none;
         }
       }
-    }
-
-    .username {
-      border-top: 1px rgb(175, 175, 175) solid;
-    }
-
-    .password {
-      border-top: 1px rgb(175, 175, 175) solid;
     }
   }
 
@@ -78,6 +73,7 @@
     width: 90%;
     height: 3rem;
     display: block;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0.5rem;

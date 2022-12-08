@@ -15,23 +15,34 @@
     bottom: 10%;
     left: 50%;
     transform: translate(-50%);
-
+    .sep{
+        background-color: black;
+        width: 1px;
+        height: 2rem;
+    }
     svg {
         justify-self: flex-end;
     }
 
     .search-input {
         flex-basis: 30rem;
+        &:hover ~ .seperator1{
+            background-color: transparent;
+        }
     }
-
+    .add-guests:hover ~ .seperator2{
+        background-color: transparent;
+    }
+    .sep{
+        margin-inline-end: 1px;
+    }
     .icon {
         // padding-inline-end: 0.5rem;
     }
 
     div {
-        cursor: pointer;
+        cursor: pointer;    
     }
-
     div:not(.icon):not(.demo-date-picker):not(.block) {
         white-space: nowrap;
         padding-left: 2rem;
@@ -48,6 +59,9 @@
         }
 
         &:hover {
+            background-color: #DDDDDD;
+        }
+        &:hover >span{
             background-color: #DDDDDD;
         }
 

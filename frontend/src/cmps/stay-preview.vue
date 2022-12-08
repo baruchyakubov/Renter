@@ -4,12 +4,12 @@
     <section style="padding:0; margin-top: 10px;" class="flex-box space-between">
       <div class="details">
         <h1>{{ stay.name }}</h1>
-        <p>Added 3 weeks ago</p>
-        <p>Jan 14 - 19</p>
+        <p>{{stay.summary}}</p>
+        <p>{{stay.loc.country}},{{stay.loc.city}}</p>
         <p class="price-preview"> ${{ stay.price?.toLocaleString() }} <span>night</span></p>
       </div>
       <div class="rating">
-        <p>★ {{ rating }}</p>
+        <p><span class="stay-rating">★ {{ rating }}</span>  (<span class="reviews-length">{{stay.reviews.length}}</span>)</p>
       </div>
     </section>
     <!-- <button @click="removeStay(stay._id)">x</button>

@@ -19,6 +19,7 @@
         font-size: 15px;
         font-weight: 600;
         line-height: 1.2rem;
+        max-width: 80%;
         white-space: nowrap;
         text-overflow:ellipsis;
         overflow: hidden;
@@ -26,6 +27,9 @@
 
     p {
         font-size: 15px;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        overflow: hidden;
 
         &:not(.price-preview) {
             line-height: 1.4rem;
@@ -42,7 +46,14 @@
             font-weight: lighter;
         }
     }
-
+    .stay-rating{
+        margin-inline-end: 0.2rem;
+        font-size: 1rem;
+    }
+    .reviews-length{
+        padding-inline: 0.05rem;
+        font-size: 1rem;
+    }
     .rating {
         p {
             color: black;
