@@ -3,7 +3,12 @@
     width: 100%;
     cursor: pointer;
     margin-bottom: 20px;
-
+    .details{
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        max-width: 80%;
+        overflow: hidden;
+    }
     .preview-img {
         object-fit: cover;
         width: 100%;
@@ -14,6 +19,9 @@
         font-size: 15px;
         font-weight: 600;
         line-height: 1.2rem;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        overflow: hidden;
     }
 
     p {

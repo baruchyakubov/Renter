@@ -17,6 +17,10 @@
 <script>
 export default {
   name: "stay-details-reviews",
+  created(){
+    const date = this.stay.reviews[0].at
+    console.log(this.stay.reviews[0].at);
+  },
   props: {
     stay: Object,
   },
