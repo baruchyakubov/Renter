@@ -3257,6 +3257,7 @@
 7.12.2022, 23:38:24 - DEBUG - auth.service - login with username: 80344827 
 7.12.2022, 23:38:24 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
 >>>>>>> 91691879a42f55a587a07113e0c7bb12a638bc86
+<<<<<<< HEAD
 7.12.2022, 23:55:30 - DEBUG - auth.service - login with username: 60712702 
 7.12.2022, 23:55:31 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
 7.12.2022, 23:58:09 - INFO - Server is running on port: 3030 
@@ -3267,3 +3268,48 @@
 8.12.2022, 0:06:25 - INFO - Server is running on port: 3030 
 8.12.2022, 0:08:10 - INFO - Server is running on port: 3030 
 8.12.2022, 0:08:25 - INFO - Server is running on port: 3030 
+=======
+7.12.2022, 23:45:35 - INFO - Server is running on port: 3030 
+7.12.2022, 23:46:09 - DEBUG - auth.service - login with username: what 
+7.12.2022, 23:46:09 - ERROR - Failed to Login Invalid username or password 
+7.12.2022, 23:47:37 - DEBUG - auth.service - login with username: 60712702 
+7.12.2022, 23:47:37 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+7.12.2022, 23:50:07 - INFO - Server is running on port: 3030 
+7.12.2022, 23:52:24 - INFO - Server is running on port: 3030 
+7.12.2022, 23:53:14 - INFO - Server is running on port: 3030 
+7.12.2022, 23:53:37 - INFO - Server is running on port: 3030 
+7.12.2022, 23:57:16 - INFO - Server is running on port: 3030 
+>>>>>>> 1434b1c299c9f6e33cf3acb338ee42febba61a14
+8.12.2022, 0:10:57 - INFO - Server is running on port: 3030 
+8.12.2022, 0:12:44 - INFO - Server is running on port: 3030 
+8.12.2022, 0:13:33 - INFO - Server is running on port: 3030 
+8.12.2022, 0:15:16 - INFO - Server is running on port: 3030 
+8.12.2022, 0:16:50 - INFO - Server is running on port: 3030 
+8.12.2022, 0:17:48 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 0:17:49 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 0:18:53 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 0:18:54 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 0:19:18 - INFO - Server is running on port: 3030 
+8.12.2022, 0:19:44 - INFO - Server is running on port: 3030 
+8.12.2022, 0:20:24 - INFO - Server is running on port: 3030 
+8.12.2022, 0:21:21 - INFO - Server is running on port: 3030 
+8.12.2022, 0:21:54 - INFO - Server is running on port: 3030 
+8.12.2022, 0:22:57 - INFO - Server is running on port: 3030 
+8.12.2022, 0:23:22 - INFO - Server is running on port: 3030 
+8.12.2022, 0:23:43 - INFO - Server is running on port: 3030 
+8.12.2022, 0:24:54 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 0:24:55 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 0:25:21 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 0:25:21 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 0:25:53 - INFO - Server is running on port: 3030 
+8.12.2022, 0:28:03 - INFO - Server is running on port: 3030 
+8.12.2022, 0:30:16 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 0:30:16 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 0:31:02 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 0:31:02 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 0:32:05 - INFO - Server is running on port: 3030 
+8.12.2022, 0:32:15 - INFO - Server is running on port: 3030 
+8.12.2022, 0:32:23 - INFO - Server is running on port: 3030 
+8.12.2022, 0:32:30 - INFO - Server is running on port: 3030 
+8.12.2022, 0:33:39 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 0:33:39 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 

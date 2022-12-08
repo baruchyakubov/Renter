@@ -11,12 +11,12 @@ export const orderService = {
 import { authService } from './auth.service'
 
 window.orderService = orderService
-const STORAGE_KEY = '/Order'
+const URL_KEY = 'Order'
 
 async function query() {
     try{
-       return httpService.get(STORAGE_KEY)
-        // const orders = await storageService.query(STORAGE_KEY)
+       return httpService.get(URL_KEY)
+        // const orders = await storageService.query(URL_KEY)
         // const loggedInUser = authService.getLoggedinUser()
         // const Orders = orders.filter(order =>{
         //    return loggedInUser._id === order.hostId
@@ -32,14 +32,14 @@ async function query() {
 async function save(order) {
     var savedOrder
     if (order._id) {
-        // savedOrder = await storageService.put(STORAGE_KEY, order)
+        // savedOrder = await storageService.put(URL_KEY, order)
         savedOrder = await httpService.put(`order/${order._id}`, order)
 
     } else {
         order.status= 'pending'
         order.createdAt = Date.now()
-        // savedStay = await storageService.post(STORAGE_KEY, order)
-        savedOrder = await httpService.post(STORAGE_KEY, order)
+        // savedStay = await storageService.post(URL_KEY, order)
+        savedOrder = await httpService.post(URL_KEY, order)
     }
     return savedOrder
 }
