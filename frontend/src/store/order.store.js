@@ -41,7 +41,7 @@ export const orderStore = {
                 showSuccessMsg('order successfully delivered')
                 return currForm
             }
-            catch {
+            catch (err){
                 showErrorMsg('failed to send order')
                 console.log('Cannot send form', err)
                 throw err
