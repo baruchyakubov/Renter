@@ -35,7 +35,7 @@ export const orderStore = {
         }
     },
     actions: {
-        async sendForm({ form }) {
+        async sendForm(state,{ form }) {
             try {
                 const currForm = await orderService.save(form)
                 console.log(currForm)

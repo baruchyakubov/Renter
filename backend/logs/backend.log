@@ -1,2 +1,14 @@
 8.12.2022, 19:05:19 - INFO - Server is running on port: 3030 
 8.12.2022, 19:05:22 - INFO - Server is running on port: 3030 
+8.12.2022, 20:41:35 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 20:41:35 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 20:41:35 - DEBUG - Setting (gaj2FJnWehenrzv3AAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:45:53 - DEBUG - Setting (NjXMjqq8n_f7FYWiAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:46:08 - DEBUG - Setting (M6uZi547D-xsWSgwAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:46:23 - DEBUG - Setting (RyXK7SJz37bgdyUEAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:46:48 - DEBUG - Setting (a4DQUdQB6s5xyjD1AAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:47:08 - DEBUG - Setting (A5bjKI1ylMpRSfs3AAAL) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:47:17 - DEBUG - Setting (fK93tQ-FpndMJDnoAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:47:21 - DEBUG - Setting (tz753OYlB4VHPaSvAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 20:47:21 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+8.12.2022, 20:47:48 - DEBUG - Setting (HdeY3JRN6fpofx4WAAAR) socket.userId = 6390a8fe4887fbe817a811e0 

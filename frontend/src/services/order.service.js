@@ -31,8 +31,8 @@ async function query() {
 }
 
 async function save(order) {
-    var savedOrder
     try {
+        var savedOrder
         if (order._id) {
             // savedOrder = await storageService.put(URL_KEY, order)
             savedOrder = await httpService.put(`order/${order._id}`, order)

@@ -12,7 +12,7 @@
         <h5 class="guests">Guests</h5>
         <p>{{ guests }} guests</p>
       </div>
-      <button @click="submit">Continue</button>
+      <button @click="submit">Confirm</button>
     </div>
     <div class="column2">
       <div class="card flex-box">
@@ -61,7 +61,7 @@ export default {
   async created() {
     this.form = utilService.loadFromStorage('tempForm')
     this.stay = await this.getStay()
-    console.log(this.stay);
+    console.log(this.form);
   },
   data() {
     return {
@@ -70,8 +70,8 @@ export default {
     }
   },
   methods: {
-    submit(){
-      this.$store.dispatch({type:"sendForm",form:this.form})
+    async submit(){
+      await this.$store.dispatch({type:"sendForm",form:this.form})
       this.$store.commit({type:"removeTempForm"})
       this.$router.push('/stay/'+this.stay._id)
     },
