@@ -3406,5 +3406,11 @@
 8.12.2022, 15:54:31 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
 8.12.2022, 15:54:31 - DEBUG - Setting (K_gT8X-TmNqZIKCFAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
 >>>>>>> 94e5a0245e78c11484b8cef2d31aab6105531aef
+<<<<<<< HEAD
 8.12.2022, 16:02:49 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
 8.12.2022, 16:05:16 - INFO - Server is running on port: 3030 
+=======
+8.12.2022, 16:02:21 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 16:02:21 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 16:02:21 - DEBUG - Setting (lex_62hl8QcMrANzAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+>>>>>>> 4c63f5d6469d5f9781456f790e0a4de86c84da15
