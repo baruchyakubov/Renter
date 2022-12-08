@@ -3313,3 +3313,10 @@
 8.12.2022, 0:32:30 - INFO - Server is running on port: 3030 
 8.12.2022, 0:33:39 - DEBUG - auth.service - login with username: 60712702 
 8.12.2022, 0:33:39 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 9:45:11 - INFO - Server is running on port: 3030 
+8.12.2022, 9:45:36 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 9:45:38 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 9:45:38 - DEBUG - Setting (qEYQa7zNtYuMkbuHAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 9:50:34 - INFO - Server is running on port: 3030 
+8.12.2022, 9:50:40 - DEBUG - user logged out succesfully 
+8.12.2022, 9:56:32 - INFO - Server is running on port: 3030 
