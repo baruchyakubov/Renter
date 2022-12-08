@@ -3393,3 +3393,20 @@
 8.12.2022, 15:44:12 - DEBUG - Setting (Iu3epTO8y_uNUo8GAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 15:44:43 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
 8.12.2022, 15:46:00 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 15:50:04 - DEBUG - user logged out succesfully 
+8.12.2022, 15:50:29 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 15:50:29 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 15:50:29 - DEBUG - Setting (Dzua_uwkOBuCHaZkAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 15:50:47 - DEBUG - user logged out succesfully 
+8.12.2022, 15:50:57 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 15:50:57 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 15:50:57 - DEBUG - Setting (Dzua_uwkOBuCHaZkAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 15:52:02 - DEBUG - user logged out succesfully 
+8.12.2022, 15:52:50 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 15:52:50 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 15:52:50 - DEBUG - Setting (Dzua_uwkOBuCHaZkAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 15:53:00 - DEBUG - user logged out succesfully 
+8.12.2022, 15:54:16 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 15:54:16 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 15:54:16 - DEBUG - Setting (Dzua_uwkOBuCHaZkAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 15:54:50 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
