@@ -14,3 +14,9 @@
 8.12.2022, 20:47:48 - DEBUG - Setting (HdeY3JRN6fpofx4WAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 21:09:17 - INFO - Server is running on port: 3030 
 8.12.2022, 21:14:03 - DEBUG - Setting (spQPmp5raKmVhlrqAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 21:28:39 - INFO - Server is running on port: 3030 
+8.12.2022, 21:31:27 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 21:31:27 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 21:31:27 - DEBUG - Setting (FRoui4RkTo_9p_YVAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 21:31:33 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+8.12.2022, 21:32:12 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
