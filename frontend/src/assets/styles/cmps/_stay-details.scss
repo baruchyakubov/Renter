@@ -1,5 +1,24 @@
 .stay-details {
   margin-top: 2rem;
+  .headerFlex{
+    justify-content: space-between;
+    .saveShare{
+      gap: 1rem;
+      p{
+        align-self: flex-start;
+        font-family: cereal-semi-light;
+        font-weight: 100;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   &-basicInfo {
     font-size: 0.9rem;
     display: flex;
