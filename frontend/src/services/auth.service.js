@@ -1,5 +1,6 @@
 import { stayService } from './stay.service'
 import { httpService } from './http.service'
+import { socketService } from './socket.service'
 
 export const authService = {
     login,
@@ -14,6 +15,7 @@ async function login(userCred) {
     try {
         const user = await httpService.post('auth/login', userCred)
         if (user) {
+            socketService.login(user._id)
              const User = await _checkIfAdmin(user)
             console.log(User);
             return saveLocalUser(User)

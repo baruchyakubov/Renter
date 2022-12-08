@@ -16,7 +16,7 @@ import userMsg from './cmps/user-msg.vue'
 import { authService } from './services/auth.service'
 import { userService } from './services/user.service'
 import userModal from './cmps/user-modal.vue'
-
+import { socketService , SOCKET_EVENT_SEND_ORDER } from './services/socket.service'
 
 export default {
   data() {
@@ -29,6 +29,7 @@ export default {
     }
   },
   created() {
+    socketService.on(SOCKET_EVENT_SEND_ORDER , this.addOrder)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
     console.log('Vue App created')
@@ -40,6 +41,9 @@ export default {
   computed:{
   },
   methods: {
+    addOrder(order){
+      this.$store.commit({ type: 'addOrder', order:{...order}})
+    },
     closeModal() {
       this.isUserModal = false
     },
