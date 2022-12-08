@@ -52,6 +52,7 @@ function setupSocketAPI(http, session) {
     socket.on('set-user-socket', (userId) => {
       logger.debug(`Setting (${socket.id}) socket.userId = ${userId}`)
       socket.userId = userId
+      console.log(socket.userId);
     })
 
     //for fun delete toy in other browsers

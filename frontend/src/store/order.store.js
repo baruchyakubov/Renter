@@ -28,6 +28,9 @@ export const orderStore = {
         updatedOrder(state, { order }) {
             const idx = state.orders.findIndex(Order => Order._id === order._id)
             state.orders[idx] = order
+        },
+        addOrder(state , { order }){
+            state.orders.unshift(order)
         }
     },
     actions: {

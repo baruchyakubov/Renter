@@ -1,9 +1,17 @@
+.back-office{
+    padding: 0;
+    padding-top: 20px;
+}
+
 .back-office-layout {
     display: flex;
     gap: 120px;
 
     ul {
         padding: 0;
+        li{
+            width: 100%;
+        }
     }
 
     >* {
@@ -74,11 +82,13 @@
         }
     }
     span{
+        width: rem(177.84px);
+        height: rem(40.95px);
         color: rgb(182, 103, 103);
         &.green{
             color: rgb(91, 168, 91);
         }
-        font-size: 1.35rem;
+        font-size: 1.2rem;
         padding: 0.2rem;
         padding-inline-start: 5rem;
     }

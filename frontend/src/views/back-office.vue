@@ -1,13 +1,13 @@
 <template>
-  <section class="back-office main-container">
+  <section class="back-office main-">
     <h1>Orders status</h1>
-    <div class="back-office-layout">
-      <ul class="orders">
+    <div class="back-office-layout ">
+      <ul class="orders main-container">
         <li class="flex-box " v-for="order in orders" :key="order._id">
           <order-preview :order="order"></order-preview>
         </li>
       </ul>
-      <hosting-summery :orders="orders"></hosting-summery>
+      <hosting-summery  :orders="orders"></hosting-summery>
     </div>
   </section>
 </template>
