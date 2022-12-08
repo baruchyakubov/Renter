@@ -25,9 +25,9 @@ function setupSocketAPI(http, session) {
       socket.join(topic)
       socket.myTopic = topic
     })
-    socket.on('send-order', (hostId) => {
-      if (socket.userId !== hostId) return
-    })
+    // socket.on('send-order', (hostId) => {
+    //   if (socket.userId !== hostId) return
+    // })
 
     socket.on('chat newMsg', (msg) => {
       console.log('Emitting Chat msg', msg)
