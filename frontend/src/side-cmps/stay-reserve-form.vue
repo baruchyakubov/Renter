@@ -176,20 +176,20 @@ export default {
       form: null,
       isModalShown: false,
       guests: {
-        adults: 0,
+        adults: 1,
         childrens: 0,
         infants: 0,
-        maxGuests: null
       },
+      maxGuests: null
     }
   },
   created() {
-    this.guests.maxGuests = this.stay.capacity
+    this.maxGuests = this.stay.capacity
     this.form = stayService.getEmptyForm()
   },
   methods: {
     increment(guests) {
-      if (this.total >= this.guests.maxGuests) return
+      if (this.total >= this.maxGuests) return
       // console.log('received guests',guests)
       // console.log('total ',this.total,'guests ',this.guests)
       if (guests === 'infantGuests') return this.guests.infants++
@@ -218,6 +218,7 @@ export default {
           showErrorMsg('Login required')
           return
         }
+        this.form.guests = this.guests
         this.form.buyer = { _id: this.currUser._id, fullname: this.currUser.fullname }
         this.form.stay = {
           _id: this.stay._id,

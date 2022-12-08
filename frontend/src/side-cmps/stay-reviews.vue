@@ -9,7 +9,7 @@
           <h4>{{ review.by.fullname }}</h4>
         </div>
       </div>
-      <p class="reviewInsight">{{ review.txt }}</p>
+      <p class="reviewInsight">{{ review.txt }} ({{stay.reviews.length}})</p>
     </div>
   </div>
 </div>

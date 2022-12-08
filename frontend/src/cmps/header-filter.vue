@@ -4,14 +4,17 @@
             <h1>Where</h1>
             <input v-model="country" type="search" placeholder="Search destinations">
         </div>
+            <span class="sep seperator1"></span>
         <div class="check-in" tabindex="1">
             <h1>Check in</h1>
             <input v-model="dates.from" type="text" placeholder="Add dates">
         </div>
+        <span class="sep seperator2"></span>
         <div class="check-out" tabindex="1">
             <h1>Check out</h1>
             <input v-model="dates.to" type="text" placeholder="Add dates">
         </div>
+        <span class="sep seperator3"></span>
         <div class="add-guests flex-box align-center space-between" tabindex="1" @click="toggleGuestModal" >
             <section >
                 <h1>Who</h1>
@@ -66,38 +69,52 @@ export default {
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("mouseover", () => {
             document.querySelector('.check-in').style.backgroundColor = '#DDDDDD'
             document.querySelector('.check-in>input').style.backgroundColor = '#DDDDDD'
+            document.querySelector('.seperator1').style.backgroundColor = 'transparent'
+            document.querySelector('.seperator2').style.backgroundColor = 'transparent'
         })
         document.querySelector('.el-date-editor :nth-child(4)').addEventListener("mouseover", () => {
             document.querySelector('.check-out').style.backgroundColor = '#DDDDDD'
             document.querySelector('.check-out>input').style.backgroundColor = '#DDDDDD'
+            document.querySelector('.seperator2').style.backgroundColor = 'transparent'
+            document.querySelector('.seperator3').style.backgroundColor = 'transparent'
         })
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("mouseout", () => {
             document.querySelector('.check-in').style.backgroundColor = '#EBEBEB'
             document.querySelector('.check-in>input').style.backgroundColor = '#EBEBEB'
+            document.querySelector('.seperator1').style.backgroundColor = 'black'
+            document.querySelector('.seperator2').style.backgroundColor = 'black'
         })
         document.querySelector('.el-date-editor :nth-child(4)').addEventListener("mouseout", () => {
             document.querySelector('.check-out').style.backgroundColor = '#EBEBEB'
             document.querySelector('.check-out>input').style.backgroundColor = '#EBEBEB'
+            document.querySelector('.seperator1').style.backgroundColor = 'black'
+            document.querySelector('.seperator2').style.backgroundColor = 'black'
         })
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("click", (event) => {
             document.querySelector('.check-in').classList.add('focus')
             document.querySelector('.check-out').classList.remove('focus')
+            document.querySelector('.search-input').classList.remove('focus')
             document.querySelector('.check-in>input').style.backgroundColor = document.querySelector('.check-in').style.backgroundColor
             event.preventDefault()
         })
         document.querySelector('.el-date-editor :nth-child(4)').addEventListener("click", (event) => {
             document.querySelector('.check-out').classList.add('focus')
             document.querySelector('.check-in').classList.remove('focus')
+            document.querySelector('.search-input').classList.remove('focus')
             document.querySelector('.check-out>input').style.backgroundColor = document.querySelector('.check-out').style.backgroundColor
             event.preventDefault()
         })
         document.querySelector('.add-guests').addEventListener("click", () => {
             document.querySelector('.check-out').classList.remove('focus')
             document.querySelector('.check-in').classList.remove('focus')
+            document.querySelector('.search-input').classList.remove('focus')
         })
         document.querySelector('.search-input').addEventListener("click", () => {
             document.querySelector('.check-out').classList.remove('focus')
             document.querySelector('.check-in').classList.remove('focus')
+        })
+        document.querySelector('.search-input input').addEventListener("click", () => {
+            document.querySelector('.search-input').classList.add('focus')
         })
     },
     methods: {
