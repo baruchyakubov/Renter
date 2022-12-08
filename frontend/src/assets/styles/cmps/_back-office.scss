@@ -9,9 +9,6 @@
 
     ul {
         padding: 0;
-        li{
-            width: 100%;
-        }
     }
 
     >* {
@@ -95,6 +92,8 @@
 }
 
 .statistic{
+    position: sticky;
+    top: 5.5rem;
     border: 2px rgb(226, 220, 220) solid;
     border-radius: 1rem;
     height: max-content;

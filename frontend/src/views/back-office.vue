@@ -16,9 +16,16 @@
 import { eventBus } from '../services/event-bus.service';
 import orderPreview from '../cmps/order-preview.vue';
 import hostingSummery from '../cmps/hosting-summery.vue';
+import { socketService } from '../services/socket.service';
 export default {
   created() {
+    const user = this.$store.getters.loggedinUser
+    console.log(user);
+    if (!user || !user.isAdmin) this.$router.push('/')
     this.$store.dispatch({ type: 'loadOrders' })
+  },
+  mounted(){
+
   },
   mounted() {
     eventBus.emit('toggleLayout', false)

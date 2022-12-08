@@ -2,6 +2,7 @@ import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from
 import { orderService } from '../services/order.service'
 import { stayService } from '../services/stay.service.local'
 import { utilService } from '../services/util.service'
+import { showSuccessMsg , showErrorMsg  } from '../services/event-bus.service'
 
 export const orderStore = {
     state: {
@@ -34,12 +35,14 @@ export const orderStore = {
         }
     },
     actions: {
-        async sendForm(context, { form }) {
+        async sendForm({ form }) {
             try {
                 const currForm = await orderService.save(form)
+                showSuccessMsg('order successfully delivered')
                 return currForm
             }
             catch {
+                showErrorMsg('failed to send order')
                 console.log('Cannot send form', err)
                 throw err
             }
@@ -49,6 +52,7 @@ export const orderStore = {
                 const orders = await orderService.query()
                 context.commit({ type: 'setOrders', orders })
             } catch (err) {
+                showErrorMsg('failed to load orders')
                 console.log('orderStore: Error in loadOrders', err)
                 throw err
             }

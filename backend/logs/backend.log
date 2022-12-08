@@ -3435,3 +3435,61 @@
 8.12.2022, 16:25:33 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
 8.12.2022, 16:25:33 - DEBUG - Setting (Y4lusI7CUZq3zhiMAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 16:26:07 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:44:03 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:44:40 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:48:02 - DEBUG - Setting (ZE8RotYEDoQ3HdjCAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:48:02 - DEBUG - Setting (DFcawBTAaxKU1bcMAAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 16:48:14 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:48:19 - DEBUG - Setting (nXgwpuCsi_2dTP5VAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:48:26 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:48:47 - DEBUG - Setting (Jq0C3W_1syQPiyzkAAAT) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:48:54 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:50:51 - DEBUG - Setting (faGRCF7Yra9bcYfNAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:58:10 - DEBUG - Setting (DH65Z3ZojxSjY-aiAAAX) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:58:19 - DEBUG - user logged out succesfully 
+8.12.2022, 16:58:50 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 16:58:51 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 16:58:51 - DEBUG - Setting (DFcawBTAaxKU1bcMAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 16:59:29 - DEBUG - Setting (pGIFBTPNVooy962sAAAZ) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:02:50 - DEBUG - Setting (yfuiVc81YcaokzwuAAAb) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:07:56 - DEBUG - Setting (CAq1hPIkt2cZVCl8AAAd) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:08:52 - DEBUG - user logged out succesfully 
+8.12.2022, 17:12:22 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 17:12:22 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 17:12:22 - DEBUG - Setting (CAq1hPIkt2cZVCl8AAAd) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:12:44 - DEBUG - user logged out succesfully 
+8.12.2022, 17:12:54 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 17:12:55 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 17:12:55 - DEBUG - Setting (CAq1hPIkt2cZVCl8AAAd) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:13:19 - DEBUG - user logged out succesfully 
+8.12.2022, 17:17:35 - DEBUG - Setting (chofT6YQs5Mt12pkAAAh) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:17:54 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 17:17:54 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 17:17:54 - DEBUG - Setting (w4I_cSuZR09Ab2wuAAAf) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:18:02 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+8.12.2022, 17:18:48 - DEBUG - Setting (cEV3ZZ3PW-f7NN2mAAAj) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:18:51 - DEBUG - Setting (or0xsAJU6sXw-5nkAAAl) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:19:21 - DEBUG - Setting (BhJI7fYq9RU4FP5tAAAn) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:19:37 - DEBUG - Setting (_0K0ZPmJkZPFp30fAAAp) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:19:42 - DEBUG - Setting (o-Z5EnR1JfjbdbHkAAAr) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:20:07 - DEBUG - Setting (q0JOVyhe442A--_fAAAt) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:20:14 - DEBUG - Setting (FwJiNbJaZf38_KOmAAAv) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:20:29 - DEBUG - Setting (5UZoAELH4ENB_ZSwAAAx) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:20:36 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+8.12.2022, 17:20:37 - DEBUG - Setting (2vod9JBLoaoka53iAAAz) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:21:40 - DEBUG - Setting (D9yW6L0_NNLPyzgjAAA1) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 17:21:46 - DEBUG - Setting (lpWkRHKKdO75pySfAAA3) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:23:06 - DEBUG - user logged out succesfully 
+8.12.2022, 17:25:52 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 17:25:53 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 17:25:53 - DEBUG - Setting (D9yW6L0_NNLPyzgjAAA1) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:26:28 - DEBUG - user logged out succesfully 
+8.12.2022, 17:26:52 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 17:26:53 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 17:26:53 - DEBUG - Setting (D9yW6L0_NNLPyzgjAAA1) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:30:38 - DEBUG - Setting (WO9iXhRzjJQpjWs0AAA5) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:33:51 - DEBUG - Setting (_Unxbp5xsdmCcGj2AAA7) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:46:50 - INFO - Server is running on port: 3030 
+8.12.2022, 17:49:19 - DEBUG - Setting (fmRkcRZ18eh9DUf4AAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:49:22 - DEBUG - Setting (DmureEGwzmVkRrILAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 17:52:58 - INFO - Server is running on port: 3030 

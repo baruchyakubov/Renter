@@ -1,5 +1,6 @@
 import io from 'socket.io-client'
 import { userService } from './user.service'
+import { authService } from './auth.service'
 
 export const SOCKET_EVENT_ADD_MSG = 'chat-add-msg'
 export const SOCKET_EMIT_SEND_MSG = 'chat-send-msg'
@@ -30,7 +31,7 @@ function createSocketService() {
     setup() {
       socket = io(baseUrl)
       setTimeout(()=>{
-        const user = userService.getLoggedinUser()
+        const user = authService.getLoggedinUser()
         if (user) this.login(user._id)
       }, 500)
     },
