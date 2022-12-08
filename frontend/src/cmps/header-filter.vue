@@ -81,14 +81,29 @@ export default {
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("mouseout", () => {
             document.querySelector('.check-in').style.backgroundColor = '#EBEBEB'
             document.querySelector('.check-in>input').style.backgroundColor = '#EBEBEB'
-            document.querySelector('.seperator1').style.backgroundColor = 'black'
-            document.querySelector('.seperator2').style.backgroundColor = 'black'
+            document.querySelector('.seperator1').style.backgroundColor = '#DDDDDD'
+            document.querySelector('.seperator2').style.backgroundColor = '#DDDDDD'
         })
         document.querySelector('.el-date-editor :nth-child(4)').addEventListener("mouseout", () => {
             document.querySelector('.check-out').style.backgroundColor = '#EBEBEB'
             document.querySelector('.check-out>input').style.backgroundColor = '#EBEBEB'
-            document.querySelector('.seperator1').style.backgroundColor = 'black'
-            document.querySelector('.seperator2').style.backgroundColor = 'black'
+            document.querySelector('.seperator2').style.backgroundColor = '#DDDDDD'
+            document.querySelector('.seperator3').style.backgroundColor = '#DDDDDD'
+        })
+
+        document.querySelector('.add-guests').addEventListener("mouseover",()=>{
+            document.querySelector('.seperator3').style.backgroundColor = 'transparent'
+        })
+        document.querySelector('.add-guests').addEventListener("mouseout",()=>{
+            document.querySelector('.seperator3').style.backgroundColor = '#DDDDDD'
+        })
+
+
+        document.querySelector('.search-input').addEventListener("mouseover",()=>{
+            document.querySelector('.seperator1').style.backgroundColor = 'transparent'
+        })
+        document.querySelector('.search-input').addEventListener("mouseout",()=>{
+            document.querySelector('.seperator1').style.backgroundColor = '#DDDDDD'
         })
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("click", (event) => {
             document.querySelector('.check-in').classList.add('focus')
