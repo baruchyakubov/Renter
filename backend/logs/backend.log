@@ -75,3 +75,4 @@
 8.12.2022, 22:50:12 - DEBUG - Setting (W1Gh_RHWPbOIkh1sAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 22:52:52 - DEBUG - Setting (NrfKT8dezecQ69vCAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 22:53:59 - DEBUG - user logged out succesfully 
+8.12.2022, 22:56:51 - INFO - Server is running on port: 3030 
