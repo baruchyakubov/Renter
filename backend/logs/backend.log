@@ -14,3 +14,64 @@
 8.12.2022, 20:47:48 - DEBUG - Setting (HdeY3JRN6fpofx4WAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 21:09:17 - INFO - Server is running on port: 3030 
 8.12.2022, 21:14:03 - DEBUG - Setting (spQPmp5raKmVhlrqAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 21:28:08 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 21:28:08 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 21:28:08 - DEBUG - Setting (smhT7zcJ5n6sVGoqAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 21:31:35 - DEBUG - Setting (1eys9MyfAg4K3thWAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 21:32:40 - DEBUG - Setting (9vVQ3RGzo6ltnz-xAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 21:41:57 - DEBUG - Setting (-YLcwRauzCG8wVfnAAAL) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 21:42:09 - DEBUG - Setting (5UEnHmQsxn34fbDYAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 21:50:27 - DEBUG - Setting (kK9cZQlYlzZ4JKM7AAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:03:17 - DEBUG - Setting (rVjS6nezlXt1-hdFAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:09:22 - DEBUG - Setting (ZdxKmblrmINrVjOYAAAT) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:11:35 - DEBUG - Setting (5-TWbVz8v_rh4FfXAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:14:29 - DEBUG - Setting (6INxJ5r4g_beIHifAAAZ) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:21:26 - DEBUG - Setting (gpTSpAl8PhVcDVnjAAAd) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:21:34 - INFO - Server is running on port: 3030 
+8.12.2022, 22:22:02 - INFO - Server is running on port: 3030 
+8.12.2022, 22:22:08 - DEBUG - Setting (-S2_wNExIOPB2EVkAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:23:14 - INFO - Server is running on port: 3030 
+8.12.2022, 22:23:23 - DEBUG - Setting (bnWd1DQsuQs5mDZsAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:23:51 - INFO - Server is running on port: 3030 
+8.12.2022, 22:24:04 - INFO - Server is running on port: 3030 
+8.12.2022, 22:24:04 - DEBUG - Setting (mO6SR0RUiG0MMQX9AAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:24:31 - INFO - Server is running on port: 3030 
+8.12.2022, 22:24:31 - DEBUG - Setting (aLUBmQqa5m8qw-arAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:24:59 - INFO - Server is running on port: 3030 
+8.12.2022, 22:25:00 - DEBUG - Setting (ej6ASaXCEr8BA0MaAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:27:03 - DEBUG - Setting (XPKQXeWhKbbjyCknAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:28:54 - INFO - Server is running on port: 3030 
+8.12.2022, 22:29:04 - DEBUG - Setting (4B1VPWF_MBlMDEgdAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:30:09 - INFO - Server is running on port: 3030 
+8.12.2022, 22:30:09 - DEBUG - Setting (7d1G01z9ZA17MQ7hAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:30:33 - DEBUG - Setting (k4u1XGubcwUxGprGAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:31:24 - INFO - Server is running on port: 3030 
+8.12.2022, 22:31:24 - DEBUG - Setting (idHavrnyRw6qjVkfAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:31:38 - DEBUG - Setting (zq_liuLqvgKujUJeAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:31:51 - DEBUG - Setting (7ISeNSc4qhNGRCWrAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:34:23 - DEBUG - Setting (_VO2sK91F3CgSIt0AAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:34:46 - INFO - Server is running on port: 3030 
+8.12.2022, 22:34:47 - DEBUG - Setting (xH_BELKG5sTbtNcUAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:34:58 - DEBUG - Setting (L2VGSjBEZL8Emo16AAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:36:10 - DEBUG - Setting (BN_6AQ48H5c7R0TnAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:36:25 - DEBUG - Setting (Rh8ibfZcIOqVRzSvAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:36:36 - DEBUG - Setting (p9QQaugSoOisufvKAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:37:00 - DEBUG - Setting (InHzDgR07f8ZseNyAAAL) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:38:36 - DEBUG - Setting (wbmoXAeaSMbzpcTRAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:41:17 - DEBUG - Setting (WgYfXwhSyEtO1lx5AAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:41:39 - DEBUG - Setting (vV0935tXAH4lrYbWAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:42:21 - DEBUG - Setting (0TkQXEtjIki8HkDgAAAT) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:43:01 - DEBUG - Setting (QgAVHmMq4w4AUyVeAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:44:32 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+8.12.2022, 22:44:55 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+8.12.2022, 22:45:37 - DEBUG - Setting (HnW28mIaJE3VpT7CAAAX) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:46:49 - INFO - Server is running on port: 3030 
+8.12.2022, 22:46:49 - DEBUG - Setting (xqSglDOXxzBmwD4yAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:47:20 - DEBUG - Setting (K-brP_myGbMZrAbhAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:47:59 - DEBUG - Setting (abGMpwyhvX1wmoItAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:48:44 - INFO - Server is running on port: 3030 
+8.12.2022, 22:49:04 - DEBUG - Setting (73Wa31h0-ZRAqqbZAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:49:15 - DEBUG - Setting (lJheU5hdiNk0w7GBAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:50:12 - DEBUG - Setting (W1Gh_RHWPbOIkh1sAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:52:52 - DEBUG - Setting (NrfKT8dezecQ69vCAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 22:53:59 - DEBUG - user logged out succesfully 

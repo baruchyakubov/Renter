@@ -34,13 +34,11 @@ export default {
         this.scrollTrigger()
     },
     methods: {
-        scrollTrigger() {
+         scrollTrigger() {
             let Observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0 && this.filterBy.currentPage < this.pageCount) {
-                        setTimeout(() => {
-                            this.$store.commit({ type: "incrementPage" })
-                        })
+                            eventBus.emit('setFilterByPage')
                     }
                 })
             })

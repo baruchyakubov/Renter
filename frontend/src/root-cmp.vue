@@ -16,7 +16,7 @@ import userMsg from './cmps/user-msg.vue'
 import { authService } from './services/auth.service'
 import { userService } from './services/user.service'
 import userModal from './cmps/user-modal.vue'
-import { socketService , SOCKET_EVENT_SEND_ORDER } from './services/socket.service'
+import { socketService, SOCKET_EVENT_SEND_ORDER } from './services/socket.service'
 
 export default {
   data() {
@@ -25,24 +25,26 @@ export default {
       filterBy: {
         label: '',
         country: '',
+        page:1
       }
     }
   },
   created() {
-    socketService.on(SOCKET_EVENT_SEND_ORDER , this.addOrder)
+    socketService.on(SOCKET_EVENT_SEND_ORDER, this.addOrder)
+    eventBus.on('setFilterByPage' , this.setFilterByPage)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
     console.log('Vue App created')
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
   },
-  mounted(){
+  mounted() {
   },
-  computed:{
+  computed: {
   },
   methods: {
-    addOrder(order){
-      this.$store.commit({ type: 'addOrder', order:{...order}})
+    addOrder(order) {
+      this.$store.commit({ type: 'addOrder', order: { ...order } })
     },
     closeModal() {
       this.isUserModal = false
@@ -51,16 +53,17 @@ export default {
       this.isUserModal = true
     },
     setFilterByLabel(label) {
-      // const filterBy = {...this.filterBy}
       this.filterBy.label = label
       console.log(this.filterBy);
-      this.$store.dispatch({ type: 'setFilterBy', filterBy:{ ...this.filterBy }})
+      this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
-    setFilterByTxt(country){
-      // const filterBy = {...this.filterBy}
-
+    setFilterByTxt(country) {
       this.filterBy.country = country
-      this.$store.dispatch({ type: 'setFilterBy', filterBy:{ ...this.filterBy }})
+      this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
+    },
+    setFilterByPage() {
+      this.filterBy.page++
+      this.$store.dispatch({ type: 'setFilterBy' , filterBy: { ...this.filterBy }  })
     }
   },
   components: {

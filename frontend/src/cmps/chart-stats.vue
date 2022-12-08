@@ -1,5 +1,5 @@
 <template>
-<div style="max-width:70%; position: relative; left: 50%; transform: translate(-50%);">
+<div style="max-width:60%; position: relative; left: 50%; transform: translate(-50%);">
       <DoughnutChart :chartData="testData" />
 </div>
   
