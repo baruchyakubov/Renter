@@ -38,6 +38,7 @@ export const orderStore = {
         async sendForm({ form }) {
             try {
                 const currForm = await orderService.save(form)
+                console.log(currForm)
                 showSuccessMsg('order successfully delivered')
                 return currForm
             }
