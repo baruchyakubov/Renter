@@ -22,8 +22,8 @@
       </section>
       <header-filter @setFilterByTxt="setFilterByTxt" v-else></header-filter>
       <div class="right-header flex-box">
-        <p>Renter here for you</p>
-        <world-icon class="world-icon"></world-icon>
+        <p>Renter your home</p>
+        <!-- <world-icon class="world-icon"></world-icon> -->
         <button @click="toggleMenuModal" class="menu-button flex-box align-center">
           <div class="menudiv">
             <div v-if="isMenuOpen" class="menu-modal">
