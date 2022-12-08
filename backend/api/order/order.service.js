@@ -4,14 +4,18 @@ const ObjectId = require('mongodb').ObjectId
 async function query(loggedInUserId) {
   const collection = await dbService.getCollection('order')
   console.log(loggedInUserId);
-  var orders = await collection.find({ hostId : { $eq : loggedInUserId } }).toArray()
+  var orders = await collection.find({ hostId: { $eq: loggedInUserId } }).toArray()
   return orders
 }
 
 async function add(order) {
-  const collection = await dbService.getCollection('order')
-  const { ops } = await collection.insertOne(order)
-  return ops[0]
+  try {
+    const collection = await dbService.getCollection('order')
+    const { ops } = await collection.insertOne(order)
+    return ops[0]
+  }catch(err){
+    throw err
+  }
 }
 
 async function update(order) {
