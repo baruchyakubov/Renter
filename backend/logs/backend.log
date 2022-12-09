@@ -258,3 +258,15 @@
 9.12.2022, 14:23:10 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
 9.12.2022, 14:28:10 - DEBUG - user logged out succesfully 
 9.12.2022, 14:37:55 - DEBUG - Setting (7PNTlWtA4z4sP4zrAAAh) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:42:54 - INFO - Server is running on port: 3030 
+9.12.2022, 14:47:42 - DEBUG - Setting (splhCJXWiPujVxdYAAAG) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 14:48:59 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 14:48:59 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 14:48:59 - DEBUG - Setting (0zJPgrrkoKTPuC4rAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:51:01 - DEBUG - user logged out succesfully 
+9.12.2022, 14:51:12 - DEBUG - auth.service - signup with username: what, fullname: what 
+9.12.2022, 14:51:12 - DEBUG - auth.route - new account created: {"username":"what","password":"$2b$10$4wAKp4UFAwnXxmVvsVFLruJ6XX9R0Ty13hPVLEZ2poXlkmdVDJfxO","fullname":"what","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","_id":"63932f40728e5ee3d0b51fa5"} 
+9.12.2022, 14:51:12 - DEBUG - auth.service - login with username: what 
+9.12.2022, 14:51:12 - INFO - User signup: | {"_id":"63932f40728e5ee3d0b51fa5","username":"what","fullname":"what","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","isAdmin":null} 
+9.12.2022, 14:51:31 - DEBUG - user logged out succesfully 
+9.12.2022, 15:08:04 - INFO - Server is running on port: 3030 
