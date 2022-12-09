@@ -1,19 +1,20 @@
 .reserveFormAll{
   position: sticky;
   top: 6.2rem;
+  max-height: 35rem;
 }
 .order-container {
   border: 1px solid #00000030;
   border-radius: 13px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-inline: 20px;
   max-width: 362px;
   box-shadow: 0 0 5px 5px #00000015;
   color: rgb(34, 34, 34);
   .totalCalc {
     margin-inline-start: 0.4rem;
     font-size: 1rem;
-    margin-top: 1.2rem;
-    margin-bottom: 0.2rem;
+    margin-top: 1.4rem;
     justify-content: space-between;
     padding-inline: 0.1rem;
     font-family: cereal-medium;
@@ -100,7 +101,7 @@
   // border: 1px solid black;
   position: relative;
   right: 0.23rem;
-  bottom: 26.5rem;
+  bottom: 25rem;
   border-radius: 0.8rem;
   width: 87%; 
   // min-width: 227px;

@@ -13,16 +13,16 @@
           <div class="date-picker">
             <div class="date-input">
               <label>CHECK-IN</label>
-              <input :value=form.startDate />
+              <input :value=startDateComp />
             </div>
             <div class="date-input">
               <label>CHECKOUT</label>
-              <input :value=form.endDate />
+              <input :value=endDateComp />
             </div>
           </div>
           <div class="guest-input" @click="toggleModal">
             <label>GUESTS</label>
-            <!-- <input value="2"></input> -->
+            <input :value="totalGuests"/>
             <svg viewBox="0 0 320 512" width="100" title="angle-down">
               <path
                 d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
@@ -139,17 +139,17 @@
         <p class="chargeDisclaimer">You won't be charged yet</p>
         <div class="payout">
           <div class="payoutFlex flex-box">
-            <p class="calcPrice">$Price x nights</p>
-            <p>150$</p>
+            <p class="calcPrice">${{stay.price}} x {{totalNights}}</p>
+            <p>${{stayCost}}</p>
           </div>
           <div class="payoutFlex flex-box">
             <p class="serviceFee">Service fee</p>
-            <p>10$</p>
+            <p>${{serviceFee}}</p>
           </div>
         </div>
         <div class="totalCalc flex-box">
           <p>Total</p>
-          <p>300$</p>
+          <p>${{totalCost}}</p>
         </div>
         <p class="footer">Report this listing</p>
       </section>
@@ -160,7 +160,7 @@
   </div>
 </template>
 <script>
-import { stayService } from '../services/stay.service.local'
+import { stayService } from '../services/stay.service'
 import calendar from '../side-cmps/calendar.vue'
 import modal from '../side-cmps/reserve-form-modal.vue'
 import svgFlag from '../side-cmps/footer-logo.vue'
@@ -180,10 +180,12 @@ export default {
         childrens: 0,
         infants: 0,
       },
-      maxGuests: null
+      maxGuests: null,
+      areDatesSelected:false
     }
   },
   created() {
+    // this.$refs.guestsInput = this.guests
     this.maxGuests = this.stay.capacity
     this.form = stayService.getEmptyForm()
   },
@@ -225,6 +227,7 @@ export default {
           name: this.stay.name,
           price: this.stay.price
         },
+        this.form.serviceFee = this.serviceFee
           this.form.hostId = this.stay.host._id
         this.form.totalPrice = ((+this.form.endDate.substring(0, 2)) - (+this.form.startDate.substring(0, 2))) * this.stay.price
         this.$store.commit({ type: 'storeForm', form: this.form })
@@ -237,8 +240,31 @@ export default {
     },
   },
   computed: {
+    serviceFee(){
+      let cost = ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5)))* this.stay.price
+      return cost ? Math.floor(cost /8): 5
+    },
+    stayCost(){
+      return this.totalCost - this.serviceFee
+    },
+    totalCost(){
+      return ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5))) * this.stay.price+this.serviceFee
+    },
+    totalNights(){
+      if(!this.form.startDate ) return 1 +' night'
+      else return ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5)))+' nights'
+    },
+    startDateComp(){
+      return !this.form.startDate ? 'Add dates' : this.form.startDate
+    },
+    endDateComp(){
+      return !this.form.endDate ? 'Add dates' : this.form.endDate
+    },
     total() {
       return this.guests.adults + this.guests.childrens + this.guests.infants
+    },
+    totalGuests(){
+      return this.total <=1 ? this.total+' Guest' : this.total+' Guests'
     },
     rating() {
       let ratingSum = 0

@@ -70,17 +70,25 @@ async function addStayMsg(stayId, txt) {
 //     }
 // }
 
-function getEmptyForm(){
-    return {
-      guests: {
-        pets: 0,
-        children: 0,
-        infants: 0,
-        adults: 0
-      },
-      total: 0
+function getEmptyForm() {
+  return {
+    startDate: '',
+    endDate: '',
+    guests: {
+      pets: 0,
+      children: 0,
+      infants: 0,
+      adults: 0
+    },
+    stay: {
+      _id: "",
+      name: "",
+      price: ''
     }
+    ,totalPrice: '',
   }
+}
+
   
   function getEmptyStay() {
     return {

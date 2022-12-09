@@ -35,7 +35,7 @@ export default {
         if (day.length < 2)
           day = '0' + day;
 
-        newArr.push([day, month, year].join('/'))
+        newArr.push([ month ,day, year].join('/'))
       })
       this.dates.from = newArr[0]
       this.dates.to = newArr[1]

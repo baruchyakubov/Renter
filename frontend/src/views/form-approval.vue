@@ -34,11 +34,11 @@
         <div class="price-specs">
           <div class="final-price">
             <p>${{ form.stay.price }} x {{ staySpan }} nights</p>
-            <p>${{ totalPrice }}</p>
+            <p>${{ totalPrice-form.serviceFee }}</p>
           </div>
           <div class="service">
             <p>Service fee</p>
-            <h4>None</h4>
+            <h4>${{form.serviceFee}}</h4>
           </div>
           <div class="service">
             <p>Occupants</p>
@@ -84,10 +84,10 @@ export default {
       return this.form.guests.forEach(guest)
     },
     staySpan() {
-      return (+this.form.endDate.substring(0, 2)) - (+this.form.startDate.substring(0, 2))
+      return (+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5))
     },
     totalPrice() {
-      return ((+this.form.endDate.substring(0, 2)) - (+this.form.startDate.substring(0, 2))) * this.stay.price
+      return ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5))) * this.stay.price
     },
     reviews() {
       if (this.stay.reviews.length === 1) return '1 review'
@@ -103,18 +103,9 @@ export default {
       else return average
     },
     month() {
-      if (+this.form.endDate.substring(3, 5) === 12) return 'Dec'
-      if (+this.form.endDate.substring(3, 5) === 11) return 'Nov'
-      if (+this.form.endDate.substring(3, 5) === 10) return 'Oct'
-      if (+this.form.endDate.substring(3, 5) === 9) return 'Sep'
-      if (+this.form.endDate.substring(3, 5) === 8) return 'Aug'
-      if (+this.form.endDate.substring(3, 5) === 7) return 'Jul'
-      if (+this.form.endDate.substring(3, 5) === 6) return 'Jun'
-      if (+this.form.endDate.substring(3, 5) === 5) return 'May'
-      if (+this.form.endDate.substring(3, 5) === 4) return 'Apr'
-      if (+this.form.endDate.substring(3, 5) === 3) return 'Mar'
-      if (+this.form.endDate.substring(3, 5) === 2) return 'Feb'
-      if (+this.form.endDate.substring(3, 5) === 1) return 'Jan'
+      let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+      let currMonth = +this.form.endDate.substring(0, 2)
+      return months[currMonth-1]
     },
     startDate() {
       return this.form.startDate.substring(0, 2)
