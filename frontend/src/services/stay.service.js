@@ -46,6 +46,7 @@ async function addStayMsg(stayId, txt) {
     return savedMsg
 }
 
+<<<<<<< HEAD
 function getEmptyForm(){
     return {
       guests: {
@@ -55,8 +56,35 @@ function getEmptyForm(){
         adults: 0
       },
       total: 0
+=======
+
+// function getEmptyStay() {
+//     return {
+//         vendor: 'Susita-' + (Date.now() % 1000),
+//         price: utilService.getRandomIntInclusive(1000, 9000),
+//     }
+// }
+
+function getEmptyForm() {
+  return {
+    startDate: '',
+    endDate: '',
+    guests: {
+      pets: 0,
+      children: 0,
+      infants: 0,
+      adults: 0
+    },
+    stay: {
+      _id: "",
+      name: "",
+      price: ''
+>>>>>>> 388e99d0e6b25e2acdd619a545ba4404be4ff8ce
     }
+    ,totalPrice: '',
   }
+}
+
   
   function getEmptyStay() {
     return {

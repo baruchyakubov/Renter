@@ -37,7 +37,6 @@ header {
         color: #222222;
         cursor: pointer;
         transition: 0.15s;
-
         &:hover {
             box-shadow: 0 3px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
         }
@@ -129,7 +128,7 @@ header {
 
     .logo {
         gap: 5px;
-
+        width: 200px;
         img {
             height: 35px;
             width: 35px;
