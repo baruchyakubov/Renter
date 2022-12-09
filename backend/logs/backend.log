@@ -76,3 +76,185 @@
 8.12.2022, 22:52:52 - DEBUG - Setting (NrfKT8dezecQ69vCAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
 8.12.2022, 22:53:59 - DEBUG - user logged out succesfully 
 8.12.2022, 22:56:51 - INFO - Server is running on port: 3030 
+8.12.2022, 23:10:26 - DEBUG - auth.service - login with username: 60712702 
+8.12.2022, 23:10:26 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+8.12.2022, 23:10:26 - DEBUG - Setting (4TA9KoNh3QlK4FjeAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+8.12.2022, 23:10:56 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:11:03 - DEBUG - user logged out succesfully 
+8.12.2022, 23:11:15 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:11:15 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:11:15 - DEBUG - Setting (4TA9KoNh3QlK4FjeAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:11:23 - DEBUG - user logged out succesfully 
+8.12.2022, 23:11:30 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:11:30 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:11:30 - DEBUG - Setting (4TA9KoNh3QlK4FjeAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:12:12 - DEBUG - user logged out succesfully 
+8.12.2022, 23:12:34 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:12:35 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:12:35 - DEBUG - Setting (4TA9KoNh3QlK4FjeAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:12:55 - DEBUG - user logged out succesfully 
+8.12.2022, 23:13:07 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:13:07 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:13:07 - DEBUG - Setting (4TA9KoNh3QlK4FjeAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:13:38 - DEBUG - user logged out succesfully 
+8.12.2022, 23:14:09 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:14:09 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:14:09 - DEBUG - Setting (EkRWZG5uYlgxuM5ZAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:14:14 - DEBUG - user logged out succesfully 
+8.12.2022, 23:22:15 - INFO - Server is running on port: 3030 
+8.12.2022, 23:23:09 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:23:10 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:23:10 - DEBUG - Setting (ahCqRrYdRYm5wG76AAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:23:25 - DEBUG - user logged out succesfully 
+8.12.2022, 23:24:04 - INFO - Server is running on port: 3030 
+8.12.2022, 23:24:08 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:24:09 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:24:09 - DEBUG - Setting (ai4rtMzsAjh_onp8AAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:25:38 - DEBUG - Setting (KA84jUKrrCplSySyAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:25:42 - DEBUG - user logged out succesfully 
+8.12.2022, 23:25:47 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:25:47 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:25:47 - DEBUG - Setting (KA84jUKrrCplSySyAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:26:16 - DEBUG - user logged out succesfully 
+8.12.2022, 23:40:18 - DEBUG - auth.service - signup with username: baruch, fullname: baruch 
+8.12.2022, 23:40:18 - DEBUG - auth.route - new account created: {"username":"baruch","password":"$2b$10$KvFBUWXpeSPyj1sL2bbeAeX1f3Q1T8ilM5GECX/v4rqiBKamXtsPi","fullname":"baruch","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","_id":"639259c21dd92e43f4dedb51"} 
+8.12.2022, 23:40:18 - DEBUG - auth.service - login with username: baruch 
+8.12.2022, 23:40:18 - INFO - User signup: | {"_id":"639259c21dd92e43f4dedb51","username":"baruch","fullname":"baruch","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","isAdmin":null} 
+8.12.2022, 23:40:29 - DEBUG - auth.service - login with username: 80344827 
+8.12.2022, 23:40:29 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+8.12.2022, 23:40:29 - DEBUG - Setting (KA84jUKrrCplSySyAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:40:58 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+8.12.2022, 23:41:15 - DEBUG - user logged out succesfully 
+8.12.2022, 23:41:46 - DEBUG - user logged out succesfully 
+9.12.2022, 0:06:16 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 0:06:16 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 0:06:16 - DEBUG - Setting (jC8P0_crl1Lm4pVtAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 0:13:27 - DEBUG - Setting (_x1Qgo7SOUOOLv6pAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 0:13:31 - DEBUG - Setting (VlGGvDRuR7QtUTQPAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 0:16:55 - DEBUG - Setting (rJ_qPtE5NBmTIFTdAAAT) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 0:17:07 - DEBUG - Setting (D_YAOYZ8m7dMHSWwAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 0:17:55 - DEBUG - user logged out succesfully 
+9.12.2022, 0:19:27 - DEBUG - auth.service - login with username: 60712702 
+9.12.2022, 0:19:27 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+9.12.2022, 0:19:27 - DEBUG - Setting (D_YAOYZ8m7dMHSWwAAAV) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 0:21:12 - DEBUG - user logged out succesfully 
+9.12.2022, 0:21:21 - DEBUG - auth.service - login with username: 60712702 
+9.12.2022, 0:21:21 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+9.12.2022, 0:21:21 - DEBUG - Setting (D_YAOYZ8m7dMHSWwAAAV) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 0:21:26 - DEBUG - user logged out succesfully 
+9.12.2022, 0:21:36 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 0:21:37 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 0:21:37 - DEBUG - Setting (D_YAOYZ8m7dMHSWwAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 0:23:05 - DEBUG - user logged out succesfully 
+9.12.2022, 0:28:04 - INFO - Server is running on port: 3030 
+9.12.2022, 0:29:27 - INFO - Server is running on port: 3030 
+9.12.2022, 0:29:38 - INFO - Server is running on port: 3030 
+9.12.2022, 0:32:48 - INFO - Server is running on port: 3030 
+9.12.2022, 0:33:26 - INFO - Server is running on port: 3030 
+9.12.2022, 0:34:32 - INFO - Server is running on port: 3030 
+9.12.2022, 0:35:53 - INFO - Server is running on port: 3030 
+9.12.2022, 0:37:17 - INFO - Server is running on port: 3030 
+9.12.2022, 0:38:05 - INFO - Server is running on port: 3030 
+9.12.2022, 0:39:01 - INFO - Server is running on port: 3030 
+9.12.2022, 0:40:36 - INFO - Server is running on port: 3030 
+9.12.2022, 0:40:53 - INFO - Server is running on port: 3030 
+9.12.2022, 0:43:46 - INFO - Server is running on port: 3030 
+9.12.2022, 0:45:39 - INFO - Server is running on port: 3030 
+9.12.2022, 0:46:38 - INFO - Server is running on port: 3030 
+9.12.2022, 0:46:58 - INFO - Server is running on port: 3030 
+9.12.2022, 0:48:29 - INFO - Server is running on port: 3030 
+9.12.2022, 0:51:19 - INFO - Server is running on port: 3030 
+9.12.2022, 0:51:50 - INFO - Server is running on port: 3030 
+9.12.2022, 0:52:56 - INFO - Server is running on port: 3030 
+9.12.2022, 0:54:32 - INFO - Server is running on port: 3030 
+9.12.2022, 0:56:12 - INFO - Server is running on port: 3030 
+9.12.2022, 0:57:57 - INFO - Server is running on port: 3030 
+9.12.2022, 1:06:03 - INFO - Server is running on port: 3030 
+9.12.2022, 1:11:30 - INFO - Server is running on port: 3030 
+9.12.2022, 1:12:12 - INFO - Server is running on port: 3030 
+9.12.2022, 1:13:44 - INFO - Server is running on port: 3030 
+9.12.2022, 1:17:10 - INFO - Server is running on port: 3030 
+9.12.2022, 1:17:47 - INFO - Server is running on port: 3030 
+9.12.2022, 1:50:22 - INFO - Server is running on port: 3030 
+9.12.2022, 1:54:51 - INFO - Server is running on port: 3030 
+9.12.2022, 1:57:07 - INFO - Server is running on port: 3030 
+9.12.2022, 1:57:38 - INFO - Server is running on port: 3030 
+9.12.2022, 1:58:38 - INFO - Server is running on port: 3030 
+9.12.2022, 2:00:55 - INFO - Server is running on port: 3030 
+9.12.2022, 2:22:35 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 2:22:36 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 2:22:36 - DEBUG - Setting (HRitzMjAB95-I7v1AAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 2:22:51 - DEBUG - user logged out succesfully 
+9.12.2022, 2:22:58 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 2:22:59 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 2:22:59 - DEBUG - Setting (HRitzMjAB95-I7v1AAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 2:23:20 - DEBUG - user logged out succesfully 
+9.12.2022, 2:25:13 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 2:25:13 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 2:25:13 - DEBUG - Setting (AiWD7l8K41wTARCeAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 2:25:57 - DEBUG - user logged out succesfully 
+9.12.2022, 5:27:33 - INFO - Server is running on port: 3030 
+9.12.2022, 5:27:37 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+9.12.2022, 5:27:37 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+9.12.2022, 5:27:46 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+9.12.2022, 5:27:46 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+9.12.2022, 7:13:06 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 7:13:06 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 7:13:06 - DEBUG - Setting (VejZcY0Df-GM45VgAAAx) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 7:13:54 - DEBUG - user logged out succesfully 
+9.12.2022, 9:58:28 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 9:58:29 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 9:58:29 - DEBUG - Setting (xGqdtSXNu3GfwhunAABa) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 9:59:07 - DEBUG - user logged out succesfully 
+9.12.2022, 9:59:14 - DEBUG - auth.service - login with username: 60712702 
+9.12.2022, 9:59:14 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+9.12.2022, 9:59:14 - DEBUG - Setting (xGqdtSXNu3GfwhunAABa) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 9:59:40 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+9.12.2022, 10:00:23 - DEBUG - Setting (npsPq8CFJ9ZQMYTAAABc) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 10:02:59 - DEBUG - user logged out succesfully 
+9.12.2022, 13:13:01 - INFO - Server is running on port: 3030 
+9.12.2022, 13:42:02 - DEBUG - auth.service - login with username: 60712702 
+9.12.2022, 13:42:03 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+9.12.2022, 13:42:03 - DEBUG - Setting (WGNMgETzCp-shpEMAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 13:42:21 - DEBUG - auth.service - login with username: 60712702 
+9.12.2022, 13:42:21 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+9.12.2022, 13:42:21 - DEBUG - Setting (WGNMgETzCp-shpEMAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 13:43:16 - DEBUG - Setting (h0uh-u_vkM7QXr4IAAAR) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 13:43:28 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 13:43:29 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 13:43:29 - DEBUG - Setting (XSTQxQbJR58KHK6sAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 13:43:38 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 13:43:38 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 13:43:38 - DEBUG - Setting (XSTQxQbJR58KHK6sAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 13:44:53 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+9.12.2022, 13:45:07 - DEBUG - user logged out succesfully 
+9.12.2022, 13:45:49 - DEBUG - auth.service - signup with username: baruch, fullname: baruch 
+9.12.2022, 13:45:49 - ERROR - Failed to signup Username already taken 
+9.12.2022, 13:46:02 - DEBUG - auth.service - signup with username: baruch, fullname: baruch 
+9.12.2022, 13:46:02 - ERROR - Failed to signup Username already taken 
+9.12.2022, 13:46:11 - DEBUG - auth.service - signup with username: baruch, fullname: baruch 
+9.12.2022, 13:46:11 - ERROR - Failed to signup Username already taken 
+9.12.2022, 13:46:15 - DEBUG - auth.service - signup with username: baruch, fullname: baruch 
+9.12.2022, 13:46:15 - ERROR - Failed to signup Username already taken 
+9.12.2022, 13:46:19 - DEBUG - auth.service - signup with username: baruch, fullname: baruch 
+9.12.2022, 13:46:19 - ERROR - Failed to signup Username already taken 
+9.12.2022, 13:46:47 - DEBUG - user logged out succesfully 
+9.12.2022, 14:07:46 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 14:07:58 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 14:07:58 - DEBUG - Setting (h0uh-u_vkM7QXr4IAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:08:20 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 14:08:24 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 14:08:24 - DEBUG - Setting (h0uh-u_vkM7QXr4IAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:12:31 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 14:12:31 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 14:12:31 - DEBUG - Setting (6Aeqi1dCcoSapccfAAAZ) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:13:15 - DEBUG - user logged out succesfully 
+9.12.2022, 14:19:49 - DEBUG - auth.service - login with username: 80344827 
+9.12.2022, 14:19:49 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small","username":"80344827","id":"80344827"} 
+9.12.2022, 14:19:49 - DEBUG - Setting (_KQbfTToa0dYla3MAAAf) socket.userId = 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:22:32 - DEBUG - auth.service - login with username: 60712702 
+9.12.2022, 14:22:34 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://robohash.org/60712702?set=set1","username":"60712702","id":"60712702"} 
+9.12.2022, 14:22:34 - DEBUG - Setting (XSTQxQbJR58KHK6sAAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+9.12.2022, 14:23:10 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+9.12.2022, 14:28:10 - DEBUG - user logged out succesfully 
+9.12.2022, 14:37:55 - DEBUG - Setting (7PNTlWtA4z4sP4zrAAAh) socket.userId = 6390a8fe4887fbe817a811e0 

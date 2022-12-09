@@ -25,13 +25,15 @@ export default {
       filterBy: {
         label: '',
         country: '',
-        page:1
+        guestsCount: 0,
+        page: 1
       }
     }
   },
   created() {
+    sessionStorage.removeItem('filter');
     socketService.on(SOCKET_EVENT_SEND_ORDER, this.addOrder)
-    eventBus.on('setFilterByPage' , this.setFilterByPage)
+    eventBus.on('setFilterByPage', this.setFilterByPage)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
     console.log('Vue App created')
@@ -57,13 +59,14 @@ export default {
       console.log(this.filterBy);
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
-    setFilterByTxt(country) {
-      this.filterBy.country = country
+    setFilterByTxt(filter) {
+      this.filterBy.country = filter.country
+      this.filterBy.guestsCount = filter.guestsCount
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
     setFilterByPage() {
       this.filterBy.page++
-      this.$store.dispatch({ type: 'setFilterBy' , filterBy: { ...this.filterBy }  })
+      this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     }
   },
   components: {

@@ -19,39 +19,23 @@ export const stayService = {
 window.cs = stayService
 
 
-async function query(filterBy = { country: '', label: 0 , page:1}) {
+async function query(filterBy = { country: '', label: '' , guestsCount: 0}) {
     return httpService.get(STORAGE_KEY, filterBy)
-
-    // var stays = await storageService.query(STORAGE_KEY)
-    // if (filterBy.txt) {
-    //     const regex = new RegExp(filterBy.txt, 'i')
-    //     stays = stays.filter(stay => regex.test(stay.vendor) || regex.test(stay.description))
-    // }
-    // if (filterBy.price) {
-    //     stays = stays.filter(stay => stay.price <= filterBy.price)
-    // }
-    // return stays
-
 }
 function getById(stayId) {
-    // return storageService.get(STORAGE_KEY, stayId)
     return httpService.get(`stay/${stayId}`)
 }
 
 async function remove(stayId) {
-    // await storageService.remove(STORAGE_KEY, stayId)
     return httpService.delete(`stay/${stayId}`)
 }
 async function save(stay) {
     var savedStay
     if (stay._id) {
-        // savedStay = await storageService.put(STORAGE_KEY, stay)
         savedStay = await httpService.put(`stay/${stay._id}`, stay)
 
     } else {
-        // Later, owner is set by the backend
         stay.owner = userService.getLoggedinUser()
-        // savedStay = await storageService.post(STORAGE_KEY, stay)
         savedStay = await httpService.post('stay', stay)
     }
     return savedStay
@@ -61,14 +45,6 @@ async function addStayMsg(stayId, txt) {
     const savedMsg = await httpService.post(`stay/${stayId}/msg`, {txt})
     return savedMsg
 }
-
-
-// function getEmptyStay() {
-//     return {
-//         vendor: 'Susita-' + (Date.now() % 1000),
-//         price: utilService.getRandomIntInclusive(1000, 9000),
-//     }
-// }
 
 function getEmptyForm(){
     return {
@@ -129,7 +105,7 @@ function getEmptyForm(){
           }
         }
       ],
-      likedByUsers: ['mini-user'] // for user-wishlist : use $in
+      likedByUsers: ['mini-user'] 
     }
   }
   

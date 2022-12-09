@@ -14,8 +14,15 @@ export const store = Vuex.createStore({
     orderStore
   },
   state: {
+    filterFocus:''
   },
   mutations: {
+    setFilterFocus(state , { value }){
+      state.filterFocus = value
+    }
+  },
+  getters:{
+    filterFocus({ filterFocus }) { return filterFocus },
   },
   actions: {
   }

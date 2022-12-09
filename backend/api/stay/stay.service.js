@@ -4,10 +4,10 @@ const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy) {
   const criteria = _buildCriteria(filterBy)
-  console.log('hey');
-console.log(filterBy);
+  console.log(criteria);
   const collection = await dbService.getCollection('stay')
-  var stays = await collection.find(criteria).limit(filterBy.page*20).toArray()
+  if (filterBy.page) var stays = await collection.find(criteria).limit(filterBy.page * 20).toArray()
+  else var stays = await collection.find(criteria).toArray()
   return stays
 }
 
@@ -62,16 +62,18 @@ async function addMsg(stayId, msg) {
 }
 
 function _buildCriteria(filterBy) {
-  const criteria = {}
+  var criteria = {}
   console.log('filterBy', filterBy)
   if (filterBy.country) {
     const txtCriteria = { $regex: filterBy.country, $options: 'i' }
-    criteria.name = txtCriteria
+    criteria = { $or: [{ name: txtCriteria }, { "loc.country": txtCriteria }  , { "loc.city": txtCriteria } ] }
+    console.log(criteria);
   }
-  if(filterBy.label){
+  if (filterBy.label) {
     const labelCriteria = { $regex: filterBy.label, $options: 'i' }
     criteria.type = labelCriteria
   }
+    criteria.capacity = {$gt: +filterBy.guestsCount}
   return criteria
 }
 

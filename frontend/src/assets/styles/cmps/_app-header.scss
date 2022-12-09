@@ -43,25 +43,47 @@ header {
         }
 
         div {
-            padding-inline-end: 16px;
-            color: rgb(34, 34, 34);
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: center;
-            align-self: center;
-
-            &:not(.grey) {
-                font-weight: 600;
-                border-inline-end: 0.5px rgb(206, 200, 200) solid;
+            &:not(.start-your-search){
+                padding-inline-end: 16px;
+                color: rgb(34, 34, 34);
+                font-size: 0.9rem;
+                display: flex;
+                justify-content: center;
+                align-self: center;
+    
+                &:not(.grey) {
+                    font-weight: 600;
+                    border-inline-end: 0.5px rgb(206, 200, 200) solid;
+                }
+    
+                &.grey {
+                    padding: 0;
+                    color: $clr7;
+                    font-weight: 400;
+                }
             }
-
-            &.grey {
-                padding: 0;
-                color: $clr7;
-                font-weight: 400;
-            }
+           
         }
     }
+    .filterInDetails{
+        padding-left: rem(8px);
+        justify-content: space-between;
+        width: rem(300px);
+        .start-your-search{
+            padding-left: rem(16px);
+            font-size: rem(14px);
+            line-height: rem(18px);
+            font-weight: 600;
+            white-space: nowrap;
+            flex: 1 1 auto;
+        }
+        svg{
+           margin-inline-end: rem(7px); 
+           margin-top: rem(7px); 
+           margin-bottom: rem(7px); 
+        }
+    }
+    
 
     .menu-button {
         margin: 0;

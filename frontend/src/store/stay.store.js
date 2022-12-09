@@ -35,6 +35,7 @@ export const stayStore = {
         filterBy:{
             label: '',
             country:'',
+            guestsCount:0,
             page:1
         }
     },
