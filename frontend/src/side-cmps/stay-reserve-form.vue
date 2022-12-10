@@ -245,10 +245,12 @@ export default {
       return cost ? Math.floor(cost /8): 5
     },
     stayCost(){
-      return this.totalCost - this.serviceFee
+      let cost = ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5))) * this.stay.price
+      return Intl.NumberFormat('en-US').format(cost)
     },
     totalCost(){
-      return ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5))) * this.stay.price+this.serviceFee
+      let cost = ((+this.form.endDate.substring(3, 5)) - (+this.form.startDate.substring(3, 5))) * this.stay.price+this.serviceFee
+      return Intl.NumberFormat('en-US').format(cost)
     },
     totalNights(){
       if(!this.form.startDate ) return 1 +' night'

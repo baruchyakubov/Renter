@@ -1,7 +1,7 @@
 <template>
     <div class="stay-details-host flex-box">
       <div>
-        <h2 class="hostedBy">{{ stay.type }} hosted by {{ stay.host.fullname }}</h2>
+        <h2 class="hostedBy">House hosted by {{ stay.host.fullname }}</h2>
         <div class="capacities">
           <h2 class="capacity guest-capacity">{{ stay.capacity }} guests <span class="bullet">•</span></h2>
           <h2 class="capacity bedrooms-capacity">{{ stay.bedrooms }} bedrooms <span class="bullet">•</span>

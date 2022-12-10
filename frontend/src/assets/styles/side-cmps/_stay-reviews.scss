@@ -1,39 +1,81 @@
-.stay-details-reviews{
+.stay-details-reviews {
   width: 100%;
   padding-bottom: 3rem;
-  border-top:1px solid rgb(210, 210, 210);
+  border-top: 1px solid rgb(210, 210, 210);
   padding-top: 3.15rem;
-  .previewContainer{
+  .previewContainer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
-  .reviewPreview{
+
+  .reviewPreview {
     padding-inline-end: 10%;
-    padding-block: 2rem;
+    padding-block: 1.5rem;
     width: 50%;
   }
-  h3{
+
+  h3 {
     font-size: 1.4rem;
     letter-spacing: 0.9px;
     padding-bottom: 4rem;
   }
-  .star{
+
+  .star {
     margin-inline: 0.35rem;
     width: 1rem;
   }
-  .bullet{
+
+  .bullet {
     padding-inline: 0.4rem;
   }
-  .reviewerImg{
+
+  .reviewerImg {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
-    object-fit: cover ;
+    object-fit: cover;
     margin-inline-end: 1rem;
+    
   }
-  .reviewInsight{
+
+  .reviewInsight {
     margin-top: 0.8rem;
     font-size: 1rem;
+    max-height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .reviewsBtn {
+    position: relative;
+    top: 2.7rem;
+    right: 0.55rem;
+    font-family: cereal-medium;
+    font-size: 1rem;
+    border-radius: 0.45rem;
+    color: black;
+    background-color: white;
+    border: 1px black solid;
+    padding: 0.77rem 1.4rem;
+    cursor: pointer;
+
+    &:active {
+      scale: 0.97;
+    }
+  }
+  .reviewTime{
+    color: rgb(113,113,113);
+    font-size: 0.84rem;
+    margin-top: 0.5rem;
+    font-family: cereal-semi-light;
+    font-weight: 100;
+  }
+  h4{
+    font-size: 0.98rem;
+    font-family: cereal-semi-light;
   }
 }

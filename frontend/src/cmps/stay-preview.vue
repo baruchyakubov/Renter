@@ -1,6 +1,6 @@
 <template>
   <section @click="goToDetails" class="stay-preview" v-if="stay">
-    <images-carusel style=" border-radius: 1.7vh; " :images="stay.imgUrls" :loop="false"></images-carusel>
+    <images-carusel :stay=stay style=" border-radius: 1.7vh; " :images="stay.imgUrls" :loop="false"></images-carusel>
     <section style="padding:0; margin-top: 10px;" class="flex-box space-between">
       <div class="details">
         <h1>{{ stay.name }}</h1>
@@ -37,7 +37,7 @@ export default {
       this.stay.reviews.forEach(review => {
         ratingSum += review.rate
       })
-      const average = (ratingSum / this.stay.reviews.length).toString().slice(0, 3)
+      const average = (ratingSum / this.stay.reviews.length).toString().slice(0, 4)
       if (average === 4 || average === 5 || average === 3) return average + '.0'
       else return average
     }

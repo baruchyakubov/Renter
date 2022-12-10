@@ -1,10 +1,13 @@
 <template>
-  <section class="container home main-container">
-    <user-modal v-if="isUserModal" @closeModal="closeModal"></user-modal>
-    <user-msg />
-    <app-header @openModal="openModal" />
-    <router-view />
-  </section>
+  <div class="main-div">
+    <section class="container home main-container">
+      <user-modal v-if="isUserModal" @closeModal="closeModal"></user-modal>
+      <user-msg />
+      <app-header @openModal="openModal" />
+      <router-view />
+    </section>
+    <app-footer ref="infiniteScrollTrigger" id="scrollTrigger"></app-footer>
+  </div>
 </template>
 
 <script>
@@ -36,7 +39,6 @@ export default {
     eventBus.on('setFilterByPage', this.setFilterByPage)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
-    console.log('Vue App created')
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
   },
@@ -55,6 +57,7 @@ export default {
       this.isUserModal = true
     },
     setFilterByLabel(label) {
+      this.filterBy.page = 1
       this.filterBy.label = label
       console.log(this.filterBy);
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })

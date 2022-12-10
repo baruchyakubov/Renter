@@ -22,7 +22,7 @@ window.cs = stayService
 async function query(filterBy = { country: '', label: '' , guestsCount: 0}) {
     return httpService.get(STORAGE_KEY, filterBy)
 }
-function getById(stayId) {
+async function getById(stayId) {
     return httpService.get(`stay/${stayId}`)
 }
 
