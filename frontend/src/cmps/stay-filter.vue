@@ -10,14 +10,14 @@ import filterCarousel from './filter-carousel.vue';
 export default {
   data(){
     return{
-      filters:[{name:'New' , icon:'public/New.jpg'}, {name:'Top of the world' , icon:'public/top-of-the-world.jpg'},
-      {name:'Trending' , icon:'public/Trending.jpg'},{name:'Adapted' , icon:'public/Adapted.jpg'},
-      {name:'Play' , icon:'public/Play.jpg'},{name:'Private rooms' , icon:'public/Private-rooms.jpg'},
-      {name:'OMG!' , icon:'public/OMG.jpg'},{name:'Amazing views' , icon:'public/Amazing-views.jpg'},
-      {name:'Cabins' , icon:'public/Cabins.jpg'},{name:'Castles' , icon:'public/Castles.jpg'},
-      {name:'Mansions' , icon:'public/Mansions.jpg'},{name:'Iconic cities' , icon:'public/Iconic-cities.jpg'},
-      {name:'Design' , icon:'public/Design.jpg'},{name:'Tropical' , icon:'public/Tropical.jpg'},
-      {name:'Treehouses' , icon:'public/Treehouses.jpg'} , {name:'Tiny homes' , icon:'public/Tiny-homes.jpg'}]
+      filters:[{name:'New' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595632/ibufiq6z0vj5kq4dhyxs.png'}, {name:'Top of the world' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595654/kqwmmgdvmwv4xu4gfq6z.png'},
+      {name:'Trending' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595678/kotmjy6tgonwt4wybjoj.png'},{name:'Adapted' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595705/w08nla69ppuga3rksqvp.png'},
+      {name:'Play' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595736/vsnml1uldjcq2ymqrvcd.png'},{name:'Private rooms' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595755/xzbyyee7t21rdgti9ppb.png'},
+      {name:'OMG!' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595774/oyfrhvsmhlcmf5mzrpzb.png'},{name:'Amazing views' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595800/fosfqnjervtxbooseyuf.png'},
+      {name:'Cabins' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595822/hagy7vvw2ls5flm4n2w6.png'},{name:'Castles' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595843/ats1zakdilbihgtek765.png'},
+      {name:'Mansions' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595863/aoljpop1t8xyr5yrdpvv.png'},{name:'Iconic cities' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595893/nzetygmqxwmekwmwx4g3.png'},
+      {name:'Design' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595913/hid9dlqavfztfnhsuafz.png'},{name:'Tropical' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595931/szvi8yz2nziimjh1r1dm.png'},
+      {name:'Treehouses' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595955/hjg4g97owsmvpwbpgem0.png'} , {name:'Tiny homes' , icon:'https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670595978/q8wkbsbs1xq8xx1rnkfu.png'}]
     }
   },
   methods:{

@@ -11,6 +11,15 @@ async function query(filterBy) {
   return stays
 }
 
+async function querySearchedStays(country){
+  const criteria = _buildCriteria({country})
+  const collection = await dbService.getCollection('stay')
+  var stays = await collection.find(criteria).limit(5).toArray()
+  return stays.map(stay  =>{
+    return {country:stay.loc.country , city: stay.loc.city , name:stay.name}
+  })
+}
+
 async function getById(stayId) {
   const collection = await dbService.getCollection('stay')
   const stay = collection.findOne({ _id: ObjectId(stayId) })
@@ -73,7 +82,10 @@ function _buildCriteria(filterBy) {
     const labelCriteria = { $regex: filterBy.label, $options: 'i' }
     criteria.type = labelCriteria
   }
+  if(filterBy.capacity){
     criteria.capacity = {$gt: +filterBy.guestsCount}
+  }
+  
   return criteria
 }
 
@@ -85,4 +97,5 @@ module.exports = {
   update,
   addReview,
   addMsg,
+  querySearchedStays
 }

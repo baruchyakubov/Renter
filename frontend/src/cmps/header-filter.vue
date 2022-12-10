@@ -2,7 +2,7 @@
     <section class="search">
         <div class="search-input" tabindex="1">
             <h1>Where</h1>
-            <input ref="myinput" v-model="country" type="search" placeholder="Search destinations">
+            <input @input="getCountryList" ref="myinput" v-model="country" type="search" placeholder="Search destinations">
         </div>
         <span class="sep seperator1"></span>
         <div class="check-in" tabindex="1">
@@ -48,13 +48,16 @@
     </section>
     <guest-modal v-click-outside="toggleGuestModal" @increment="increment" @decrement="decrement"
         @toggleModal="toggleGuestModal" :counter="counter" v-if="isGuestsShown"></guest-modal>
-        <country-modal @setFilterSearch="setFilterSearch"  v-click-outside="toggleCountryModal" v-if="isCountryModalShown"></country-modal>
+        <country-modal @setFilterSearch="setFilterSearch"  v-click-outside="toggleCountryModal" v-if="isCountryModalShown && !isListModalShown "></country-modal>
+        <search-list-modal  v-if="isListModalShown"></search-list-modal>
 </template>
 
 <script>
+import { utilService } from '../services/util.service'
 import countryModal from '../side-cmps/country-modal.vue'
 import guestModal from '../side-cmps/search-guest-modal.vue'
 import calendar from '../side-cmps/calendar.vue'
+import searchListModal from '../side-cmps/search-list-modal.vue'
 export default {
     data() {
         return {
@@ -67,10 +70,12 @@ export default {
             totalGuestsCount: 0,
             isGuestsShown: false,
             isCountryModalShown: false,
+            isListModalShown: false,
             country: ''
         }
     },
     mounted() {
+        this.getCountryList = utilService.debounce(this.getCountryList)
         window.addEventListener('scroll', () => {
             this.$emit('toggleFilter')
         })
@@ -116,6 +121,10 @@ export default {
             document.querySelector('.seperator1').style.backgroundColor = '#DDDDDD'
         })
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("click", (event) => {
+            if(this.isListModalShown){
+                this.isListModalShown = false
+                this.isCountryModalShown = false
+            } 
             if (this.isGuestsShown) this.toggleGuestModal()
             document.querySelector('.check-in').classList.add('focus')
             document.querySelector('.check-out').classList.remove('focus')
@@ -125,6 +134,7 @@ export default {
             event.preventDefault()
         })
         document.querySelector('.el-date-editor :nth-child(4)').addEventListener("click", (event) => {
+            if(this.isListModalShown )this.isListModalShown = false
             if (this.isGuestsShown) this.toggleGuestModal()
             document.querySelector('.check-out').classList.add('focus')
             document.querySelector('.check-in').classList.remove('focus')
@@ -134,13 +144,17 @@ export default {
             event.preventDefault()
         })
         document.querySelector('.add-guests').addEventListener("click", () => {
+            if(this.isListModalShown){
+                this.isListModalShown = false
+                this.isCountryModalShown = false
+            } 
             document.querySelector('.check-out').classList.remove('focus')
             document.querySelector('.check-in').classList.remove('focus')
             document.querySelector('.search-input').classList.remove('focus')
         })
         document.querySelector('.search-input').addEventListener("click", () => {
             if (this.isGuestsShown) this.toggleGuestModal()
-            if(!this.isCountryModalShown )this.toggleCountryModal()
+            if(!this.isCountryModalShown)this.toggleCountryModal()
             document.querySelector('.check-out').classList.remove('focus')
             document.querySelector('.check-in').classList.remove('focus')
             document.querySelector('.add-guests').classList.remove('focus')
@@ -160,6 +174,10 @@ export default {
             e.stopPropagation()
             sessionStorage.setItem('filter', JSON.stringify({ dates: this.dates, guests: this.counter }))
             this.$emit('setFilterByTxt', { country: this.country, guestsCount: this.totalGuestsCount })
+        },
+        getCountryList(){
+            this.isListModalShown = (this.country === '') ? false : true
+            this.$store.dispatch({ type: 'getCountryList', txt: this.country })
         },
         setFilterSearch(region){
             this.country = region.name 
@@ -230,7 +248,8 @@ export default {
     components: {
         calendar,
         guestModal,
-        countryModal
+        countryModal,
+        searchListModal
     }
 }
 </script>
