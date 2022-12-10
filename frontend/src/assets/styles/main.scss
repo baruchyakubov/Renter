@@ -17,6 +17,7 @@
 // Components
 @import "cmps/stay-app";
 @import "cmps/app-header";
+@import "cmps/app-footer";
 @import "cmps/user-msg";
 @import "cmps/review-list";
 @import "cmps/stay-list";
@@ -37,3 +38,5 @@
 @import "cmps/filter-carousel";
 @import "cmps/country-modal";
 @import "cmps/search-list-modal";
+@import "side-cmps/search-guest-modal";
+@import "side-cmps/wishlist";

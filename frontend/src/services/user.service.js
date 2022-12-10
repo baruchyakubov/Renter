@@ -1,5 +1,5 @@
 import { storageService } from './async-storage.service'
-// import { httpService } from './http.service'
+import { httpService } from './http.service'
 import { store } from '../store/store'
 import { socketService, SOCKET_EVENT_USER_UPDATED, SOCKET_EMIT_USER_WATCH } from './socket.service'
 import { showSuccessMsg } from './event-bus.service'
@@ -43,8 +43,8 @@ function remove(userId) {
 }
 
 async function update(user) {
-    await storageService.put('user', user)
-    // user = await httpService.put(`user/${user._id}`, user)
+    // await storageService.put('user', user)
+    user = await httpService.put(`user/${user._id}`, user)
     // Handle case in which admin updates other user's details
     if (authService.getLoggedinUser()._id === user._id) authService.saveLocalUser(user)
     return user

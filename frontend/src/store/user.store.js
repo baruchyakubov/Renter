@@ -35,6 +35,9 @@ export const userStore = {
         setUsers(state, { users }) {
             state.users = users
         },
+        setUser(state, { user }) {
+            state.loggedinUser = user
+        },
         removeUser(state, { userId }) {
             state.users = state.users.filter(user => user._id !== userId)
         },
@@ -105,6 +108,7 @@ export const userStore = {
         },
         async updateUser({ commit }, { user }) {
             try {
+                console.log(user);
                 user = await userService.update(user)
                 commit({ type: 'setUser', user })
             } catch (err) {

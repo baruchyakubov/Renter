@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import backOffice from './views/back-office.vue'
 import home from './views/home.vue'
+import wishlist from './views/wishlist.vue'
 import chat from './views/chat.vue'
 import stayApp from './views/stay-app.vue'
 import reviewApp from './views/review-app.vue'
@@ -47,6 +48,11 @@ const routes = [
     path: '/backOffice',
     name: 'back-office',
     component: backOffice
+  },
+  {
+    path: '/wishlist',
+    name: 'wishlist',
+    component: wishlist
   }
 ]
 

@@ -1,0 +1,13 @@
+.guestsModalSearch{
+  border-radius: 2rem;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
+  padding: 1rem 1rem;
+  min-width: 25.5rem;
+  .adultDiv, .childrenDiv ,.infantsDiv,.petsDiv{
+    border-bottom: 1px solid rgb(235, 235, 235);
+    padding-bottom: 1.2rem;
+    p{
+      color: rgb(113,113,113);
+    }
+  }
+}

@@ -41,7 +41,7 @@
         <div class="counter">
         </div>
       </div>
-      <h4 class="closeBtn" @click="$emit('toggleModal')">Close</h4>
+      <!-- <h4 class="closeBtn" @click="$emit('toggleModal')">Close</h4> -->
     </div>
 </template>
 <script>

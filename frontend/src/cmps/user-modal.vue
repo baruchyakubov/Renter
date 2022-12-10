@@ -18,11 +18,14 @@
       </div>
     </div>
     <p class="disclaimer">We'll call or text you to confirm your number. Standard message and data rates apply. Privacy Policy</p>
-    <button v-if="signedup" @click="signup">Sign up</button>
-    <button v-if="!signedup" @click="login">Login</button>
+    <!-- <button v-if="signedup" @click="signup">Sign up</button>
+    <button v-if="!signedup" @click="login">Login</button> -->
+    <reactive-btn :content='"Login"' v-if="!signedup" @click="login"></reactive-btn>  
+    <reactive-btn :content='"Sign up"' @click="signup" v-if="signedup"></reactive-btn>
   </div>
 </template>
 <script>
+import reactiveBtn from '../side-cmps/reactive-btn.vue'
 export default {
   data(){
     return{
@@ -59,6 +62,9 @@ export default {
     signedup(){
       return this.$store.getters.isLogged
     }
+  }
+  ,components:{
+    reactiveBtn
   }
 }
 </script>

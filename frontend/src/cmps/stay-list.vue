@@ -4,7 +4,7 @@
             <stay-preview :stay="stay"></stay-preview>
         </li>
     </ul>
-    <div ref="infiniteScrollTrigger" id="scrollTrigger"></div>
+    <!-- <div ></div> -->
 </template>
 
 <script>

@@ -11,7 +11,7 @@
       </div>
       <div class="saveShare flex-box">
         <p><share-svg></share-svg> <span>Share</span></p>
-        <p><save-svg></save-svg> <span>Save</span></p>
+        <p @click="saveStay"><save-svg></save-svg> <span>Save</span></p>
       </div>
     </div>
     <div class="stay-details-imgs-container">
@@ -35,6 +35,13 @@ export default {
     this.isSuperHost = this.isSuper()
   },
   methods: {
+    saveStay(e){
+      e.stopPropagation()
+      const user = JSON.parse(JSON.stringify(this.$store.getters.loggedinUser)) 
+      user.wishList.push(this.stay._id)
+      this.$store.dispatch({type:"updateUser",user})
+      showSuccessMsg('Added stay to wishlist')
+    },
     isSuper() {
       let ratingSum = 0
       this.stay.reviews.forEach(review => {

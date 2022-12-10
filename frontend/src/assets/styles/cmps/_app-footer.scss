@@ -1,0 +1,19 @@
+.app-footer{
+  height: 5rem;
+  width: 100%;
+  background-color: gray;
+  border-top: 1px solid rgb(221, 221, 221) !important;
+  margin-top: 2rem;
+  background-color: rgb(255, 255, 255);
+  padding-inline: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p{
+    font-family: cereal-semi-light;
+  }
+  .svgs{
+    display: flex;
+    gap: 1.5rem;
+  }
+}
