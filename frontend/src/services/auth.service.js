@@ -1,4 +1,3 @@
-import { stayService } from './stay.service'
 import { httpService } from './http.service'
 import { socketService } from './socket.service'
 
@@ -17,9 +16,7 @@ async function login(userCred) {
         const user = await httpService.post('auth/login', userCred)
         if (user) {
             socketService.login(user._id)
-             const User = await _checkIfAdmin(user)
-            console.log(User);
-            return saveLocalUser(User)
+            return saveLocalUser(user)
         } else throw 'User does not match'
 
     }
@@ -31,7 +28,7 @@ async function login(userCred) {
 async function signup(userCred) {
     if (!userCred.imgUrl) userCred.imgUrl = 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
     const user = await httpService.post('auth/signup', userCred)
-    // socketService.login(user._id)
+    socketService.login(user._id)
     return saveLocalUser(user)
 }
 
@@ -50,21 +47,4 @@ function saveLocalUser(user) {
     user = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl ,isAdmin:user.isAdmin,wishList:user.wishList}
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
     return user
-}
-
-async function _checkIfAdmin(user) {
-    try {
-        const stays = await stayService.query()
-        console.log(stays);
-        var isAdmin = stays.find(stay => {
-            return stay.host._id === user._id
-        })
-        user.isAdmin = (isAdmin) ? true : false
-        console.log(user);
-        return user
-    }
-    catch (err) {
-        throw err
-    }
-
 }

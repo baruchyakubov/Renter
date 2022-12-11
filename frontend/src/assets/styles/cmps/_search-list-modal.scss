@@ -1,0 +1,38 @@
+.search-list-modal {
+    position: relative;
+    top: 8rem;
+    right: 15rem;
+    width: 361px;
+    height: 384px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
+    margin-top: 12px;
+    padding: 16px 8px 24px;
+    ul{
+        padding: 0;
+        padding-inline-start: 8px;
+    }
+    .search-item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 8px 32px 8px 24px;
+        p{
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: rgb(34, 34, 34) ;
+        }
+        .search-icon {
+            min-width: 48px;
+            aspect-ratio: 1/1;
+            border-radius: rem(12px);
+            background-color: rgb(235, 235, 235);
+            margin-inline-end: rem(16px);
+        }
+        &:hover{
+            background-color: rgb(247, 247, 247);
+        }
+    }
+}

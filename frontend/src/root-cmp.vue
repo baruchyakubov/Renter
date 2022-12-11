@@ -20,6 +20,7 @@ import { authService } from './services/auth.service'
 import { userService } from './services/user.service'
 import userModal from './cmps/user-modal.vue'
 import { socketService, SOCKET_EVENT_SEND_ORDER } from './services/socket.service'
+import { showSuccessMsg } from './services/event-bus.service'
 
 export default {
   data() {
@@ -36,6 +37,7 @@ export default {
   created() {
     sessionStorage.removeItem('filter');
     socketService.on(SOCKET_EVENT_SEND_ORDER, this.addOrder)
+    socketService.on('set-order-status', this.setOrderStatus)
     eventBus.on('setFilterByPage', this.setFilterByPage)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
@@ -47,6 +49,11 @@ export default {
   computed: {
   },
   methods: {
+    setOrderStatus(order) {
+      showSuccessMsg(`your order has been ${order.status}`)
+      // if (this.$router.currentRoute.path !== '/userOrders') return
+      this.$store.commit({ type: 'changeOrderStatusToUser', order: { ...order } })
+    },
     addOrder(order) {
       this.$store.commit({ type: 'addOrder', order: { ...order } })
     },

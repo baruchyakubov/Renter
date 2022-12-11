@@ -3,25 +3,36 @@ const bcrypt = require('bcrypt')
 const userService = require('../user/user.service')
 const logger = require('../../services/logger.service')
 const cryptr = new Cryptr(process.env.SECRET1 || 'Secret-Puk-1234')
+const dbService = require('../../services/db.service')
+const ObjectId = require('mongodb').ObjectId
 
 async function login(username, password) {
   logger.debug(`auth.service - login with username: ${username}`)
 
   const user = await userService.getByUsername(username)
   if (!user) return Promise.reject('Invalid username or password')
+
   // TODO: un-comment for real login
   // const match = await bcrypt.compare(password, user.password)
   // if (!match) return Promise.reject('Invalid username or password')
-
+  await _checkIfAdmin(user)
   delete user.password
   user._id = user._id.toString()
   return user
 }
 
-// (async ()=>{
-//     await signup('bubu', '123', 'Bubu Bi')
-//     await signup('mumu', '123', 'Mumu Maha')
-// })()
+async function _checkIfAdmin(user) {
+  try {
+    const collection = await dbService.getCollection('stay')
+    console.log(user._id);
+    const stay = await collection.findOne({'host._id': ObjectId(user._id) })
+    if (stay) user.isAdmin = true
+    else user.isAdmin = false
+  }
+  catch (err){
+    console.log(err);
+  }
+}
 
 async function signup({ username, password, fullname, imgUrl, isAdmin }) {
   const saltRounds = 10

@@ -10,19 +10,18 @@ const {
   updateStay,
   removeStay,
   addReview,
+  getSearchedStays
 } = require('./stay.controller')
 const router = express.Router()
 
-// middleware that is specific to this router
-// router.use(requireAuth)
-
 router.get('/', getStays)
+router.get('/searchedStays', getSearchedStays)
 router.get('/:id', getStayById)
 router.post('/', addStay) //,
-// router.post('/', requireAuth, requireAdmin, addStay)
+
 router.put('/:id', requireAuth, updateStay)
-// router.put('/:id', requireAuth, requireAdmin, updateStay)
-router.delete('/:id', removeStay) //requireAuth, requireAdmin,
+
+router.delete('/:id', removeStay) 
 router.post('/:id/review', addReview)
 
 module.exports = router

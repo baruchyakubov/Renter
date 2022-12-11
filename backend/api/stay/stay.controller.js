@@ -15,6 +15,19 @@ async function getStays(req, res) {
   }
 }
 
+async function getSearchedStays(req, res){
+  try{
+    console.log('heyyyy');
+    const queryParams = req.query
+    console.log(queryParams);
+    const stays = await stayService.querySearchedStays(queryParams['0'])
+    res.json(stays)
+  } catch (err) {
+    console.log(err);
+    res.status(404).send(err)
+  }
+}
+
 async function getStayById(req, res) {
   try {
     const stayId = req.params.id
@@ -75,4 +88,5 @@ module.exports = {
   updateStay,
   removeStay,
   addReview,
+  getSearchedStays
 }

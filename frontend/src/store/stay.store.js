@@ -37,7 +37,8 @@ export const stayStore = {
             country:'',
             guestsCount:0,
             page:1
-        }
+        },
+        searchCountryList: []
     },
     getters: {
         stays({ stays }) {
@@ -45,9 +46,15 @@ export const stayStore = {
         },
         getCurrStay({ currStay }) {
             return currStay
+        },
+        searchCountryList({ searchCountryList }){
+            return searchCountryList
         }
     },
     mutations: {
+        resetSearchList(state){
+            state.searchCountryList = []
+        },
         setCurrStay(state, { stay }) {
             state.currStay = stay
         },
@@ -71,9 +78,20 @@ export const stayStore = {
         },
         setFilter(state, { filter }) {
             state.filterBy = filter
+        },
+        setCountryList(state , { searchList }){
+            state.searchCountryList = searchList
         }
     },
     actions: {
+        async getCountryList({ commit }, { txt }){
+            try{
+                const searchList = await stayService.getSearchedStays(txt)
+                commit({ type: 'setCountryList', searchList })
+            }catch(err){
+                console.log('failed to get list' , err)
+            }
+        },
         async setCurrStay(context, { stayId }) {
             try {
                 const currStay = await stayService.getById(stayId)

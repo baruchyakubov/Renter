@@ -1,6 +1,6 @@
 <template>
     <div class="order-preview">
-        <img src="https://robohash.org/57515702?set=set1" alt="">
+        <img src="https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg" alt="">
         <div class="order-details">
             <h1>{{ order.buyer.fullname }}</h1>
             <p class="date">Reserved at: {{ dateFormat }}</p>

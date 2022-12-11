@@ -7,7 +7,8 @@ async function getOrders(req, res) {
   try {
 
     const loggedinUser = authService.validateToken(req.cookies.loginToken)
-    const orders = await orderService.query(loggedinUser._id)
+    console.log(loggedinUser);
+    const orders = (!loggedinUser.isAdmin) ? await orderService.queryUserOrders(loggedinUser._id) : await orderService.query(loggedinUser._id)
     res.json(orders)
   } catch (err) {
     res.status(404).send(err)
@@ -32,6 +33,7 @@ async function updateOrder(req, res) {
   try {
     const order = req.body
     const updatedOrder = await orderService.update(order)
+    socketService.emitToUser({ type: 'set-order-status', data: order, userId: order.buyer._id })
     res.json(updatedOrder)
   } catch (err) {
     res.status(500).send(err)

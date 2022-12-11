@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 8.12.2022, 19:05:19 - INFO - Server is running on port: 3030 
 8.12.2022, 19:05:22 - INFO - Server is running on port: 3030 
 8.12.2022, 20:41:35 - DEBUG - auth.service - login with username: 80344827 
@@ -396,3 +397,311 @@
 10.12.2022, 20:28:32 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":[]} 
 10.12.2022, 20:28:32 - DEBUG - Setting (pTfDTLRebnstdVMIAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
 10.12.2022, 20:30:05 - DEBUG - Setting (cS9vqQwNSExGsh0oAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+=======
+10.12.2022, 20:15:16 - INFO - Server is running on port: 3030 
+10.12.2022, 20:15:20 - DEBUG - Setting (R3f6l2oETa18qSXIAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:20:12 - DEBUG - Setting (LZSzNgyERE7HnkqtAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:21:16 - DEBUG - Setting (hTOtrNmv-5fEQVQ4AAAF) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:21:22 - DEBUG - Setting (Cj6aXNlhrJE2jJfOAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:23:36 - DEBUG - Setting (Jo5hRL_BZp_XHSERAAAJ) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:29:21 - DEBUG - Setting (iupp7srDZ2VNwAadAAAL) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:30:23 - DEBUG - Setting (afKMfd1vGrRMUC1QAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:47:41 - DEBUG - user logged out succesfully 
+10.12.2022, 20:48:17 - DEBUG - auth.service - login with username: 60712702 
+10.12.2022, 20:48:18 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0"]} 
+10.12.2022, 20:48:18 - DEBUG - Setting (afKMfd1vGrRMUC1QAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:49:26 - DEBUG - Setting (YZEeIdFqoZwlxKMMAAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:49:52 - DEBUG - user logged out succesfully 
+10.12.2022, 20:56:55 - DEBUG - auth.service - login with username: 60712702 
+10.12.2022, 20:56:55 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"]} 
+10.12.2022, 20:56:55 - DEBUG - Setting (JOpI6jbEa0yO9ycdAAAR) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 20:57:16 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 20:57:17 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b"]} 
+10.12.2022, 20:57:17 - DEBUG - Setting (YZEeIdFqoZwlxKMMAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 20:57:54 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a81c0d 
+10.12.2022, 20:58:27 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+10.12.2022, 20:59:51 - DEBUG - Setting (ptK-VLBDc2A_tG2IAAAT) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 21:01:07 - DEBUG - Setting (IS3uDWnoPouVOakkAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 21:04:09 - DEBUG - Setting (tj7zSuxVFgW1cgpRAAAX) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 21:12:21 - DEBUG - user logged out succesfully 
+10.12.2022, 21:21:19 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 21:21:19 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 21:21:19 - DEBUG - Setting (tj7zSuxVFgW1cgpRAAAX) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 21:22:14 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a8207b 
+10.12.2022, 21:23:15 - DEBUG - user logged out succesfully 
+10.12.2022, 21:29:24 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 21:29:24 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 21:29:24 - DEBUG - Setting (aFikbGMas9JlKh7zAAAb) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 21:30:18 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+10.12.2022, 21:30:46 - DEBUG - user logged out succesfully 
+10.12.2022, 22:55:16 - DEBUG - Setting (qsHfa0D4jt0y5eTCAAAg) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 22:56:37 - INFO - Server is running on port: 3030 
+10.12.2022, 22:56:41 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:56:41 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:10 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:10 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:11 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:11 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:12 - DEBUG - Setting (DwZqgarkjLuhFmMbAAAJ) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 22:57:34 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:34 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:40 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:57:40 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:58:00 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:58:00 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:58:34 - INFO - Server is running on port: 3030 
+10.12.2022, 22:58:40 - ERROR - Cannot Connect to DB | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 22:58:40 - ERROR - Failed to get Mongo collection | {"code":"ECONNREFUSED","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.a9b3eth.mongodb.net"} 
+10.12.2022, 23:00:29 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:00:30 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:00:30 - DEBUG - Setting (4SgmLSuQaPXJrzZgAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:14:51 - INFO - Server is running on port: 3030 
+10.12.2022, 23:15:54 - DEBUG - Setting (FAmqscFb2oZ3DeOWAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:15:58 - DEBUG - user logged out succesfully 
+10.12.2022, 23:16:04 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:16:04 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":false} 
+10.12.2022, 23:16:04 - DEBUG - Setting (FAmqscFb2oZ3DeOWAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:16:10 - DEBUG - user logged out succesfully 
+10.12.2022, 23:17:14 - INFO - Server is running on port: 3030 
+10.12.2022, 23:17:30 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:17:32 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:17:32 - DEBUG - Setting (PmOtSfAl57_mGq00AAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:17:38 - DEBUG - user logged out succesfully 
+10.12.2022, 23:18:19 - INFO - Server is running on port: 3030 
+10.12.2022, 23:18:25 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:18:26 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:18:26 - DEBUG - Setting (Kg5aXdDZMGHBzJDKAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:19:14 - INFO - Server is running on port: 3030 
+10.12.2022, 23:19:17 - DEBUG - user logged out succesfully 
+10.12.2022, 23:19:22 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:19:23 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:19:23 - DEBUG - Setting (5xMCHGkRXB6kJA2BAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:20:50 - INFO - Server is running on port: 3030 
+10.12.2022, 23:20:52 - DEBUG - user logged out succesfully 
+10.12.2022, 23:20:58 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:21:01 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:21:01 - DEBUG - Setting (Gv51AdRCP1YlDQBOAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:27:05 - INFO - Server is running on port: 3030 
+10.12.2022, 23:27:06 - DEBUG - user logged out succesfully 
+10.12.2022, 23:27:13 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:27:15 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:27:15 - DEBUG - Setting (xXSXhqleVhPeeKolAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:27:32 - DEBUG - user logged out succesfully 
+10.12.2022, 23:30:52 - INFO - Server is running on port: 3030 
+10.12.2022, 23:30:56 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:30:57 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:30:57 - DEBUG - Setting (O8RF_cArGeqM9a78AAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:33:04 - INFO - Server is running on port: 3030 
+10.12.2022, 23:33:09 - DEBUG - user logged out succesfully 
+10.12.2022, 23:33:15 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:33:16 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:33:16 - DEBUG - Setting (ocBHn7V-xpVRg-yWAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:33:28 - DEBUG - user logged out succesfully 
+10.12.2022, 23:34:35 - INFO - Server is running on port: 3030 
+10.12.2022, 23:34:45 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:34:46 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:34:46 - DEBUG - Setting (P__o4EsEUOvhid9fAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:35:04 - INFO - Server is running on port: 3030 
+10.12.2022, 23:35:07 - DEBUG - user logged out succesfully 
+10.12.2022, 23:35:16 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:35:17 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:35:17 - DEBUG - Setting (aY1PXw5ZiaxD3bMbAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:39:06 - INFO - Server is running on port: 3030 
+10.12.2022, 23:39:09 - DEBUG - user logged out succesfully 
+10.12.2022, 23:39:15 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:39:17 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:39:17 - DEBUG - Setting (zQjqA9Sy5i0uEmXVAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:39:22 - DEBUG - user logged out succesfully 
+10.12.2022, 23:39:38 - INFO - Server is running on port: 3030 
+10.12.2022, 23:39:43 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:39:44 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:39:44 - DEBUG - Setting (tF4_tIFRZgLkKZBCAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:40:00 - INFO - Server is running on port: 3030 
+10.12.2022, 23:40:01 - DEBUG - user logged out succesfully 
+10.12.2022, 23:40:05 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:40:06 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:40:07 - DEBUG - Setting (TShSIWKsuxmLzCYjAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:40:35 - INFO - Server is running on port: 3030 
+10.12.2022, 23:40:37 - DEBUG - user logged out succesfully 
+10.12.2022, 23:40:55 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:40:56 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:40:56 - DEBUG - Setting (seU8ngscXoMjK0JOAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:42:14 - INFO - Server is running on port: 3030 
+10.12.2022, 23:42:17 - DEBUG - user logged out succesfully 
+10.12.2022, 23:42:22 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:42:24 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:42:24 - DEBUG - Setting (alpXSxPVDYLB4aJCAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:42:54 - INFO - Server is running on port: 3030 
+10.12.2022, 23:43:54 - INFO - Server is running on port: 3030 
+10.12.2022, 23:43:55 - DEBUG - user logged out succesfully 
+10.12.2022, 23:44:00 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:44:01 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:44:01 - DEBUG - Setting (Bw3gSaRq9AUdfM9cAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:44:27 - DEBUG - user logged out succesfully 
+10.12.2022, 23:45:12 - INFO - Server is running on port: 3030 
+10.12.2022, 23:45:19 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:45:21 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:45:21 - DEBUG - Setting (f5L4SgKz4urPTNxWAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:46:41 - INFO - Server is running on port: 3030 
+10.12.2022, 23:46:42 - DEBUG - user logged out succesfully 
+10.12.2022, 23:46:48 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:46:49 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:46:49 - DEBUG - Setting (JWf4v26OdvJQZULWAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:52:06 - INFO - Server is running on port: 3030 
+10.12.2022, 23:52:07 - DEBUG - user logged out succesfully 
+10.12.2022, 23:52:13 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:52:15 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:52:15 - DEBUG - Setting (3M7qc6_NzKzLYhRhAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:52:56 - DEBUG - user logged out succesfully 
+10.12.2022, 23:53:04 - DEBUG - auth.service - login with username: 60712702 
+10.12.2022, 23:53:04 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"]} 
+10.12.2022, 23:53:04 - DEBUG - Setting (3M7qc6_NzKzLYhRhAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 23:53:07 - DEBUG - user logged out succesfully 
+10.12.2022, 23:53:12 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:53:12 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:53:12 - DEBUG - Setting (3M7qc6_NzKzLYhRhAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:53:39 - INFO - Server is running on port: 3030 
+10.12.2022, 23:53:41 - DEBUG - user logged out succesfully 
+10.12.2022, 23:53:48 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:53:50 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"]} 
+10.12.2022, 23:53:50 - DEBUG - Setting (oCtAdwkeSxlJowQiAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:54:09 - INFO - Server is running on port: 3030 
+10.12.2022, 23:54:12 - DEBUG - user logged out succesfully 
+10.12.2022, 23:54:17 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:54:18 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+10.12.2022, 23:54:18 - DEBUG - Setting (9-8gTBuwCRMunfHUAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:54:28 - INFO - Server is running on port: 3030 
+10.12.2022, 23:54:38 - DEBUG - user logged out succesfully 
+10.12.2022, 23:54:43 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:54:44 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+10.12.2022, 23:54:44 - DEBUG - Setting (xEELFIoPcQCk3cUwAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+10.12.2022, 23:54:51 - DEBUG - user logged out succesfully 
+10.12.2022, 23:54:58 - DEBUG - auth.service - login with username: 60712702 
+10.12.2022, 23:54:58 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"],"isAdmin":false} 
+10.12.2022, 23:54:58 - DEBUG - Setting (xEELFIoPcQCk3cUwAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+10.12.2022, 23:55:02 - DEBUG - user logged out succesfully 
+10.12.2022, 23:57:57 - INFO - Server is running on port: 3030 
+10.12.2022, 23:58:04 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:58:06 - ERROR - Failed to Login Invalid username or password 
+10.12.2022, 23:59:37 - INFO - Server is running on port: 3030 
+10.12.2022, 23:59:55 - DEBUG - auth.service - login with username: 80344827 
+10.12.2022, 23:59:57 - ERROR - Failed to Login Invalid username or password 
+11.12.2022, 0:00:30 - INFO - Server is running on port: 3030 
+11.12.2022, 0:00:38 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 0:00:39 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 0:00:39 - DEBUG - Setting (cKddGoAg0-eL8Hp9AAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 0:00:51 - DEBUG - user logged out succesfully 
+11.12.2022, 0:01:37 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 0:01:37 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 0:01:37 - DEBUG - Setting (6whGNS-MC6I22RrxAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 0:01:43 - DEBUG - user logged out succesfully 
+11.12.2022, 0:03:57 - DEBUG - auth.service - signup with username: bar, fullname: bar 
+11.12.2022, 0:03:57 - ERROR - Failed to signup Username already taken 
+11.12.2022, 0:04:11 - DEBUG - auth.service - signup with username: bar, fullname: bar 
+11.12.2022, 0:04:12 - ERROR - Failed to signup Username already taken 
+11.12.2022, 0:04:22 - DEBUG - auth.service - signup with username: bar123, fullname: bar 
+11.12.2022, 0:04:23 - DEBUG - auth.route - new account created: {"username":"bar123","password":"$2b$10$mhiQPPWEcW2FD97l3mE4DO0rwk2J/Uu6pTQiE0KF412GPvdarGada","fullname":"bar","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","_id":"63950267ec243a50e443448b"} 
+11.12.2022, 0:04:23 - DEBUG - auth.service - login with username: bar123 
+11.12.2022, 0:04:23 - INFO - User signup: | {"_id":"63950267ec243a50e443448b","username":"bar123","fullname":"bar","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","isAdmin":false} 
+11.12.2022, 0:04:23 - DEBUG - Setting (gMA05srNw2Scugr9AAAJ) socket.userId = 63950267ec243a50e443448b 
+11.12.2022, 0:04:42 - DEBUG - user logged out succesfully 
+11.12.2022, 0:05:08 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 0:05:09 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 0:05:09 - DEBUG - Setting (gMA05srNw2Scugr9AAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 1:26:17 - DEBUG - Setting (Fq4-gpLSol3gvmW7AAAM) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 1:33:47 - DEBUG - user logged out succesfully 
+11.12.2022, 1:46:48 - DEBUG - auth.service - login with username: 60712702 
+11.12.2022, 1:46:48 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"],"isAdmin":false} 
+11.12.2022, 1:46:48 - DEBUG - Setting (C2XaLkHzI3C5rKIMAAAO) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 1:47:35 - DEBUG - Setting (UIY0mO-8-bDI-QkcAAAQ) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:02:39 - INFO - Server is running on port: 3030 
+11.12.2022, 2:03:00 - INFO - Server is running on port: 3030 
+11.12.2022, 2:03:07 - INFO - Server is running on port: 3030 
+11.12.2022, 2:03:12 - DEBUG - Setting (_pk-ZLZZ2Jf0vBtRAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:04:34 - INFO - Server is running on port: 3030 
+11.12.2022, 2:04:37 - DEBUG - Setting (9O2ypTjFqCR3Zs5vAAAC) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:05:41 - INFO - Server is running on port: 3030 
+11.12.2022, 2:05:44 - DEBUG - Setting (hOtE-SbnZynryU-TAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:06:04 - INFO - Server is running on port: 3030 
+11.12.2022, 2:06:05 - DEBUG - Setting (vIu6uiJ49XHSCbuaAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:06:33 - INFO - Server is running on port: 3030 
+11.12.2022, 2:06:36 - DEBUG - Setting (dtB7G1jH4NkxyQs4AAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:06:48 - INFO - Server is running on port: 3030 
+11.12.2022, 2:07:01 - INFO - Server is running on port: 3030 
+11.12.2022, 2:07:04 - DEBUG - Setting (5AQ8bEu45o4NJ_RHAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:09:49 - INFO - Server is running on port: 3030 
+11.12.2022, 2:09:54 - DEBUG - Setting (E9aTXXmT_ImPDPjGAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:12:10 - INFO - Server is running on port: 3030 
+11.12.2022, 2:12:15 - DEBUG - Setting (av1n-PR9QgJ0I--dAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:13:48 - DEBUG - Setting (V8Wez4AdOwSGRLq6AAAF) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:14:23 - DEBUG - Setting (M96llfY-zJWbBjpOAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:15:13 - DEBUG - Setting (ZKkD5dC_l7nXGb68AAAJ) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:15:49 - DEBUG - Setting (eSb_tRmjSnWrMI_AAAAL) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:19:11 - DEBUG - Setting (pRKmu0k9qbfhXuDcAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:47:39 - DEBUG - Setting (gmIdrYAwiuSDMXT1AAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 2:48:30 - DEBUG - Setting (SVW3zVEeHW5TpwouAAAR) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:03:26 - INFO - Server is running on port: 3030 
+11.12.2022, 3:11:14 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 3:11:15 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 3:11:15 - DEBUG - Setting (9-wpgGZ2g2ZvIUgHAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 3:14:03 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:22:16 - DEBUG - Setting (KP5JWamMsq-H0lTfAAAF) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:22:21 - DEBUG - Setting (Yd8mEQ7fEnYSklpBAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 3:28:16 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:29:38 - DEBUG - Setting (CS674E0-yyg2IjlwAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 3:29:40 - DEBUG - Setting (ORLUdTKz1tLlDnDDAAAL) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:31:30 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:32:37 - DEBUG - Setting (m7s-LqiufhEn1r8XAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 3:32:37 - DEBUG - Setting (PSSx29xGj2rU6awfAAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:33:39 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:34:13 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:35:37 - DEBUG - Setting (VpzfTZHEVH1xzK3qAAAR) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 3:35:37 - DEBUG - Setting (VuYityhDt7p6SqHpAAAT) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:36:43 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:38:23 - DEBUG - Setting (aWcCJ2daX6qMg26BAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 3:38:23 - DEBUG - Setting (HdyCBdB_lDAcEVPUAAAX) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:38:41 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:39:28 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:41:08 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 3:42:14 - DEBUG - user logged out succesfully 
+11.12.2022, 9:53:57 - DEBUG - Setting (bkU1bpKD0hvosg7HAAAc) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 9:54:11 - DEBUG - auth.service - login with username: 60712702 
+11.12.2022, 9:54:11 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"],"isAdmin":false} 
+11.12.2022, 9:54:11 - DEBUG - Setting (2AyNTRfLxDR5foGBAAAd) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 9:56:06 - DEBUG - Setting (MtvuvrD2pdfLjU3EAAAf) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 9:57:49 - DEBUG - Setting (dzQMfRDA5GeqOMC6AAAh) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 9:57:59 - DEBUG - Setting (i7wACAo9snkoPNLmAAAj) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:04:13 - DEBUG - Setting (-db52nZpS8U2XDYaAAAl) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:04:52 - DEBUG - Setting (jpzCzUOxxgPQ0jniAAAn) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:14:12 - DEBUG - Setting (317EzeKH6zkl3vjcAAAp) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:14:47 - DEBUG - Setting (L2Rd7JzDadZmvu-_AAAr) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:32:53 - DEBUG - user logged out succesfully 
+11.12.2022, 10:33:00 - DEBUG - user logged out succesfully 
+11.12.2022, 10:33:23 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 10:33:23 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 10:33:23 - DEBUG - Setting (L2Rd7JzDadZmvu-_AAAr) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:38:36 - DEBUG - auth.service - login with username: 60712702 
+11.12.2022, 10:38:36 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"],"isAdmin":false} 
+11.12.2022, 10:38:36 - DEBUG - Setting (MtvuvrD2pdfLjU3EAAAf) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:39:01 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a815c8 
+11.12.2022, 10:39:19 - DEBUG - Setting (maVL40bQtKwnFBTXAAAt) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:39:27 - DEBUG - user logged out succesfully 
+11.12.2022, 10:39:40 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 10:39:40 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 10:39:40 - DEBUG - Setting (maVL40bQtKwnFBTXAAAt) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:40:10 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:40:34 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:40:59 - DEBUG - Setting (c9Rnymb60p6QRoPHAAAv) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:41:12 - DEBUG - user logged out succesfully 
+11.12.2022, 10:41:28 - DEBUG - auth.service - login with username: 60712702 
+11.12.2022, 10:41:29 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1"],"isAdmin":false} 
+11.12.2022, 10:41:29 - DEBUG - Setting (c9Rnymb60p6QRoPHAAAv) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:42:46 - DEBUG - Setting (gPOW2Jqy2S9cSbQlAAAx) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:48:02 - DEBUG - Setting (pfR-lAHPFjpBtov0AAAz) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 10:48:26 - DEBUG - Setting (5eK8Kuq_ZuoLK0UBAAA1) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:49:26 - DEBUG - Setting (ZGoIskk_AL9lsVEWAAA3) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:49:59 - DEBUG - Setting (i_yJqmAA9Ncu67ECAAA5) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:52:05 - DEBUG - Setting (_jIJ2iwRowAkdJosAAA7) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:57:20 - DEBUG - Setting (dY3Jx4DcDNyrawUwAAA9) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 10:57:48 - DEBUG - Setting (OCdnKG6NdN6dK5QrAAA_) socket.userId = 6390a8fe4887fbe817a811e0 
+>>>>>>> 4c23681169d3804b2a1863b5bc0ad362c01d2605
