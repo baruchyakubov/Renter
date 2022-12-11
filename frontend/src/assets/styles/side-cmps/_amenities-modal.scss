@@ -1,5 +1,5 @@
 .amenitiesModal{
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden  ;
   width: 48.6rem;
   height: 93vh;
@@ -11,6 +11,9 @@
   box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px ;
   transform: translate(50%, -50%);
   border-radius: 0.8rem;
+  .item{
+    margin-top: 1.4rem;
+  }
   .closeBtn{
     cursor: pointer;
     position: relative;

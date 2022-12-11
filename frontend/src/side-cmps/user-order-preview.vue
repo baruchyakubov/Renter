@@ -20,7 +20,6 @@ computed:{
 dateFormat() {
             const date = new Date(this.order.createdAt)
             const dateFormat = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getUTCDay(), 0, 0))
-
             const options = {
                 weekday: "long",
                 year: "numeric",
