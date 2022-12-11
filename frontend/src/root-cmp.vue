@@ -47,14 +47,9 @@ export default {
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
   },
-  mounted() {
-  },
-  computed: {
-  },
   methods: {
     setOrderStatus(order) {
       showSuccessMsg(`your order has been ${order.status}`)
-      // if (this.$router.currentRoute.path !== '/userOrders') return
       this.$store.commit({ type: 'changeOrderStatusToUser', order: { ...order } })
     },
     addOrder(order) {
@@ -69,7 +64,6 @@ export default {
     setFilterByLabel(label) {
       this.filterBy.page = 1
       this.filterBy.label = label
-      console.log(this.filterBy);
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
     setFilterByTxt(filter) {
