@@ -24,10 +24,10 @@ export const orderStore = {
             utilService.saveToStorage('tempForm',form)
         },
         setOrders(state, { orders }) {
-           
-            state.orders =   orders.sort((a,b)=>{
-                return (b.createdAt-a.createdAt)
-            })
+           state.orders = orders
+            // state.orders =   orders.sort((a,b)=>{
+            //     return (b.createdAt-a.createdAt)
+            // })
         },
         updatedOrder(state, { order }) {
             const idx = state.orders.findIndex(Order => Order._id === order._id)

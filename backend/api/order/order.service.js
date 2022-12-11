@@ -3,14 +3,14 @@ const ObjectId = require('mongodb').ObjectId
 
 async function query(loggedInUserId) {
   const collection = await dbService.getCollection('order')
-  var orders = await collection.find({ hostId: { $eq: loggedInUserId } }).toArray()
+  var orders = await collection.find({ hostId: { $eq: loggedInUserId } }).sort({"createdAt":-1}).toArray()
   return orders
 }
 
 async function queryUserOrders(loggedInUserId) {
   const collection = await dbService.getCollection('order')
   console.log(loggedInUserId);
-  var orders = await collection.find({'buyer._id': loggedInUserId }).toArray()
+  var orders = await collection.find({'buyer._id': loggedInUserId }).sort({"createdAt":-1}).toArray()
   console.log(orders);
   return orders
 }

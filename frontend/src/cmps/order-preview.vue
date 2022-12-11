@@ -38,8 +38,6 @@ export default {
             return dateFormat.toLocaleDateString("en-US", options)
         },
         dateFormat2() {
-            console.log(this.order.startDate);
-            console.log(this.order.endDate);
             var arrStart = this.order.startDate.split('/')
             var arrEnd = this.order.endDate.split('/')
             const event = new Date(Date.UTC(arrStart[2], arrStart[0],arrStart[1] ))
