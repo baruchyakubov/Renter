@@ -39,7 +39,6 @@ export const orderStore = {
         changeOrderStatusToUser(state , { order }){
             const idx = state.orders.findIndex(Order => order._id === Order._id)
             state.orders[idx].status = order.status
-            console.log(state.orders[idx]);
         }
     },
     actions: {

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 8.12.2022, 19:05:19 - INFO - Server is running on port: 3030 
 8.12.2022, 19:05:22 - INFO - Server is running on port: 3030 
 8.12.2022, 20:41:35 - DEBUG - auth.service - login with username: 80344827 
@@ -734,3 +735,6 @@
 11.12.2022, 17:06:14 - DEBUG - Setting (kJpQXfGwE2UVmnyBAAAL) socket.userId = 6390a8fe4887fbe817a811e2 
 11.12.2022, 17:06:20 - DEBUG - Setting (yMR-ZAdWQDsRTlhpAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
 11.12.2022, 17:20:47 - DEBUG - Setting (JW11FML2136mgy5xAAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+=======
+
+>>>>>>> bea03181944fe03af43271ecf2ee45189d2b8cd8
