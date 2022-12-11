@@ -1,6 +1,6 @@
 <template>
   <section class="back-office main-">
-    <h1>Orders list</h1>
+    <h1>Orders status</h1>
     <div class="back-office-layout ">
       <ul class="orders main-container">
         <li class="flex-box " v-for="order in orders" :key="order._id">
@@ -16,7 +16,6 @@
 import { eventBus } from '../services/event-bus.service';
 import orderPreview from '../cmps/order-preview.vue';
 import hostingSummery from '../cmps/hosting-summery.vue';
-import { socketService } from '../services/socket.service';
 export default {
   created() {
     const user = this.$store.getters.loggedinUser
