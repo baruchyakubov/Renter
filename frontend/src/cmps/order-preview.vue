@@ -40,13 +40,13 @@ export default {
         dateFormat2() {
             var arrStart = this.order.startDate.split('/')
             var arrEnd = this.order.endDate.split('/')
-            const event = new Date(Date.UTC(arrStart[2], arrStart[1], arrStart[0]))
+            const event = new Date(Date.UTC(arrStart[2], arrStart[0], arrStart[1]))
             const options = { month: 'short', day: 'numeric' };
-            if (arrStart[1] === arrEnd[1]) {
+            if (arrStart[0] === arrEnd[0]) {
                 var str = event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[0]
                 return str
             } else {
-                const event2 = new Date(Date.UTC(arrEnd[2], arrEnd[1], arrEnd[0]))
+                const event2 = new Date(Date.UTC(arrEnd[2], arrEnd[0], arrEnd[1]))
                 const options2 = { month: 'short', day: 'numeric' };
                 var str = event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
                 return str
@@ -65,6 +65,9 @@ export default {
         },
         status(){
             return order.status
+        },
+        loggedinUser(){
+            return this.$store.getters.loggedinUser
         }
     },
     methods:{
