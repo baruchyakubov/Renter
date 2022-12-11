@@ -1,12 +1,12 @@
 <template>
-<div style="max-width:80%; position: relative; left: 50%; transform: translate(-50%);">
-      <DoughnutChart :chartData="testData" />
-</div>
-  
+    <div style="max-width:80%; position: relative; left: 50%; transform: translate(-50%);">
+        <DoughnutChart :options="options" :chartData="testData" />
+    </div>
 
 
 
-   
+
+
 </template>
   
 <script>
@@ -19,8 +19,20 @@ Chart.register(...registerables);
 export default {
     name: 'Home',
     components: { DoughnutChart },
-    props:{
-        testData:Object
+    props: {
+        testData: Object
+    },
+    data() {
+        return {
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        }
     }
 }
 </script>

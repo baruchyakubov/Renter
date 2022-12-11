@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 8.12.2022, 19:05:19 - INFO - Server is running on port: 3030 
 8.12.2022, 19:05:22 - INFO - Server is running on port: 3030 
 8.12.2022, 20:41:35 - DEBUG - auth.service - login with username: 80344827 
@@ -740,3 +741,5 @@
 >>>>>>> bea03181944fe03af43271ecf2ee45189d2b8cd8
 11.12.2022, 17:25:31 - INFO - Server is running on port: 3030 
 11.12.2022, 17:29:12 - INFO - Server is running on port: 3030 
+=======
+>>>>>>> 285d6a33ab63230022e91607626b46a22964afa4

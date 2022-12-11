@@ -6,7 +6,10 @@
       <app-header @openModal="openModal" />
       <router-view />
     </section>
-    <app-footer ref="infiniteScrollTrigger" id="scrollTrigger"></app-footer>
+    <div style="display:grid;">
+      <app-footer ref="infiniteScrollTrigger" id="scrollTrigger"></app-footer>
+    </div>
+   
   </div>
 </template>
 

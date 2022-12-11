@@ -13,11 +13,15 @@
       </div>
       <reserve-form :stay="stay"></reserve-form>
     </div>
+    <div class="map-container">
+      <h1>Where you'll be</h1>
+      <location-map :stayLoc="stay.loc"></location-map>
+    </div>
     <stay-reviews :stay="stay"></stay-reviews>
   </div>
 </template>
 <script>
-
+import locationMap from '../side-cmps/location-map.vue'
 import { eventBus } from '../services/event-bus.service'
 import stayAttributes from '../side-cmps/stay-preview-attributes.vue'
 import stayAmenities from '../side-cmps/amenities.vue'
@@ -66,7 +70,8 @@ export default {
     reserveForm,
     stayReviews,
     calendar,
-    hostDetails
+    hostDetails,
+    locationMap
   }
 }
 </script>
