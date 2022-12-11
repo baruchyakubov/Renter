@@ -18,7 +18,8 @@
     }
     &.alert-error {
         opacity: 0.8;
-        background-color: lightcoral;
+        border: 1px rgb(241, 130, 130) solid;
+        background-color: rgb(254, 224, 224);
     }
 }
 
