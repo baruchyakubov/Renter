@@ -27,6 +27,9 @@
       width: 0.65rem;
       margin-inline-end: 0.2rem;
     }
+    .rating{
+      font-family: cereal-semi-light;
+    }
     .reviews {
       text-decoration: underline;
       cursor: pointer;
@@ -37,11 +40,16 @@
       }
     }
     .bullet {
-      font-size: 10px;
+      font-size: 14px;
       color: rgb(129, 129, 129);
-      padding-inline: 0.6rem;
+      padding-inline: 0.4rem;
     }
-
+    .bullet1 {
+      font-size: 14px;
+      color: rgb(129, 129, 129);
+      padding-inline-end: 0.2rem;
+      padding-inline-start: 0.05rem;
+    }
     .location>:not(.bullet) {
       text-decoration: underline;
       font-family: cereal-semi-light;

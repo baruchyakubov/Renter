@@ -3,7 +3,7 @@
     <h2 class="stay-details-name">{{ stay.name }}</h2>
     <div class="headerFlex flex-box">
       <div class="stay-details-basicInfo">
-        <p><img class="star" src="../assets/svg/review-start-svg.svg">{{ rating }} <span class="bullet">•</span></p>
+        <p><img class="star" src="../assets/svg/review-start-svg.svg"><span class="rating">{{ rating }}</span> <span class="bullet1">•</span></p>
         <p class="reviews">{{ reviews }}</p>
         <p v-if="isSuperHost"><span class="bullet">•</span> Superhost</p>
         <p class="location"><span class="bullet">•</span> <span>{{ stay.loc.address }}, {{ stay.loc.city }},

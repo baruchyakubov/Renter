@@ -7,9 +7,9 @@
     position: fixed;
     width: 100%;
     top: 77px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.29);
-    -webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.29);
+    box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.29);
+    -webkit-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.29);
 
     .stay-filter-div {
         display: flex;
@@ -18,10 +18,15 @@
         border-bottom: 2px solid transparent;
         // padding-bottom: 2rem;
         cursor: pointer;
+        position: relative;
+        top: 0.4rem;
 
         &:hover {
             div {
                 color: black;
+                box-shadow: 0px -2px 0px 0px rgb(226, 226, 226) inset;
+                -webkit-box-shadow: 0px -2px 0px 0px rgb(226, 226, 226) inset;
+                -moz-box-shadow: 0px -2px 0px 0px rgb(226, 226, 226) inset;
             }
 
             img {
@@ -33,9 +38,9 @@
         &:focus {
             div {
                 color: black;
-                // box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 1) inset;
-                // -webkit-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 1) inset;
-                // -moz-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 1) inset;
+                box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 1) inset;
+                -webkit-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 1) inset;
+                -moz-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 1) inset;
                 // border-bottom: 2px solid black;
             }
 
@@ -58,4 +63,11 @@
             white-space: nowrap;
         }
     }
+}
+
+.stay-filter .stay-filter-div div {
+    padding-bottom: 0.5rem;
+}
+.carousel__viewport{
+    margin-inline: 1.4rem !important;
 }

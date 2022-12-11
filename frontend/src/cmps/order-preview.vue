@@ -40,21 +40,13 @@ export default {
         dateFormat2() {
             var arrStart = this.order.startDate.split('/')
             var arrEnd = this.order.endDate.split('/')
-<<<<<<< HEAD
-            const event = new Date(Date.UTC(arrStart[2], arrStart[0],arrStart[1] ))
-=======
             const event = new Date(Date.UTC(arrStart[2], arrStart[0], arrStart[1]))
->>>>>>> bea03181944fe03af43271ecf2ee45189d2b8cd8
             const options = { month: 'short', day: 'numeric' };
             if (arrStart[0] === arrEnd[0]) {
                 var str = event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[0]
                 return str
             } else {
-<<<<<<< HEAD
-                const event2 = new Date(Date.UTC(arrStart[2], arrStart[0],arrStart[1]))
-=======
                 const event2 = new Date(Date.UTC(arrEnd[2], arrEnd[0], arrEnd[1]))
->>>>>>> bea03181944fe03af43271ecf2ee45189d2b8cd8
                 const options2 = { month: 'short', day: 'numeric' };
                 var str = event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
                 return str

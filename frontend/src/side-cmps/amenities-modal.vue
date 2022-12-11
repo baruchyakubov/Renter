@@ -3,9 +3,10 @@
     <close-btn class="closeBtn" @click="closeModal"></close-btn>
     <h3>What this place offers</h3>
     <div class="container flex-box">
-      <p v-for="item in amenities" :key="item" class="item"> 
-        {{ item }}
-      </p>
+      <div v-for="item in amenities" :key="item" class="item"> 
+        <img class="imgSvg" :src='"/src/assets/svg/"+item.img+".svg"'>
+        <p>{{ item.txt }}</p>
+      </div>
     </div>
   </div>
 </template>
