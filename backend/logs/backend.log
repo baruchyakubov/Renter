@@ -743,3 +743,13 @@
 11.12.2022, 17:29:12 - INFO - Server is running on port: 3030 
 =======
 >>>>>>> 285d6a33ab63230022e91607626b46a22964afa4
+11.12.2022, 21:07:11 - INFO - Server is running on port: 3030 
+11.12.2022, 22:09:29 - DEBUG - auth.service - login with username: :80344827 
+11.12.2022, 22:09:29 - ERROR - Failed to Login Invalid username or password 
+11.12.2022, 22:09:32 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 22:09:33 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 22:09:33 - DEBUG - Setting (3WITMNFVxTxFnRxsAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 22:22:04 - DEBUG - auth.service - login with username: 60712702 
+11.12.2022, 22:22:05 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1"],"isAdmin":false} 
+11.12.2022, 22:22:05 - DEBUG - Setting (q_prP4lFfMuxtKhBAAAF) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 22:22:07 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a8244d 

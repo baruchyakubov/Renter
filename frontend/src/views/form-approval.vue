@@ -73,7 +73,7 @@ export default {
     async submit(){
       await this.$store.dispatch({type:"sendForm",form:this.form})
       this.$store.commit({type:"removeTempForm"})
-      this.$router.push('/')
+      this.$router.push('/userOrders')
     },
     async getStay() {
       return this.$store.dispatch({ type: "setCurrStay", stayId: this.form.stay._id })
