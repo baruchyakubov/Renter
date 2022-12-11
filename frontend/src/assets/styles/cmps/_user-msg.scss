@@ -5,15 +5,16 @@
     background-color: lightgray;
     position: fixed;
     opacity: 0.2;
-    top: 7rem; 
+    top: 12rem; 
     right: 50%;
     transform: translate(50%,-50%);
     transition: all 0.2s;
-    padding: 1rem 3rem;
-    border-radius: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
     &.alert-success {
+        border: 1px rgb(124, 124, 124) solid;
         opacity: 0.8;
-        background-color: lightgreen;
+        background-color: rgb(255, 255, 255);
     }
     &.alert-error {
         opacity: 0.8;

@@ -15,6 +15,7 @@
     bottom: 10%;
     left: 50%;
     transform: translate(-50%);
+    border: 1px solid #DDDDDD;
     .sep{
         background-color: #DDDDDD;
         width: 1px;
@@ -128,6 +129,8 @@
     width: 23rem;
 }
 .alternateSearch{
+    position: relative;
+    right: 0.13rem;
     display: flex;
     align-items: center;
     min-height: 48px ;  

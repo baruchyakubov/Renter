@@ -19,6 +19,9 @@ export default {
   methods:{
     closeModal(){
       this.$emit('closeModal')
+    },
+    amenitySvg(item){
+      return item
     }
   },
   created(){
