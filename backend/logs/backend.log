@@ -1,0 +1,20 @@
+11.12.2022, 22:39:28 - INFO - Server is running on port: 3030 
+11.12.2022, 22:39:29 - DEBUG - Setting (RL0AUuzbR35ARL2nAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 22:39:29 - DEBUG - Setting (IuTWwGmAtCoSYIwEAAAC) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 22:52:19 - DEBUG - user logged out succesfully 
+11.12.2022, 22:52:27 - DEBUG - auth.service - login with username: 80344827 
+11.12.2022, 22:52:27 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Angel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599899/kyyucq46zoznoqrpm0zn.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+11.12.2022, 22:52:27 - DEBUG - Setting (RL0AUuzbR35ARL2nAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 22:52:35 - DEBUG - user logged out succesfully 
+11.12.2022, 22:52:37 - DEBUG - auth.service - login with username: 60712702 
+11.12.2022, 22:52:38 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Maria Isabel","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1"],"isAdmin":false} 
+11.12.2022, 22:52:38 - DEBUG - Setting (IuTWwGmAtCoSYIwEAAAC) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 22:53:23 - DEBUG - Setting (-sCc-Klx2XFFG4m0AAAF) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 22:54:51 - DEBUG - Setting (CC6NECwwAVVDFItBAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 22:56:53 - DEBUG - Setting (V4zpji_cmW4SvvXMAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+11.12.2022, 23:02:18 - DEBUG - Setting (8VGmijrk3hneQgknAAAL) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 23:02:22 - DEBUG - Setting (P-9sDk4ETZVZyB0cAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+11.12.2022, 23:05:50 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+11.12.2022, 23:06:16 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+11.12.2022, 23:25:14 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+11.12.2022, 23:26:10 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 

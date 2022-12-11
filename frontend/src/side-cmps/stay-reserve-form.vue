@@ -220,6 +220,7 @@ export default {
           showErrorMsg('Login required')
           return
         }
+        if(!this.form.startDate) return showErrorMsg('Dates required')
         this.form.guests = this.guests
         this.form.buyer = { _id: this.currUser._id, fullname: this.currUser.fullname }
         this.form.stay = {
