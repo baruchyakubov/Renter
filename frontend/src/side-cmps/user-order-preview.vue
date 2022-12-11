@@ -1,30 +1,23 @@
 <template>
-    <div class="order-preview">
-        <img src="https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg" alt="">
+  <section class="order-preview">
+    <img :src="loggedinUser.imgUrl" alt="">
         <div class="order-details">
             <h1>{{ order.buyer.fullname }}</h1>
             <p class="date">Reserved at: {{ dateFormat }}</p>
             <p>{{ guestsCount }} guests | {{ dateFormat2 }}</p>
             <p>your apartment in {{ place }} in tel-aviv</p>
         </div>
-        <div v-if="order.status === 'pending'" class="btn-status flex-box">
-            <button @click="setStatusToApproved" class="approve">Approve</button>
-            <button @click="setStatusToRejected" class="reject">Reject</button>
-        </div>
-
-        <span :class="{green: order.status === 'approved'}" v-else class="status">{{ order.status }}</span>
-    </div>
-
-
+        <span :class="{green: order.status === 'approved' , yellow:order.status === 'pending'}" class="status">{{ order.status }}</span>
+  </section>
 </template>
 
 <script>
 export default {
-    props: {
-        order: Object
-    },
-    computed: {
-        dateFormat() {
+props:{
+    order:Object
+},
+computed:{
+dateFormat() {
             const date = new Date(this.order.createdAt)
             const dateFormat = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getUTCDay(), 0, 0))
 
@@ -65,20 +58,9 @@ export default {
         },
         status(){
             return order.status
-        }
-    },
-    methods:{
-        setStatusToApproved(){
-            var updatedOrder = {...this.order}
-            console.log(updatedOrder);
-            updatedOrder.status = 'approved'
-
-            this.$store.dispatch({ type: 'updateOrder', updatedOrder: JSON.stringify(updatedOrder) })
         },
-        setStatusToRejected(){
-            var updatedOrder = {...this.order}
-            updatedOrder.status = 'rejected'
-            this.$store.dispatch({ type: 'updateOrder', updatedOrder: JSON.stringify(updatedOrder) })
+        loggedinUser(){
+            return this.$store.getters.loggedinUser
         }
     }
 }

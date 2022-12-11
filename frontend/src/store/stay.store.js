@@ -38,7 +38,7 @@ export const stayStore = {
             guestsCount:0,
             page:1
         },
-        searchCountryList: null
+        searchCountryList: []
     },
     getters: {
         stays({ stays }) {
@@ -53,7 +53,7 @@ export const stayStore = {
     },
     mutations: {
         resetSearchList(state){
-            state.searchCountryList = null
+            state.searchCountryList = []
         },
         setCurrStay(state, { stay }) {
             state.currStay = stay

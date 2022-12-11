@@ -49,7 +49,7 @@
     <guest-modal v-click-outside="toggleGuestModal" @increment="increment" @decrement="decrement"
         @toggleModal="toggleGuestModal" :counter="counter" v-if="isGuestsShown"></guest-modal>
         <country-modal @setFilterSearch="setFilterSearch"  v-click-outside="toggleCountryModal" v-if="isCountryModalShown && !isListModalShown "></country-modal>
-        <search-list-modal  v-if="isListModalShown"></search-list-modal>
+        <search-list-modal @setInputBySearch="setInputBySearch"  v-if="isListModalShown"></search-list-modal>
 </template>
 
 <script>
@@ -178,6 +178,10 @@ export default {
         getCountryList(){
             this.isListModalShown = (this.country === '') ? false : true
             this.$store.dispatch({ type: 'getCountryList', txt: this.country })
+        },
+        setInputBySearch(input){
+            this.country = input
+            this.setFocus('check-in')
         },
         setFilterSearch(region){
             this.country = region.name 
