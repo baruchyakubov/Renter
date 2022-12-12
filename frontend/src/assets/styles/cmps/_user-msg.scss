@@ -2,19 +2,20 @@
 
 .alert {
     z-index: 10000;
-    background-color: lightgray;
+    // background-color: lightgray;
     position: fixed;
-    opacity: 0.2;
-    top: 12rem; 
+    top: 10rem; 
     right: 50%;
     transform: translate(50%,-50%);
     transition: all 0.2s;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
+    background-color: 1px rgb(255, 56, 92) solid;
     &.alert-success {
-        border: 1px rgb(124, 124, 124) solid;
-        opacity: 0.8;
-        background-color: rgb(255, 255, 255);
+        border: 1px rgb(112, 112, 112) solid;
+        color: white;
+        opacity: 0.9;
+        background-color: rgb(255, 56, 92);
     }
     &.alert-error {
         opacity: 0.8;
