@@ -120,3 +120,4 @@
 12.12.2022, 9:38:27 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
 12.12.2022, 9:38:27 - DEBUG - Setting (ZHbS9RVtFSN4w1PlAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 9:41:20 - DEBUG - Setting (Qm-HyNQS9tbLiK6cAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 9:42:49 - INFO - Server is running on port: 3030 

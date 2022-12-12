@@ -222,7 +222,7 @@ export default {
         }
         if(!this.form.startDate) return showErrorMsg('Dates required')
         this.form.guests = this.guests
-        this.form.buyer = { _id: this.currUser._id, fullname: this.currUser.fullname }
+        this.form.buyer = { _id: this.currUser._id, fullname: this.currUser.fullname , imgUrl:this.currUser.imgUrl}
         this.form.stay = {
           _id: this.stay._id,
           name: this.stay.name,
