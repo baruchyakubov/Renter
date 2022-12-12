@@ -55,6 +55,7 @@ export default {
       this.$store.commit({ type: 'changeOrderStatusToUser', order: { ...order } })
     },
     addOrder(order) {
+      showSuccessMsg(`you've been received an order from ${order.buyer.fullname}`)
       this.$store.commit({ type: 'addOrder', order: { ...order } })
     },
     closeModal() {

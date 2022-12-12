@@ -170,3 +170,4 @@
 12.12.2022, 11:54:58 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
 12.12.2022, 11:55:13 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
 12.12.2022, 11:55:53 - DEBUG - Setting (S8zA9zxWKWl8PvwhAAAb) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 11:13:19 - INFO - Server is running on port: 3030 
