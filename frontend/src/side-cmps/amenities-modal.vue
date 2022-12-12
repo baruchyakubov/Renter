@@ -4,7 +4,7 @@
     <h3>What this place offers</h3>
     <div class="container flex-box">
       <div v-for="item in amenities" :key="item" class="item"> 
-        <img class="imgSvg" :src='"/src/assets/svg/"+item.img+".svg"'>
+        <img class="imgSvg" v-bind:src="item.img">
         <p>{{ item.txt }}</p>
       </div>
     </div>
