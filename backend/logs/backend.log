@@ -132,6 +132,7 @@
 12.12.2022, 19:54:58 - INFO - Server is running on port: 3030 
 12.12.2022, 19:55:00 - DEBUG - Setting (fv6AvtT_CFA9z-etAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 19:55:00 - DEBUG - Setting (IU8R1P_OmaG57ZCOAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+<<<<<<< HEAD
 12.12.2022, 19:55:58 - INFO - Server is running on port: 3030 
 12.12.2022, 20:15:03 - DEBUG - Setting (J8TrY51nszAiFhKiAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 20:15:05 - DEBUG - Setting (xC-4X91snssmVmOOAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
@@ -186,3 +187,6 @@
 12.12.2022, 22:10:55 - DEBUG - Setting (vaePIe27eH1NV0LvAAAt) socket.userId = 6390a8fe4887fbe817a811e2 
 12.12.2022, 22:10:57 - DEBUG - Setting (EC00ZReWxckLSg_8AAAv) socket.userId = 6390a8fe4887fbe817a811e2 
 12.12.2022, 22:11:23 - INFO - Server is running on port: 3030 
+=======
+12.12.2022, 22:13:46 - DEBUG - Setting (knDmIS3lPuhHlEgeAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+>>>>>>> 78e5955bfebe55490f1e79e7323bc434d3adb0bf
