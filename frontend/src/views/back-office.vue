@@ -1,5 +1,5 @@
 <template>
-  <section class="back-office main-">
+  <section v-if="isLoaded" class="back-office main-">
     <h1>Orders status</h1>
     <div class="back-office-layout ">
       <ul class="orders main-container">
@@ -7,9 +7,10 @@
           <order-preview :order="order"></order-preview>
         </li>
       </ul>
-      <hosting-summery  :orders="orders"></hosting-summery>
+      <hosting-summery :orders="orders"></hosting-summery>
     </div>
   </section>
+  <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </template>
 
 <script>
@@ -17,14 +18,18 @@ import { eventBus } from '../services/event-bus.service';
 import orderPreview from '../cmps/order-preview.vue';
 import hostingSummery from '../cmps/hosting-summery.vue';
 export default {
-  created() {
-    const user = this.$store.getters.loggedinUser
-    console.log(user);
-    if (!user || !user.isAdmin) this.$router.push('/')
-    this.$store.dispatch({ type: 'loadOrders' })
+  data() {
+    return {
+      isLoaded: false
+    }
   },
-  mounted(){
-
+  async created() {
+      const user = this.$store.getters.loggedinUser
+      console.log(user);
+      if (!user || !user.isAdmin) this.$router.push('/')
+      await this.$store.dispatch({ type: 'loadOrders' , from:'back-office-view' })
+      this.isLoaded = true
+    
   },
   mounted() {
     eventBus.emit('toggleLayout', false)
@@ -34,7 +39,7 @@ export default {
       return this.$store.getters.orders
     }
   },
-  components:{
+  components: {
     orderPreview,
     hostingSummery
   }

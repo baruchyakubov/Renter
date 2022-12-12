@@ -1,5 +1,5 @@
 <template>
-    <section class="user-orders detailsContainer">
+    <section v-if="isLoaded" class="user-orders detailsContainer">
         <h1>orders</h1>
         <ul>
             <li v-for="order in orders" :key="order._id">
@@ -7,17 +7,23 @@
             </li>
         </ul>
     </section>
-
+    <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </template>
 
 <script>
 import { eventBus } from '../services/event-bus.service'
 import userOrderPreview from '../side-cmps/user-order-preview.vue'
 export default {
-    created() {
+    data(){
+        return {
+            isLoaded:false
+        }
+    },
+    async created() {
         const user = this.$store.getters.loggedinUser
         if (!user) this.$router.push('/')
-        this.$store.dispatch({ type: 'loadOrders' })
+        await this.$store.dispatch({ type: 'loadOrders' , from:'orders-view' })
+        this.isLoaded = true
     },
     mounted() {
         eventBus.emit('toggleLayout', true)

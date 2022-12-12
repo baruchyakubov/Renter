@@ -19,6 +19,7 @@
     </div>
     <stay-reviews :stay="stay"></stay-reviews>
   </div>
+  <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </template>
 <script>
 import locationMap from '../side-cmps/location-map.vue'

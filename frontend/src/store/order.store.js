@@ -55,9 +55,9 @@ export const orderStore = {
                 throw err
             }
         },
-        async loadOrders(context) {
+        async loadOrders(context , { from }) {
             try {
-                const orders = await orderService.query()
+                const orders = await orderService.query(from)
                 context.commit({ type: 'setOrders', orders })
             } catch (err) {
                 showErrorMsg('failed to load orders')

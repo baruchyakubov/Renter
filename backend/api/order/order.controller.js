@@ -5,10 +5,10 @@ const orderService = require('./order.service.js')
 
 async function getOrders(req, res) {
   try {
-
+    const queryParams = req.query
     const loggedinUser = authService.validateToken(req.cookies.loginToken)
-    console.log(loggedinUser);
-    const orders = (!loggedinUser.isAdmin) ? await orderService.queryUserOrders(loggedinUser._id) : await orderService.query(loggedinUser._id)
+    console.log(queryParams['0']);
+    const orders = (!loggedinUser.isAdmin || queryParams['0'] === 'orders-view') ? await orderService.queryUserOrders(loggedinUser._id) : await orderService.query(loggedinUser._id)
     res.json(orders)
   } catch (err) {
     res.status(404).send(err)
