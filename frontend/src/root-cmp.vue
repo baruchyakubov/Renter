@@ -51,6 +51,7 @@ export default {
   },
   methods: {
     setOrderStatus(order) {
+      if(!order) return showErrorMsg('Trouble processing order')
       showSuccessMsg(`your order has been ${order.status}`)
       this.$store.commit({ type: 'changeOrderStatusToUser', order: { ...order } })
     },
