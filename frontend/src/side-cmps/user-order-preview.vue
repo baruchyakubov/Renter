@@ -7,7 +7,7 @@
             <p>{{ guestsCount }} guests | {{ dateFormat2 }}</p>
             <p>Your apartment in {{ order.stay.loc.country }} , {{ order.stay.loc.city }}</p>
         </div>
-        <span :class="{green: order.status === 'approved' , yellow:order.status === 'pending'}" class="status">{{ order.status }}</span>
+        <span :class="{green: order.status === 'approved' , yellow:order.status === 'pending'}" class="status">{{ status }}</span>
   </section>
 </template>
 
@@ -56,7 +56,7 @@ dateFormat() {
             return this.order.stay.name
         },
         status(){
-            return order.status
+            return this.order.status.charAt(0).toUpperCase() + this.order.status.slice(1).toLowerCase();
         },
         loggedinUser(){
             return this.$store.getters.loggedinUser

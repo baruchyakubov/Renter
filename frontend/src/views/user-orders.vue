@@ -1,6 +1,6 @@
 <template>
     <section v-if="isLoaded" class="user-orders detailsContainer">
-        <h1>orders</h1>
+        <h1 class="trips">Your trips</h1>
         <ul>
             <li v-for="order in orders" :key="order._id">
                 <user-order-preview :order="order"></user-order-preview>

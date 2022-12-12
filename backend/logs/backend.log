@@ -61,3 +61,10 @@
 12.12.2022, 14:24:17 - DEBUG - Setting (RfQ4Q_mIAtPcEwXpAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 14:29:47 - DEBUG - Setting (9jxLFHhNi-_h2VFjAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 15:42:57 - DEBUG - Setting (fZSC9J6LEz36YcRnAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 16:09:06 - INFO - Server is running on port: 3030 
+12.12.2022, 16:10:03 - INFO - Server is running on port: 3030 
+12.12.2022, 18:13:20 - DEBUG - auth.service - login with username: 60712702 
+12.12.2022, 18:13:20 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan Bibi","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1"],"isAdmin":false} 
+12.12.2022, 18:13:20 - DEBUG - Setting (jFHlncfZIIcsqe4kAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 18:14:48 - DEBUG - Setting (TPvFprw1Qdx0zvCaAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 18:38:59 - DEBUG - Setting (pjj1JAP1Mb9jcXbHAAAF) socket.userId = 6390a8fe4887fbe817a811e2 
