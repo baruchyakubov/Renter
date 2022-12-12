@@ -17,7 +17,6 @@ export default {
   data() {
     return {
       stayToAdd: stayService.getEmptyStay(),
-      isLoaded:false
     }
   },
   computed: {
