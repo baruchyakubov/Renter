@@ -17,6 +17,7 @@
 import { eventBus } from '../services/event-bus.service';
 import orderPreview from '../cmps/order-preview.vue';
 import hostingSummery from '../cmps/hosting-summery.vue';
+
 export default {
   data() {
     return {

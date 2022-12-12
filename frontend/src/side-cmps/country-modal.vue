@@ -8,13 +8,10 @@
                         <img :src="region.img" alt="">
                     </button>
                     <div class="region-name">{{ region.name }}</div>
-
                 </li>
             </ul>
         </div>
-
     </section>
-
 </template>
 
 <script>

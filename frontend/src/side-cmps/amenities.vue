@@ -12,10 +12,8 @@
 </template>
 <script>
 import amenitiesModal from './amenities-modal.vue'
+
 export default {
-  // props: {
-  //   amenities: Object
-  // },
   data(){
     return{
       isModalShown:false,

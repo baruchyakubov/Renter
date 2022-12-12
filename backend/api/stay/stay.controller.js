@@ -7,7 +7,6 @@ async function getStays(req, res) {
   try {
 
     const queryParams = req.query
-    console.log(queryParams);
     const stays = await stayService.query(queryParams)
     res.json(stays)
   } catch (err) {
@@ -17,9 +16,7 @@ async function getStays(req, res) {
 
 async function getSearchedStays(req, res){
   try{
-    console.log('heyyyy');
     const queryParams = req.query
-    console.log(queryParams);
     const stays = await stayService.querySearchedStays(queryParams['0'])
     res.json(stays)
   } catch (err) {

@@ -1,23 +1,43 @@
-.user-orders{
+.user-orders {
     padding: 0;
-    ul{
+
+    .trips {
+        font-size: rem(24.6px);
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    ul {
         padding: 0;
-        .order-preview{
+
+        .order-preview {
+            padding: 15px;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
             display: grid;
-            grid-template-columns: 4fr 9fr 1fr;
+            grid-template-columns: 220px 9fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             align-items: center;
         }
     }
+
     img {
+        justify-self: flex-start;
         grid-row: 1/span 3;
         object-fit: cover;
         padding: 0;
-        height: 130px;
-        width: 90%;
+        width: 190px;
+        height: 150px;
         border-radius: 10px;
     }
-    .yellow{
+
+    .status {
+        justify-self: flex-end !important;
+        margin-right: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .yellow {
         color: rgb(236, 168, 40);
     }
 }

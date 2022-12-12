@@ -20,7 +20,6 @@ import { store } from './store/store'
 import appHeader from './cmps/app-header.vue'
 import userMsg from './cmps/user-msg.vue'
 import { authService } from './services/auth.service'
-import { userService } from './services/user.service'
 import userModal from './cmps/user-modal.vue'
 import { socketService, SOCKET_EVENT_SEND_ORDER } from './services/socket.service'
 import { showSuccessMsg } from './services/event-bus.service'
@@ -51,7 +50,6 @@ export default {
   },
   methods: {
     setOrderStatus(order) {
-      // if(!order) return showErrorMsg('Trouble processing order')
       showSuccessMsg(`your order has been ${order.status}`)
       this.$store.commit({ type: 'changeOrderStatusToUser', order: { ...order } })
     },

@@ -55,7 +55,8 @@
 </template>
 <script>
 import { utilService } from '../services/util.service';
-import backBtn from '../side-cmps/approval-backBtn.vue'
+import backBtn from '../side-cmps/approval-backBtn.vue';
+
 export default {
   name: 'approval-form',
   async created() {

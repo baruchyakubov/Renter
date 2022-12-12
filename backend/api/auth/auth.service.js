@@ -24,7 +24,6 @@ async function login(username, password) {
 async function _checkIfAdmin(user) {
   try {
     const collection = await dbService.getCollection('stay')
-    console.log(user._id);
     const stay = await collection.findOne({'host._id': ObjectId(user._id) })
     if (stay) user.isAdmin = true
     else user.isAdmin = false

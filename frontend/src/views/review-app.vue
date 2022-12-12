@@ -1,6 +1,5 @@
 <template>
   <div class="container home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <ul class="review-list">
       <li v-for="review in reviews" :key="review._id">
         <p>
@@ -67,8 +66,6 @@ export default {
         showErrorMsg('Cannot add review')
       }
     }
-  }
-
-  
+  } 
 }
 </script>

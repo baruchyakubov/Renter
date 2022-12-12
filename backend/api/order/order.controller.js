@@ -7,7 +7,6 @@ async function getOrders(req, res) {
   try {
     const queryParams = req.query
     const loggedinUser = authService.validateToken(req.cookies.loginToken)
-    console.log(queryParams['0']);
     const orders = (!loggedinUser.isAdmin || queryParams['0'] === 'orders-view') ? await orderService.queryUserOrders(loggedinUser._id) : await orderService.query(loggedinUser._id)
     res.json(orders)
   } catch (err) {
@@ -17,10 +16,8 @@ async function getOrders(req, res) {
 
 async function addOrder(req, res) {
   const order = req.body
-  console.log(order);
   try {
     const addedOrder = await orderService.add(order)
-    console.log(addedOrder.hostId);
     socketService.emitToUser({ type: 'send-order', data: addedOrder, userId: addedOrder.hostId })
     res.json(addedOrder)
   } catch (err) {

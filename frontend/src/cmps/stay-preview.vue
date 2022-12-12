@@ -12,10 +12,6 @@
         <p><span class="stay-rating">★ {{ rating }}</span>  (<span class="reviews-length">{{stay.reviews.length}}</span>)</p>
       </div>
     </section>
-    <!-- <button @click="removeStay(stay._id)">x</button>
-        <button @click="updateStay(stay)">Update</button>
-        <button @click="addStayMsg(stay._id)">Add stay msg</button>
-        <button @click="printStayToConsole(stay)">Print msgs to console</button> -->
   </section>
 </template>
 
