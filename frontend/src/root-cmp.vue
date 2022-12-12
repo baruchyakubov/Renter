@@ -40,12 +40,14 @@ export default {
   created() {
     sessionStorage.removeItem('filter');
     socketService.on(SOCKET_EVENT_SEND_ORDER, this.addOrder)
-    socketService.on('set-order-status', this.setOrderStatus)
     eventBus.on('setFilterByPage', this.setFilterByPage)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
+  },
+  mounted(){
+    socketService.on('set-order-status', this.setOrderStatus)
   },
   methods: {
     setOrderStatus(order) {
