@@ -143,3 +143,8 @@
 12.12.2022, 10:30:27 - DEBUG - Setting (YRcOX-MlFtQ_3DGGAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 10:32:06 - DEBUG - user logged out succesfully 
 12.12.2022, 11:13:19 - INFO - Server is running on port: 3030 
+12.12.2022, 12:00:28 - INFO - Server is running on port: 3030 
+12.12.2022, 12:29:49 - DEBUG - auth.service - login with username: 60712702 
+12.12.2022, 12:29:49 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan Bibi","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1"],"isAdmin":false} 
+12.12.2022, 12:29:49 - DEBUG - Setting (Cy6jhPzqm2DcdSK9AAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 12:30:03 - DEBUG - user logged out succesfully 
