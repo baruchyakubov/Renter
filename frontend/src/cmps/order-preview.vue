@@ -1,6 +1,6 @@
 <template>
     <div class="order-preview">
-        <img src="https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670599766/fyqzvdwwboawqnvhi0we.jpg" alt="">
+        <img :src="order.buyer.imgUrl" alt="">
         <div class="order-details">
             <h1>{{ order.buyer.fullname }}</h1>
             <p class="date">Reserved at: {{ dateFormat }}</p>

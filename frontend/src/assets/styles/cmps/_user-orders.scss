@@ -2,13 +2,20 @@
     padding: 0;
     ul{
         padding: 0;
+        .order-preview{
+            display: grid;
+            grid-template-columns: 4fr 9fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            align-items: center;
+        }
     }
     img {
-        grid-row: 1/3;
+        grid-row: 1/span 3;
+        object-fit: cover;
         padding: 0;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
+        height: 130px;
+        width: 90%;
+        border-radius: 10px;
     }
     .yellow{
         color: rgb(236, 168, 40);

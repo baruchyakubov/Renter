@@ -1,11 +1,11 @@
 <template>
   <section class="order-preview">
-    <img :src="loggedinUser.imgUrl" alt="">
+    <img :src="order.stay.imgUrl" alt="">
         <div class="order-details">
-            <h1>{{ order.buyer.fullname }}</h1>
+            <h1>{{ place }}</h1>
             <p class="date">Reserved at: {{ dateFormat }}</p>
             <p>{{ guestsCount }} guests | {{ dateFormat2 }}</p>
-            <p>your apartment in {{ place }} in tel-aviv</p>
+            <p>Your apartment in {{ order.stay.loc.country }} , {{ order.stay.loc.city }}</p>
         </div>
         <span :class="{green: order.status === 'approved' , yellow:order.status === 'pending'}" class="status">{{ order.status }}</span>
   </section>
