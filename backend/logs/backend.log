@@ -121,3 +121,24 @@
 12.12.2022, 9:38:27 - DEBUG - Setting (ZHbS9RVtFSN4w1PlAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 9:41:20 - DEBUG - Setting (Qm-HyNQS9tbLiK6cAAAH) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 9:42:49 - INFO - Server is running on port: 3030 
+12.12.2022, 9:44:24 - INFO - Server is running on port: 3030 
+12.12.2022, 9:44:24 - DEBUG - Setting (Pv6RrwaKu1_GgIxtAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 9:44:24 - DEBUG - user logged out succesfully 
+12.12.2022, 9:44:34 - DEBUG - auth.service - login with username: 60712702 
+12.12.2022, 9:44:35 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1"],"isAdmin":false} 
+12.12.2022, 9:44:35 - DEBUG - Setting (Pv6RrwaKu1_GgIxtAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 9:44:48 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+12.12.2022, 9:44:54 - DEBUG - user logged out succesfully 
+12.12.2022, 9:45:00 - DEBUG - auth.service - login with username: 80344827 
+12.12.2022, 9:45:01 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+12.12.2022, 9:45:01 - DEBUG - Setting (Pv6RrwaKu1_GgIxtAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 9:45:48 - DEBUG - user logged out succesfully 
+12.12.2022, 10:28:52 - DEBUG - auth.service - login with username: 60712702 
+12.12.2022, 10:28:53 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan Bibi","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1"],"isAdmin":false} 
+12.12.2022, 10:28:53 - DEBUG - Setting (OLHUUI-3LLgQrhOeAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 10:29:38 - DEBUG - user logged out succesfully 
+12.12.2022, 10:29:54 - DEBUG - auth.service - login with username: 80344827 
+12.12.2022, 10:29:54 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch Yakubov","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+12.12.2022, 10:29:54 - DEBUG - Setting (OLHUUI-3LLgQrhOeAAAN) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 10:30:27 - DEBUG - Setting (YRcOX-MlFtQ_3DGGAAAP) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 10:32:06 - DEBUG - user logged out succesfully 
