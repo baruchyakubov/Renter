@@ -57,9 +57,9 @@ export default {
     },
     addOrder(order) {
       setTimeout(() => {
-        showSuccessMsg(`you've been received an order from ${order.buyer.fullname}`)
-      this.$store.commit({ type: 'addOrder', order: { ...order } })
-      }, 2000);
+        showSuccessMsg(`New order received`)
+        this.$store.commit({ type: 'addOrder', order: { ...order } })
+      }, 2700);
     },
     closeModal() {
       this.isUserModal = false

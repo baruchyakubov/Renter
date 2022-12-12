@@ -12,7 +12,7 @@ export default {
   created() {
     eventBus.on(SHOW_MSG, (msg) => {
       this.msg = msg
-      var delay = msg.delay || 2000
+      var delay = msg.delay || 3200
       this.alive = true
       setTimeout(() => {
         this.alive = false
