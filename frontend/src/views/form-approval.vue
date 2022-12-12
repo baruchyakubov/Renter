@@ -71,11 +71,17 @@ export default {
       stay: null
     }
   },
+  mounted(){
+    this.scrollTop()
+  },
   methods: {
     async submit(){
       await this.$store.dispatch({type:"sendForm",form:this.form})
       this.$store.commit({type:"removeTempForm"})
       this.$router.push('/userOrders')
+    },
+    scrollTop() {
+      window.scrollTo(0, 0)
     },
     async getStay() {
       return this.$store.dispatch({ type: "setCurrStay", stayId: this.form.stay._id })

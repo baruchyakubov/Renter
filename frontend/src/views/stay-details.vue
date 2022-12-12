@@ -42,12 +42,19 @@ export default {
   },
   mounted() {
     eventBus.emit('toggleLayout', true)
+    var scrollTop = function () {
+      window.scrollTo(0, 0);
+    }
+    this.scrollTop()
   },
   async created() {
     await this.setStay()
     if (this.rating > 4.6 && this.stay.reviews.length > 3) this.isSuperHost = true
   },
   methods: {
+    scrollTop() {
+      window.scrollTo(0, 0)
+    },
     async setStay() {
       const stayId = this.$route.params.id
       if (stayId) {

@@ -9,7 +9,7 @@
     <div style="display:grid;">
       <app-footer ref="infiniteScrollTrigger" id="scrollTrigger"></app-footer>
     </div>
-   
+
   </div>
 </template>
 
@@ -46,7 +46,7 @@ export default {
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
   },
-  mounted(){
+  mounted() {
     socketService.on('set-order-status', this.setOrderStatus)
   },
   methods: {
