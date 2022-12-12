@@ -1,6 +1,6 @@
 <template>
-    <div class="main-container full" :class="{ detailsContainer: this.isDetailsLayout }">
-    <div class="app-footer">
+    <div class="main-container full"   :class="{ detailsContainer: this.isDetailsLayout }">
+    <div class="app-footer"  >
       <p>© 2022 Renter, Inc</p>
       <div class="svgs">
         <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="Navigate to Facebook" focusable="false"

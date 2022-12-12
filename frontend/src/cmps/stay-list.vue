@@ -21,9 +21,9 @@ export default {
                 currentPage: 1,
                 maxPerPage: 2,
                 totalResults: 200,
-                showLoader: false
-            }
-
+                showLoader: false,
+            },
+            isPaging:null
         }
     },
     created() {
@@ -31,10 +31,15 @@ export default {
     },
     mounted() {
         eventBus.emit('toggleLayout', false)
+        this.isPaging = true
         this.scrollTrigger()
+    },
+    unmounted() {
+        this.isPaging = false
     },
     methods: {
          scrollTrigger() {
+            if(!this.isPaging) return
             let Observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0 && this.filterBy.currentPage < this.pageCount) {

@@ -63,7 +63,7 @@ export default {
         return {
             dates: { from: '', to: '' },
             counter: {
-                adultCounter: 0,
+                adultCounter: 1,
                 infantCounter: 0,
                 childrenCounter: 0
             },

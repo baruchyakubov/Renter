@@ -165,6 +165,7 @@ import calendar from '../side-cmps/calendar.vue'
 import modal from '../side-cmps/reserve-form-modal.vue'
 import svgFlag from '../side-cmps/footer-logo.vue'
 import { showErrorMsg, showUserMsg, showSuccessMsg } from '../services/event-bus.service'
+import { utilService } from '../services/util.service'
 export default {
   name: "reserve-form",
   props: {
@@ -188,6 +189,16 @@ export default {
     // this.$refs.guestsInput = this.guests
     this.maxGuests = this.stay.capacity
     this.form = stayService.getEmptyForm()
+  },
+  mounted(){
+    let sessionStats= utilService.loadFromSession('filter')
+    if(sessionStats) {
+      this.form.startDate = sessionStats.dates.from
+      this.form.endDate = sessionStats.dates.to
+      this.form.guests.adults = sessionStats.guests.adultCounter
+      this.form.guests.childrens = sessionStats.guests.childrenCounter
+      this.form.guests.infants = sessionStats.guests.infantCounter
+    }
   },
   methods: {
     increment(guests) {

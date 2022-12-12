@@ -7,7 +7,7 @@
         <img class="reviewerImg" :src="review.by.imgUrl" />
         <div>
           <h4>{{ review.by.fullname }}</h4>
-          <h5 class="reviewTime">{{month()}} {{year()}}</h5>
+          <h5 class="reviewTime"> {{year(review)}} {{month(review)}}</h5>
         </div>
       </div>
       <p class="reviewInsight">{{ review.txt }}</p>
@@ -21,7 +21,6 @@ export default {
   name: "stay-details-reviews",
   created(){
     const date = this.stay.reviews[0].at
-    // console.log(this.stay.reviews[0].at.getMonth());
   },
   props: {
     stay: Object,
@@ -30,15 +29,14 @@ export default {
    
   },
   methods:{
-    month() {
+    month(review) {
+      let month = +review.at.substring(5,7)
       let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-      let currMonth = months[Math.floor(Math.random()*12)]
+      let currMonth = months[month]
       return currMonth
     },
-    year(){
-      let months = ['2015','2016','2017','2018','2019','2020','2022','2021']
-      let currMonth = months[Math.floor(Math.random()*8)]
-      return currMonth
+    year(review){
+      return review.at.substring(0,4)
     }
   },
   computed: {

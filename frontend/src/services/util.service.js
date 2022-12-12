@@ -5,7 +5,8 @@ export const utilService = {
     debounce,
     randomPastTime,
     saveToStorage,
-    loadFromStorage
+    loadFromStorage,
+    loadFromSession
 }
 
 function makeId(length = 6) {
@@ -59,5 +60,10 @@ function saveToStorage(key, value) {
 
 function loadFromStorage(key) {
     const data = localStorage.getItem(key)
+    return (data) ? JSON.parse(data) : undefined
+}
+
+function loadFromSession(key) {
+    const data = sessionStorage.getItem(key)
     return (data) ? JSON.parse(data) : undefined
 }
