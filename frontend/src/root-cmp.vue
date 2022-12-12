@@ -51,13 +51,15 @@ export default {
   },
   methods: {
     setOrderStatus(order) {
-      if(!order) return showErrorMsg('Trouble processing order')
+      // if(!order) return showErrorMsg('Trouble processing order')
       showSuccessMsg(`your order has been ${order.status}`)
       this.$store.commit({ type: 'changeOrderStatusToUser', order: { ...order } })
     },
     addOrder(order) {
-      showSuccessMsg(`you've been received an order from ${order.buyer.fullname}`)
+      setTimeout(() => {
+        showSuccessMsg(`you've been received an order from ${order.buyer.fullname}`)
       this.$store.commit({ type: 'addOrder', order: { ...order } })
+      }, 2000);
     },
     closeModal() {
       this.isUserModal = false

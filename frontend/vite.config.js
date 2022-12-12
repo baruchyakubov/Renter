@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     outDir:'../backend/public',
+    chunkSizeWarningLimit: 1600,
     emptyOutDir: true
   }
 })
