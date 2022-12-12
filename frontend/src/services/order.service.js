@@ -14,9 +14,9 @@ import { authService } from './auth.service'
 window.orderService = orderService
 const URL_KEY = 'Order'
 
-async function query() {
+async function query(from) {
     try {
-        return httpService.get(URL_KEY)
+        return httpService.get(URL_KEY , from)
         // const orders = await storageService.query(URL_KEY)
         // const loggedInUser = authService.getLoggedinUser()
         // const Orders = orders.filter(order =>{
