@@ -68,3 +68,25 @@
 12.12.2022, 18:13:20 - DEBUG - Setting (jFHlncfZIIcsqe4kAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
 12.12.2022, 18:14:48 - DEBUG - Setting (TPvFprw1Qdx0zvCaAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
 12.12.2022, 18:38:59 - DEBUG - Setting (pjj1JAP1Mb9jcXbHAAAF) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 18:54:24 - DEBUG - Setting (yEQa98As2VYCzLj5AAAJ) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 18:56:10 - DEBUG - Setting (7w3LQZ5BACmBmzCUAAAL) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 19:05:49 - DEBUG - Setting (RXqUWHu2W1fwEhpLAAAN) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 19:06:31 - DEBUG - Setting (zhSN78AhYGe0bA6QAAAP) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 19:06:56 - DEBUG - Setting (TFF619gJgxV2Qy89AAAR) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 19:07:04 - DEBUG - Setting (_u1AYuEr3O7IG36eAAAT) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 19:16:57 - INFO - Server is running on port: 3030 
+12.12.2022, 19:17:06 - INFO - Server is running on port: 3030 
+12.12.2022, 19:17:27 - INFO - Server is running on port: 3030 
+12.12.2022, 19:17:55 - INFO - Server is running on port: 3030 
+12.12.2022, 19:18:32 - INFO - Server is running on port: 3030 
+12.12.2022, 19:19:03 - INFO - Server is running on port: 3030 
+12.12.2022, 19:19:37 - INFO - Server is running on port: 3030 
+12.12.2022, 19:20:22 - INFO - Server is running on port: 3030 
+12.12.2022, 19:21:54 - INFO - Server is running on port: 3030 
+12.12.2022, 19:23:19 - INFO - Server is running on port: 3030 
+12.12.2022, 19:23:38 - DEBUG - Setting (xK0KlRfmYQcrDM0sAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+12.12.2022, 19:25:06 - DEBUG - user logged out succesfully 
+12.12.2022, 19:25:12 - DEBUG - auth.service - login with username: 80344827 
+12.12.2022, 19:25:12 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch Yakubov","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+12.12.2022, 19:25:12 - DEBUG - Setting (xK0KlRfmYQcrDM0sAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+12.12.2022, 19:43:10 - DEBUG - Setting (amiQkBk_4V869wOLAAAF) socket.userId = 6390a8fe4887fbe817a811e0 

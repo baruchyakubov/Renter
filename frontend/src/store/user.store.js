@@ -24,8 +24,6 @@ export const userStore = {
             console.log(state.isLogged);
         },
         setLoggedinUser(state, { user }) {
-            // Yaron: needed this workaround as for score not reactive from birth
-            // state.loggedinUser = (user) ? { ...user } : null
             state.loggedinUser = user
             console.log(state.loggedinUser);
         },
@@ -78,7 +76,6 @@ export const userStore = {
             }
         },
         async loadUsers({ commit }) {
-            // TODO: loading
             try {
                 const users = await userService.getUsers()
                 commit({ type: 'setUsers', users })

@@ -36,9 +36,6 @@ export default {
     return {
       stay: null,
       isSuperHost: false
-      //   review : {
-      //   txt: req.body.txt,
-      // }
     }
   },
   mounted() {
@@ -83,7 +80,3 @@ export default {
   }
 }
 </script>
-
-<style lang="">
-  
-</style>

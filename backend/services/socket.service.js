@@ -1,4 +1,3 @@
-// const asyncLocalStorage = require('./als.service')
 const logger = require('./logger.service')
 const toyService = require('../api/stay/stay.service')
 var gIo = null
@@ -25,9 +24,6 @@ function setupSocketAPI(http, session) {
       socket.join(topic)
       socket.myTopic = topic
     })
-    // socket.on('send-order', (hostId) => {
-    //   if (socket.userId !== hostId) return
-    // })
 
     socket.on('chat newMsg', (msg) => {
       console.log('Emitting Chat msg', msg)
@@ -66,11 +62,6 @@ function setupSocketAPI(http, session) {
   })
 }
 
-// socket.emit
-// socket.broadcast
-// gIo.emit
-// emits to all sockets:
-// gIo.emit('chat addMsg', msg)
 
 function emitTo({ type, data, label }) {
   if (label) gIo.to('watching:' + label).emit(type, data)

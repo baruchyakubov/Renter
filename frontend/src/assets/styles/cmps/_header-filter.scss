@@ -8,8 +8,6 @@
     border-radius: 3rem;
     padding: 0;
     background-color: #EBEBEB;
-    // border: 1px gray solid;
-    // background-color: #FFFFFF;
     font-family: cereal-semi-light;
     position: absolute;
     bottom: 10%;
@@ -37,10 +35,6 @@
     .sep{
         margin-inline-end: 1px;
     }
-    .icon {
-        // padding-inline-end: 0.5rem;
-    }
-
     div {
         cursor: pointer;    
     }
@@ -147,7 +141,6 @@
         right: 0.3rem;
     }
     svg{
-        // margin-inline-end: 1rem;
         position: relative;
         right: 1rem;
     }

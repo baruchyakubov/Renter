@@ -41,18 +41,12 @@
         <div class="counter">
         </div>
       </div>
-      <!-- <h4 class="closeBtn" @click="$emit('toggleModal')">Close</h4> -->
     </div>
 </template>
 <script>
 export default {
   props:{
     counter:Object
-  },
-  data(){
-    return{
-      
-    }
   },
   methods:{
     increment(counter){
@@ -62,13 +56,5 @@ export default {
       return this.$emit('decrement',counter)
     }
   },
-  created(){
-    console.log(this.counter)
-  },
-  computed:{
-  }
 }
 </script>
-<style >
-  
-</style>

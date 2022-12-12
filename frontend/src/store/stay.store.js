@@ -1,6 +1,5 @@
-// import { stayService } from '../services/stay.service.local'
 import { stayService } from '../services/stay.service'
-import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
+
 export function getActionRemoveStay(stayId) {
     return {
         type: 'removeStay',

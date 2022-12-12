@@ -186,7 +186,6 @@ export default {
     }
   },
   created() {
-    // this.$refs.guestsInput = this.guests
     this.maxGuests = this.stay.capacity
     this.form = stayService.getEmptyForm()
   },
@@ -203,16 +202,12 @@ export default {
   methods: {
     increment(guests) {
       if (this.total >= this.maxGuests) return
-      // console.log('received guests',guests)
-      // console.log('total ',this.total,'guests ',this.guests)
       if (guests === 'infantGuests') return this.guests.infants++
       if (guests === 'adultGuests') return this.guests.adults++
       if (guests === 'childrenGuests') return this.guests.childrens++
     },
     decrement(guests) {
       if (this.total <= 1) return
-      // console.log('received guests',guests)
-      // console.log('total ',this.total,'guests ',this.guests)
       if (guests === 'infantGuests' && this.guests.infants > 0) return this.guests.infants--; this.total--
       if (guests === 'adultGuests' && this.guests.adults > 0) return this.guests.adults--; this.total--
       if (guests === 'childrenGuests' && this.guests.childrens > 0) return this.guests.childrens--; this.total--
@@ -226,7 +221,6 @@ export default {
     },
     async onSubmit() {
       try {
-        // this.$store.dispatch({ type: 'sendForm', form: this.form })
         if (!this.currUser) {
           showErrorMsg('Login required')
           return
@@ -304,6 +298,3 @@ export default {
   }
 }
 </script>
-<style>
-
-</style>

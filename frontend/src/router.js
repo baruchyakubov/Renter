@@ -1,8 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import backOffice from './views/back-office.vue'
-import home from './views/home.vue'
 import wishlist from './views/wishlist.vue'
-import chat from './views/chat.vue'
 import stayApp from './views/stay-app.vue'
 import reviewApp from './views/review-app.vue'
 import loginSignup from './views/login-signup.vue'
@@ -29,11 +27,6 @@ const routes = [
     path: '/review',
     name: 'review',
     component: reviewApp
-  },
-  {
-    path: '/chat',
-    name: 'chat',
-    component: chat
   },
   {
     path: '/login',
@@ -66,6 +59,5 @@ const routes = [
 export const router = createRouter({
   routes,
   history: createWebHashHistory()
-  // base: process.env.BASE_URL,
 })
 

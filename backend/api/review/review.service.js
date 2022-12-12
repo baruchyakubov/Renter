@@ -60,9 +60,3 @@ function _buildCriteria(filterBy) {
   return criteria
 }
 
-// populate(data)
-// async function populate(data) {
-//   const collection = await dbService.getCollection('user');
-//   await collection.insertMany(data)
-
-// }

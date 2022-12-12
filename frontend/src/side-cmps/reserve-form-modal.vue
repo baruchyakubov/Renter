@@ -46,7 +46,6 @@
     </div>
 </template>
 <script>
-import { utilService } from '../services/util.service'
 export default {
   props:{
     stay:Object,
@@ -71,6 +70,3 @@ export default {
   }
 }
 </script>
-<style >
-  
-</style>

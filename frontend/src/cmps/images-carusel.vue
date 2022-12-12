@@ -5,11 +5,10 @@
       <img class="preview-img" :src="image" alt="">
     </el-carousel-item>
   </el-carousel>
-  
 </template>
 
 <script>
-import {showSuccessMsg , showErrorMsg,showUserMsg } from '../services/event-bus.service'
+import { showSuccessMsg } from '../services/event-bus.service'
 export default {
   name: 'carousel',
   props:{

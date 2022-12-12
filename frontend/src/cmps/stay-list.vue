@@ -4,7 +4,6 @@
             <stay-preview :stay="stay"></stay-preview>
         </li>
     </ul>
-    <!-- <div ></div> -->
 </template>
 
 <script>
