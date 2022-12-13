@@ -100,7 +100,6 @@
 12.12.2022, 19:54:58 - INFO - Server is running on port: 3030 
 12.12.2022, 19:55:00 - DEBUG - Setting (fv6AvtT_CFA9z-etAAAB) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 19:55:00 - DEBUG - Setting (IU8R1P_OmaG57ZCOAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
-<<<<<<< HEAD
 12.12.2022, 19:55:58 - INFO - Server is running on port: 3030 
 12.12.2022, 20:15:03 - DEBUG - Setting (J8TrY51nszAiFhKiAAAF) socket.userId = 6390a8fe4887fbe817a811e0 
 12.12.2022, 20:15:05 - DEBUG - Setting (xC-4X91snssmVmOOAAAH) socket.userId = 6390a8fe4887fbe817a811e2 
@@ -155,9 +154,6 @@
 12.12.2022, 22:10:55 - DEBUG - Setting (vaePIe27eH1NV0LvAAAt) socket.userId = 6390a8fe4887fbe817a811e2 
 12.12.2022, 22:10:57 - DEBUG - Setting (EC00ZReWxckLSg_8AAAv) socket.userId = 6390a8fe4887fbe817a811e2 
 12.12.2022, 22:11:23 - INFO - Server is running on port: 3030 
-=======
-12.12.2022, 22:13:46 - DEBUG - Setting (knDmIS3lPuhHlEgeAAAJ) socket.userId = 6390a8fe4887fbe817a811e0 
->>>>>>> 78e5955bfebe55490f1e79e7323bc434d3adb0bf
 12.12.2022, 22:27:33 - INFO - Server is running on port: 3030 
 12.12.2022, 22:28:42 - INFO - Server is running on port: 3030 
 12.12.2022, 22:32:38 - DEBUG - Setting (p34UTt1lDha6-YHeAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
@@ -214,3 +210,4 @@
 13.12.2022, 0:03:35 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch Yakubov","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
 13.12.2022, 0:03:35 - DEBUG - Setting (gxqlKVhAzxSmyB0sAAAV) socket.userId = 6390a8fe4887fbe817a811e0 
 13.12.2022, 0:03:49 - DEBUG - user logged out succesfully 
+13.12.2022, 9:56:46 - INFO - Server is running on port: 3030 
