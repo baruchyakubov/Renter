@@ -57,7 +57,7 @@ export default {
       setTimeout(() => {
         showSuccessMsg(`New order received`)
         this.$store.commit({ type: 'addOrder', order: { ...order } })
-      }, 2700);
+      }, 4500);
     },
     closeModal() {
       this.isUserModal = false
