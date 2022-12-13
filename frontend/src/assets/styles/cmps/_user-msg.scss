@@ -11,9 +11,9 @@
     background-color: 1px rgb(255, 56, 92) solid;
     &.alert-success {
         border: 1px rgb(112, 112, 112) solid;
-        color: white;
+        color: rgb(255, 56, 92);
         opacity: 0.9;
-        background-color: rgb(255, 56, 92);
+        background-color: white;
     }
     &.alert-error {
         opacity: 0.8;
