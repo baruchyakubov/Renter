@@ -296,3 +296,33 @@
 13.12.2022, 18:22:26 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
 13.12.2022, 18:22:37 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
 13.12.2022, 18:23:49 - DEBUG - user logged out succesfully 
+14.12.2022, 0:06:07 - INFO - Server is running on port: 3030 
+14.12.2022, 0:07:47 - DEBUG - auth.service - login with username: 80344827 
+14.12.2022, 0:07:48 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch Yakubov","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+14.12.2022, 0:07:48 - DEBUG - Setting (MMEU_wF-THOudTfwAAAD) socket.userId = 6390a8fe4887fbe817a811e0 
+14.12.2022, 0:07:54 - DEBUG - user logged out succesfully 
+14.12.2022, 0:07:59 - DEBUG - auth.service - login with username: 60712702 
+14.12.2022, 0:07:59 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan Bibi","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826d6","6390a9034887fbe817a826d6"],"isAdmin":false} 
+14.12.2022, 0:07:59 - DEBUG - Setting (MMEU_wF-THOudTfwAAAD) socket.userId = 6390a8fe4887fbe817a811e2 
+14.12.2022, 0:09:20 - DEBUG - user logged out succesfully 
+14.12.2022, 0:38:25 - INFO - Server is running on port: 3030 
+14.12.2022, 0:39:48 - DEBUG - auth.service - login with username: 60712702 
+14.12.2022, 0:39:49 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan Bibi","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826d6","6390a9034887fbe817a826d6"],"isAdmin":false} 
+14.12.2022, 0:39:49 - DEBUG - Setting (hVFIk4UwICU8yLYnAAAB) socket.userId = 6390a8fe4887fbe817a811e2 
+17.12.2022, 1:53:14 - INFO - Server is running on port: 3030 
+17.12.2022, 1:54:29 - DEBUG - auth.service - login with username: 80344827 
+17.12.2022, 1:54:29 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch Yakubov","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+17.12.2022, 1:54:29 - DEBUG - Setting (kcdmyP6p3A5pOKmcAAAE) socket.userId = 6390a8fe4887fbe817a811e0 
+17.12.2022, 1:54:35 - DEBUG - user logged out succesfully 
+17.12.2022, 1:54:41 - DEBUG - auth.service - login with username: 60712702 
+17.12.2022, 1:54:41 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e2","fullname":"Matan Bibi","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830606/okvgyxkhc47kpjykfi08.jpg","username":"60712702","id":"60712702","wishList":["6390a9034887fbe817a826c2","6390a9034887fbe817a826c1","6390a9034887fbe817a826c0","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826c1","6390a9034887fbe817a826d6","6390a9034887fbe817a826d6"],"isAdmin":false} 
+17.12.2022, 1:54:41 - DEBUG - Setting (kcdmyP6p3A5pOKmcAAAE) socket.userId = 6390a8fe4887fbe817a811e2 
+17.12.2022, 1:55:05 - DEBUG - auth.service - login with username: 80344827 
+17.12.2022, 1:55:06 - INFO - User login:  | {"_id":"6390a8fe4887fbe817a811e0","fullname":"Baruch Yakubov","imgUrl":"https://res.cloudinary.com/dgvpl7cdq/image/upload/v1670830135/hzohyqcc0cxj9simqly5.jpg","username":"80344827","id":"80344827","wishList":["6390a9034887fbe817a8271b","6390a9034887fbe817a826ee"],"isAdmin":true} 
+17.12.2022, 1:55:06 - DEBUG - Setting (zsxi81ITxuVotwELAAAG) socket.userId = 6390a8fe4887fbe817a811e0 
+17.12.2022, 1:55:16 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+17.12.2022, 1:55:25 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+17.12.2022, 1:55:38 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e0 
+17.12.2022, 1:55:44 - DEBUG - Emiting to user socket: 6390a8fe4887fbe817a811e2 
+17.12.2022, 2:48:47 - INFO - Server is running on port: 3030 
+9.1.2023, 8:08:01 - INFO - Server is running on port: 3030 
