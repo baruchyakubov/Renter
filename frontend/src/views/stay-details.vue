@@ -20,6 +20,7 @@
     <stay-reviews :stay="stay"></stay-reviews>
   </div>
   <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  <mobile-footer :stay="stay" v-if="stay"/>
 </template>
 <script>
 import locationMap from '../side-cmps/location-map.vue'
@@ -31,6 +32,7 @@ import reserveForm from '../side-cmps/stay-reserve-form.vue'
 import stayReviews from '../side-cmps/stay-reviews.vue'
 import calendar from '../side-cmps/calendar.vue'
 import hostDetails from '../side-cmps/stay-host-details.vue'
+import mobileFooter from '../cmps/mobile-footer.vue'
 export default {
   data() {
     return {
@@ -76,7 +78,8 @@ export default {
     stayReviews,
     calendar,
     hostDetails,
-    locationMap
+    locationMap,
+    mobileFooter
   }
 }
 </script>
