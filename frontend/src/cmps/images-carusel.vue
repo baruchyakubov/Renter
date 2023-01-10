@@ -9,6 +9,7 @@
 
 <script>
 import { showSuccessMsg } from '../services/event-bus.service'
+import { authService } from '../services/auth.service';
 export default {
   name: 'carousel',
   props:{
@@ -22,7 +23,7 @@ export default {
     saveStay(e,stayId){
       e.stopPropagation()
       document.getElementById(`${this.stay._id}`).style.fill ='red'
-      const user = {...this.$store.getters.loggedinUser}
+      const user = authService.getLoggedinUser()
       const stay = {
         _id: this.stay._id,
         name: this.stay.name,
@@ -36,7 +37,7 @@ export default {
         reviews: this.stay.reviews
       } 
       user.wishList.push(stay)
-      this.$store.dispatch({type:"updateUser",user})
+      this.$store.dispatch({type:"updateUser",user:{...user}})
       showSuccessMsg('Added stay to wishlist')
     }
   }
