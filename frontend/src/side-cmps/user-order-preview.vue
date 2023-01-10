@@ -1,6 +1,6 @@
 <template>
   <section class="order-preview">
-    <img :src="order.stay.imgUrl" alt="">
+    <img class="stay-trip-img" :src="order.stay.imgUrl" alt="">
         <div class="order-details">
             <h1>{{ place }}</h1>
             <p class="date">Reserved at: {{ dateFormat }}</p>

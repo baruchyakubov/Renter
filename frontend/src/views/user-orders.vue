@@ -1,5 +1,5 @@
 <template>
-    <section v-if="isLoaded" class="user-orders detailsContainer">
+    <section v-if="isLoaded" class="user-trips detailsContainer">
         <h1 class="trips">Your trips</h1>
         <ul>
             <li v-for="order in orders" :key="order._id">

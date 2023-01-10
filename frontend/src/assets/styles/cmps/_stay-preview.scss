@@ -95,3 +95,9 @@
     height: auto;
     aspect-ratio: 1.0526 !important;
 }
+
+@media (max-width:595px){
+    .stay-preview{
+        max-width: none;
+    }
+}

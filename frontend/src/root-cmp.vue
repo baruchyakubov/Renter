@@ -1,6 +1,6 @@
 <template>
   <div class="main-div">
-    <section class="container home main-container">
+    <section class="container home mainContainerr">
       <user-modal v-if="isUserModal" @closeModal="closeModal"></user-modal>
       <user-msg />
       <app-header @openModal="openModal" />
@@ -9,7 +9,7 @@
     <div style="display:grid;">
       <app-footer ref="infiniteScrollTrigger" id="scrollTrigger"></app-footer>
     </div>
-
+    <mobile-menu v-if="isMenuShown"></mobile-menu>
   </div>
 </template>
 
@@ -23,6 +23,7 @@ import { authService } from './services/auth.service'
 import userModal from './cmps/user-modal.vue'
 import { socketService, SOCKET_EVENT_SEND_ORDER } from './services/socket.service'
 import { showSuccessMsg } from './services/event-bus.service'
+import mobileMenu from './cmps/mobile-menu.vue'
 
 export default {
   data() {
@@ -33,10 +34,13 @@ export default {
         country: '',
         guestsCount: 0,
         page: 1
-      }
+      },
+      currRoute: this.$route.path,
+      isMenuShown: true 
     }
   },
   created() {
+    if(this.$route.path === '/stay/:id') this.isMenuShown = false
     sessionStorage.removeItem('filter');
     socketService.on(SOCKET_EVENT_SEND_ORDER, this.addOrder)
     eventBus.on('setFilterByPage', this.setFilterByPage)
@@ -80,11 +84,18 @@ export default {
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     }
   },
+  watch:{
+    '$route': function (){
+      if(this.$route.path.includes('stay')) this.isMenuShown = false
+      else this.isMenuShown = true
+    }
+  },
   components: {
     appHeader,
     userMsg,
     userModal,
-    appFooter
+    appFooter,
+    mobileMenu
   },
 }
 </script>

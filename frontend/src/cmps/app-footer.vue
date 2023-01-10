@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container full"   :class="{ detailsContainer: this.isDetailsLayout }">
+    <div class="full"   :class="{ detailsContainer: this.isDetailsLayout , mainContainer:!this.isDetailsLayout }">
     <div class="app-footer"  >
       <p>© 2022 Renter, Inc</p>
       <div class="svgs">

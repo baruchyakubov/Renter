@@ -5,7 +5,7 @@ import { stayStore } from './stay.store.js'
 import { reviewStore } from './review.store.js'
 import { orderStore } from './order.store.js'
 
-export const stayStore = Vuex.createStore({
+export const store = Vuex.createStore({
   strict: true,
   modules: {
     userStore,

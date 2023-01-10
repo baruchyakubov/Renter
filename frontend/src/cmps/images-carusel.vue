@@ -22,8 +22,20 @@ export default {
     saveStay(e,stayId){
       e.stopPropagation()
       document.getElementById(`${this.stay._id}`).style.fill ='red'
-      const user = JSON.parse(JSON.stringify(this.$store.getters.loggedinUser)) 
-      user.wishList.push(this.stay._id)
+      const user = {...this.$store.getters.loggedinUser}
+      const stay = {
+        _id: this.stay._id,
+        name: this.stay.name,
+        imgUrls: this.stay.imgUrls,
+        summary: this.stay.summary,
+        loc: {
+          country: this.stay.loc.country,
+          city: this.stay.loc.city
+        },
+        price:this.stay.price,
+        reviews: this.stay.reviews
+      } 
+      user.wishList.push(stay)
       this.$store.dispatch({type:"updateUser",user})
       showSuccessMsg('Added stay to wishlist')
     }

@@ -1,8 +1,8 @@
 <template>
-  <section v-if="isLoaded" class="back-office main-">
+  <section v-if="isLoaded" class="back-office mainContainer">
     <h1>Orders status</h1>
     <div class="back-office-layout ">
-      <ul class="orders main-container">
+      <ul class="orders mainContainer">
         <li class="flex-box " v-for="order in orders" :key="order._id">
           <order-preview :order="order"></order-preview>
         </li>
