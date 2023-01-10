@@ -1,8 +1,8 @@
 <template>
   <stay-filter></stay-filter>
-  <div>
-    <stay-list class="" v-if="stays.length" :stays="stays"></stay-list>
-    <div v-else="stays" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  <div class="mainContainer">
+    <stay-list  v-if="stays.length" :stays="stays"></stay-list>
+    <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     <hr />
   </div>
 </template>

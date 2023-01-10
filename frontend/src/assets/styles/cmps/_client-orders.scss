@@ -1,4 +1,4 @@
-.user-trips {
+.user-orders {
     padding: 0;
 
     .trips {
@@ -18,13 +18,10 @@
             grid-template-columns: 220px 9fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             align-items: center;
-            p , h1{
-                white-space: pre-wrap;
-            }
         }
     }
 
-    .stay-trip-img {
+    img {
         justify-self: flex-start;
         grid-row: 1/span 3;
         object-fit: cover;
@@ -35,35 +32,12 @@
     }
 
     .status {
-        justify-self: flex-end;
-        margin-right: 0;
-        margin-right: 0;
+        justify-self: flex-end !important;
+        margin-right: 0 !important;
+        margin-right: 0 !important;
     }
 
     .yellow {
         color: rgb(236, 168, 40);
-    }
-}
-
-@media (max-width:835px){
-    .user-trips{
-        ul {
-        .order-preview {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .stay-trip-img{
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3/2;
-        }
-        .status{
-            padding-inline-start: 0;
-            align-self: center;
-            width: fit-content;
-            margin-block-start: rem(10px);
-        }
-    }
     }
 }

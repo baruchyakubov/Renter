@@ -15,13 +15,15 @@ import './assets/styles/setup/_typography.scss'
 import rootCmp from './root-cmp.vue'
 
 
+
+
+
 const app = createApp(rootCmp)
 
 app.directive('focus', focusDirective)
 app.directive('rainbow', rainbowDirective)
 app.directive('custom-on', customOnDirective)
 app.directive('click-outside', clickOutsideDirective)
-
 app.use(router)
 app.use(store)
 app.use(ElementPlus)

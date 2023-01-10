@@ -1,6 +1,6 @@
 <template>
     <carousel :mouseDrag="false" :transition="600" :itemsToScroll="9" style="padding:0;" :settings="settings"
-        :breakpoints="breakpoints" class="main-container" :items-to-show="15" :wrap-around="true" :loop="false">
+        :breakpoints="breakpoints" class="mainContainer" :items-to-show="15" :wrap-around="true" :loop="false">
         <slide v-for="filter in filters" :key="filter">
             <div style="width:100%" class="carousel__item " tabindex="1">
                 <div @click="$emit('setFilterByLabel' , filter.name)" style="width:100%" tabindex="1" class="stay-filter-div flex-box column">

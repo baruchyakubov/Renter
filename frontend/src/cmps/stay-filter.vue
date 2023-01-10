@@ -1,5 +1,5 @@
 <template>
-  <section class="stay-filter main-container">
+  <section class="stay-filter mainContainer">
       <filter-carousel @setFilterByLabel="setFilterByLabel" :filters="filters"></filter-carousel> 
   </section>
 </template>
