@@ -1,11 +1,13 @@
 <template>
   <div class="detailsContainer">
     <div class="form-approval flex-box" v-if="stay">
-      <div class="column1">
+      <div class="columm0">
         <div class="header flex-box">
           <back-btn class="backBtn" @click="$router.push('/stay/' + form.stay._id)"></back-btn>
           <h1>Confirm and pay</h1>
         </div>
+      </div>
+      <div class="column1">
         <div class="trip-details">
           <h3 class="title">Your trip</h3>
           <h5 class="dates">Dates</h5>

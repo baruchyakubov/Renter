@@ -198,3 +198,12 @@
 
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .form-approval{
+    flex-direction: column;
+    .column1,.column2{
+      width: 100%;
+    }
+  }
+}
