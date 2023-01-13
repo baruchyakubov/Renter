@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="reactive-btn-container">
     <div class="btn-container" @click="onSubmit" v-if="content">
           <div class="cell"></div>
           <div class="cell"></div>

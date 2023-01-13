@@ -1,4 +1,8 @@
 .user-modal-container {
+  .backBtn{
+     cursor: pointer;
+    margin-inline: 24px;
+  }
   width: 35.6rem;
   height: fit-content;
   padding-bottom: 2.5rem;
@@ -31,13 +35,15 @@
     border: 1px rgb(175, 175, 175) solid;
     border-radius: 0.5rem;
     gap: 0;
+
     div {
       border: none;
       height: 4rem;
       margin: 0;
-    &:not(:first-child){
-      border-top: 1px rgb(175, 175, 175) solid;
-    }
+
+      &:not(:first-child) {
+        border-top: 1px rgb(175, 175, 175) solid;
+      }
 
       input {
         width: 90%;
@@ -67,44 +73,48 @@
     font-size: 0.7rem;
     text-align: center;
     margin-top: 1.5rem;
+    margin-inline: 24px;
   }
 }
 
-.user-modal-container{
-  .btn-container {
-    margin-top: 1.5rem;
-    position: relative;
-    width: 520px;
-    height: 48px;
-    padding: 0 0;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    border: none;
-    display: grid;
-    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-  
-    @for $i from 0 to 10 {
-      .cell:nth-child(10n + #{$i + 1}):hover~.content {
-        --positionX: #{$i};
-      }
-  
-      .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
-        --positionY: #{$i};
+.user-modal-container {
+  .reactive-btn-container {
+    margin-inline: 24px;
+    .btn-container {
+      margin-top: 1.5rem;
+      position: relative;
+      width: 100%;
+      height: 48px;
+      padding: 0 0;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      border: none;
+      display: grid;
+      grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+
+      @for $i from 0 to 10 {
+        .cell:nth-child(10n + #{$i + 1}):hover~.content {
+          --positionX: #{$i};
+        }
+
+        .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
+          --positionY: #{$i};
+        }
       }
     }
   }
-  
+
   .cell {
     width: 100%;
     height: 100%;
     z-index: 1;
   }
-  
+
   .content {
     --positionX: 0;
     --positionY: 5;
-  
+
     position: absolute;
     top: 0;
     right: 0;
@@ -115,7 +125,7 @@
     align-items: center;
     height: 100%;
     border-radius: 8px;
-  
+
     background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
         rgb(241, 37, 75) 0%,
         rgb(230, 30, 77) 27.5%,
@@ -124,7 +134,7 @@
         rgb(189, 30, 89) 75%,
         rgb(189, 30, 89) 100%);
   }
-  
+
   .action-btn {
     padding: 0 0;
     margin: 0 0;
@@ -135,5 +145,13 @@
     background-color: transparent;
     border: none;
   }
-  
+
+}
+
+@media (max-width:750px) {
+  .user-modal-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }
