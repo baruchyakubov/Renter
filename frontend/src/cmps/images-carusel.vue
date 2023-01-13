@@ -1,6 +1,6 @@
 <template>
   <el-carousel interval="999999999" indicator-position="inside" v-if="stay">
-    <svg v-if="$route.path === '/'" :id="stay._id" @click.prevent="saveStay($event, stay._id)" viewBox="0 0 32 32"
+    <svg :class="{red: isInWishlist}" v-if="$route.path === '/'" :id="stay._id" @click.prevent="saveStay($event, stay._id)" viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"
       style="position: absolute; z-index: 20; left: 95%; top: 5%; transform: translate(-95% , -5%);  display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: white; stroke-width: 2; overflow: visible;">
       <path
@@ -22,8 +22,19 @@ export default {
     images: Array,
     stay: Object
   },
-  created() {
-    console.log(this.stay.loc.address);
+  data(){
+    return {
+      isInWishlist: false
+    }
+  },
+  mounted() {
+    const user = authService.getLoggedinUser()
+    if(this.$route.path === '/' && user){
+      const stay = user.wishList.find(stay => {
+         return this.stay._id === stay._id
+      })
+      if(stay) this.isInWishlist = true
+    }
   },
   methods: {
     async saveStay(e, stayId) {
@@ -37,10 +48,16 @@ export default {
         return stay._id === stayId
       })
       if (isExcised) {
-        showErrorMsg('already added to wishlist')
+        const idx = user.wishList.findIndex(stay => {
+          return stay._id === this.stay._id
+        })
+        user.wishList.splice(idx , 1)
+        await this.$store.dispatch({ type: "updateUser", user: { ...user } })
+        this.isInWishlist = false
+        showSuccessMsg('removed successfully wishlist')
         return
       }
-      document.getElementById(`${this.stay._id}`).style.fill = 'red'
+      document.getElementById(`${this.stay._id}`).style.fill = '#FF385C'
       const stay = {
         _id: this.stay._id,
         name: this.stay.name,

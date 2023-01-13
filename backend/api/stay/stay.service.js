@@ -72,7 +72,7 @@ function _buildCriteria(filterBy) {
   var criteria = {}
   if (filterBy.country) {
     const txtCriteria = { $regex: filterBy.country, $options: 'i' }
-    criteria = { $or: [{ name: txtCriteria }, { "loc.country": txtCriteria }  , { "loc.city": txtCriteria } ] }
+    criteria.$or = [{ name: txtCriteria }, { "loc.country": txtCriteria }  , { "loc.city": txtCriteria } ]
   }
   if (filterBy.label) {
     const labelCriteria = { $regex: filterBy.label, $options: 'i' }

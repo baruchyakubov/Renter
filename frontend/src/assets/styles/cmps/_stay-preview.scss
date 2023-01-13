@@ -4,6 +4,11 @@
     max-width: 415px;
     cursor: pointer;
     margin-bottom: 20px;
+    svg{
+        &.red{
+            fill: $clr1 !important;
+        }
+    }
     .details{
         white-space: nowrap;
         text-overflow:ellipsis;
@@ -43,7 +48,12 @@
     .price-preview {
         padding-top: 3px;
         font-weight: 600;
-
+      
+        svg{
+       
+        }
+        
+       
         span {
             font-weight: lighter;
         }
@@ -95,6 +105,8 @@
     height: auto;
     aspect-ratio: 1.0526 !important;
 }
+
+
 
 @media (max-width:595px){
     .stay-preview{
