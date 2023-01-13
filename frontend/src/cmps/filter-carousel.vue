@@ -2,8 +2,10 @@
     <carousel :mouseDrag="false" :transition="600" :itemsToScroll="9" style="padding:0;" :settings="settings"
         :breakpoints="breakpoints" class="mainContainer" :items-to-show="15" :wrap-around="true" :loop="false">
         <slide v-for="filter in filters" :key="filter">
-            <div style="width:100%" class="carousel__item " tabindex="1">
-                <div @click="$emit('setFilterByLabel' , filter.name)" style="width:100%" tabindex="1" class="stay-filter-div flex-box column">
+            <div  style="width:100%" class="carousel__item"
+                tabindex="1">
+                <div :class="{ activeLabel: isActive === filter.name }" @click="$emit('setFilterByLabel', filter.name); isActive = filter.name" style="width:100%"
+                    tabindex="1" class="stay-filter-div flex-box column">
                     <img :src="filter.icon" alt="">
                     <div class="stay-filter-btn">{{ filter.name }}</div>
                 </div>
@@ -18,7 +20,7 @@
         </template>
     </carousel>
 </template>
-  
+
 <script>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
@@ -33,6 +35,11 @@ export default {
     },
     props: {
         filters: Array
+    },
+    data() {
+        return {
+            isActive: ''
+        }
     },
     setup() {
         return {
@@ -90,4 +97,3 @@ export default {
 }
 </script>
 
-  

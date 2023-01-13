@@ -44,6 +44,7 @@ function remove(userId) {
 
 async function update(user) {
     // await storageService.put('user', user)
+    console.log(user);
     user = await httpService.put(`user/${user._id}`, user)
     // Handle case in which admin updates other user's details
     if (authService.getLoggedinUser()._id === user._id) authService.saveLocalUser(user)

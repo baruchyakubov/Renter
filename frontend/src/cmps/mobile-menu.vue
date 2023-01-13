@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import { authService } from '../services/auth.service'
+import { showErrorMsg } from '../services/event-bus.service'
+
 export default {
     data(){
         return {
@@ -31,7 +34,13 @@ export default {
             this.$router.push('/')
         },
         goToWishList(){
+          const user = authService.getLoggedinUser()
+          if(!user){
+            showErrorMsg('Login required')
+            return
+          } 
           this.isActive = 'Wishlist'
+          this.$router.push('/wishlist')
         },
         goToLogin(){
           this.isActive = 'Login'

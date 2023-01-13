@@ -37,6 +37,7 @@
               <div v-if="!loggedInUser" @click="openModal('sign')">Signup</div>
               <div v-else class="user-menu-modal">
                 <div v-if="loggedInUser.isAdmin" @click="openBackOffice">Back-office</div>
+                <div @click="$router.push('/wishlist')">Wishlist</div>
                 <div @click="this.$router.push('/userOrders')">Your orders</div>
                 <div @click="logout">Logout</div>
               </div>
