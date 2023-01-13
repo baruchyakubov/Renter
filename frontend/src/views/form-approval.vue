@@ -1,7 +1,7 @@
 <template>
   <div class="detailsContainer">
-    <div class="form-approval flex-box" v-if="stay">
-      <div class="columm0">
+    <div class="form-approval" v-if="stay">
+      <div class="column0">
         <div class="header flex-box">
           <back-btn class="backBtn" @click="$router.push('/stay/' + form.stay._id)"></back-btn>
           <h1>Confirm and pay</h1>
@@ -59,12 +59,14 @@
 
 </template>
 <script>
+import { eventBus } from '../services/event-bus.service';
 import { utilService } from '../services/util.service';
 import backBtn from '../side-cmps/approval-backBtn.vue';
 
 export default {
   name: 'approval-form',
   async created() {
+    eventBus.emit('toggleLayout', true)
     this.form = utilService.loadFromStorage('tempForm')
     this.stay = await this.getStay()
     this.form.stay.imgUrl = this.stay.imgUrls[0]
