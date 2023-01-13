@@ -57,7 +57,7 @@ export default {
         showSuccessMsg('removed successfully wishlist')
         return
       }
-      document.getElementById(`${this.stay._id}`).style.fill = '#FF385C'
+      this.isInWishlist = true
       const stay = {
         _id: this.stay._id,
         name: this.stay.name,
