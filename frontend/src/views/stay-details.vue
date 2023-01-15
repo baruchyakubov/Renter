@@ -1,26 +1,41 @@
 <template>
-  <div v-if="stay" class="stay-details detailsContainer">
-    <stay-main :stay="stay"></stay-main>
-    <div class="detailsColumnsContainer">
-      <div class="column1">
-        <host-details :stay="stay"></host-details>
-        <stay-attributes />
-        <div class="stay-details-summary">
-          <p>{{ stay.summary }}</p>
-          <p class="showMoreBtn">Show more..</p>
+  <div>
+    <div v-if="stay" class="stay-details detailsContainer">
+      <stay-main :stay="stay"></stay-main>
+      <div class="detailsColumnsContainer">
+        <div class="column1">
+          <host-details :stay="stay"></host-details>
+          <stay-attributes />
+          <div class="stay-details-summary">
+            <p>{{ stay.summary }}</p>
+            <p class="showMoreBtn">Show more..</p>
+          </div>
+          <stay-amenities :amenities=stay.amenities></stay-amenities>
         </div>
-        <stay-amenities :amenities=stay.amenities></stay-amenities>
+        <reserve-form :stay="stay"></reserve-form>
       </div>
-      <reserve-form :stay="stay"></reserve-form>
+      <div class="map-container">
+        <h1>Where you'll be</h1>
+        <location-map :stayLoc="stay.loc"></location-map>
+      </div>
+      <stay-reviews :stay="stay"></stay-reviews>
     </div>
-    <div class="map-container">
-      <h1>Where you'll be</h1>
-      <location-map :stayLoc="stay.loc"></location-map>
+    <div v-else class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <stay-reviews :stay="stay"></stay-reviews>
+    <mobile-footer :stay="stay" v-if="stay" />
   </div>
-  <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-  <mobile-footer :stay="stay" v-if="stay"/>
 </template>
 <script>
 import locationMap from '../side-cmps/location-map.vue'

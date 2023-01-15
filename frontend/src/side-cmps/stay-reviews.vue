@@ -2,7 +2,7 @@
   <div v-if="stay" class="stay-details-reviews">
     <h3><img class="star" src="../assets/svg/review-start-svg.svg" />{{ rating }}<span class="bullet">•</span>{{ reviews}}</h3>
     <div class="previewContainer">
-    <div v-for="review,idx in stay.reviews.slice(0,6)" class="reviewPreview">
+    <div v-for="review,idx in stay.reviews.slice(0,6)" :key="review+idx" class="reviewPreview">
       <div class="flex-box">
         <img class="reviewerImg" :src="review.by.imgUrl" />
         <div>

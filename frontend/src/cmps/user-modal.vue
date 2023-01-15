@@ -19,6 +19,11 @@
           <input id="password" v-model="form.password" />
         </div>
       </div>
+      <div class="toggle-login">
+        <a @click="$store.commit({ type: 'setIsLogged', condition: 'true' })" v-if="!signedup">Don't have an Account?</a>
+        <a @click="$store.commit({ type: 'setIsLogged', condition: '' })" v-else>Already have an Account?</a>
+      </div>
+
       <p class="disclaimer">We'll call or text you to confirm your number. Standard message and data rates apply.
         Privacy Policy</p>
       <reactive-btn :content='"Login"' v-if="!signedup" @click="login"></reactive-btn>
@@ -39,9 +44,6 @@ export default {
         password: ''
       }
     }
-  },
-  created() {
-    console.log(this.$store.getters.isLogged);
   },
   methods: {
     closeModal() {

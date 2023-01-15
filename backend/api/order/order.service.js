@@ -9,9 +9,7 @@ async function query(loggedInUserId) {
 
 async function queryUserOrders(loggedInUserId) {
   const collection = await dbService.getCollection('order')
-  console.log(loggedInUserId);
   var orders = await collection.find({'buyer._id': loggedInUserId }).sort({"createdAt":-1}).toArray()
-  console.log(orders);
   return orders
 }
 

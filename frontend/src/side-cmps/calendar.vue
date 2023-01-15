@@ -19,7 +19,6 @@ export default {
   methods: {
     show() {
       this.formatDate()
-      console.log(this.value1)
     },
     formatDate() {
       let newArr = []
@@ -44,7 +43,6 @@ export default {
   watch: {
     value1(newVal, oldVal) {
         this.formatDate()
-        console.log(this.dates)
     }
   },
   computed: {

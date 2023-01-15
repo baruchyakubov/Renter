@@ -36,9 +36,6 @@ export default {
     ]
     }
   },
-  created(){
-    console.log(typeof this.amenities[0].svg);
-  },
   methods:{
     closeModal(){
       this.isModalShown = false

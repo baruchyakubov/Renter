@@ -22,7 +22,6 @@ export default {
   },
   data() {
     return {
-      price: null,
       dates: null,
       session: null
     }

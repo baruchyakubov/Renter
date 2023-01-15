@@ -16,7 +16,6 @@ export const rainbowDirective = {
 
 export const customOnDirective = {
   mounted(el, binding) {
-    console.log('binding', binding)
     const type = binding.arg
     const fn = binding.value
     el.addEventListener(type, fn)
@@ -34,10 +33,7 @@ export const clickOutsideDirective = {
           clientY < top + height)
       ) {
         cb()
-        console.log('outside')
-      } else {
-        console.log('inside')
-      }
+      } 
     }
     setTimeout(() => {
       document.addEventListener('click', el.clickOutside)
@@ -50,7 +46,6 @@ export const clickOutsideDirective = {
 
 export const close = {
   mounted(el, { value }, x) {
-    console.log(x)
     el.onkeyup = () => {
       const color = _getRandomColor()
       el.style.backgroundColor = color

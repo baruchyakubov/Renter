@@ -1,17 +1,33 @@
 <template>
-  <stay-filter></stay-filter>
-  <div class="mainContainer">
-    <stay-list  v-if="stays.length" :stays="stays"></stay-list>
-    <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    <hr />
+  <div>
+    <stay-filter></stay-filter>
+    <div class="mainContainer">
+      <stay-list v-if="stays.length" :stays="stays"></stay-list>
+      <div v-else class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <hr />
+    </div>
   </div>
+
 </template>
 
 <script>
 import stayFilter from '../cmps/stay-filter.vue'
 import stayList from '../cmps/stay-list.vue'
-import {showErrorMsg, showSuccessMsg , eventBus} from '../services/event-bus.service'
-import {stayService} from '../services/stay.service'
+import { showErrorMsg, showSuccessMsg, eventBus } from '../services/event-bus.service'
+import { stayService } from '../services/stay.service'
 import { getActionRemoveStay, getActionUpdateStay, getActionAddStayMsg } from '../store/stay.store'
 export default {
   data() {
@@ -28,8 +44,8 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch({type: 'loadStays'})
-    eventBus.on('toggleMenuModal' , this.toggleMenuModal)
+    this.$store.dispatch({ type: 'loadStays' })
+    eventBus.on('toggleMenuModal', this.toggleMenuModal)
   },
   methods: {
     async removeStay(stayId) {
@@ -37,18 +53,18 @@ export default {
         await this.$store.dispatch(getActionRemoveStay(stayId))
         showSuccessMsg('Stay removed')
 
-      } catch(err) {
+      } catch (err) {
         console.log(err)
         showErrorMsg('Cannot remove stay')
       }
     },
     async updateStay(stay) {
       try {
-        stay = {...stay}
+        stay = { ...stay }
         stay.price = +prompt('New price?', stay.price)
         await this.$store.dispatch(getActionUpdateStay(stay))
 
-      } catch(err) {
+      } catch (err) {
         console.log(err)
         showErrorMsg('Cannot update stay')
       }
@@ -57,7 +73,7 @@ export default {
       try {
         await this.$store.dispatch(getActionAddStayMsg(stayId))
         showSuccessMsg('Stay msg added')
-      } catch(err) {
+      } catch (err) {
         console.log(err)
         showErrorMsg('Cannot add stay msg')
       }
@@ -66,11 +82,11 @@ export default {
       console.log('Stay msgs:', stay.msgs)
     }
   },
-  components:{
+  components: {
     stayList,
     stayFilter
   }
 
-  
+
 }
 </script>

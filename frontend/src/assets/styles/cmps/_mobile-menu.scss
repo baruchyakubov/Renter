@@ -6,6 +6,7 @@
 @media (max-width:750px) {
     .mobile-menu {
         display: flex;
+        overflow-x: auto;
         background-color: #FFFFFF;
         z-index: 2000;
         position: fixed;
@@ -33,6 +34,7 @@
         .activePage{
             svg{
                 stroke: #FF385C !important;
+                fill: #FF385C;
             }
             p{
                 color: $clr2;

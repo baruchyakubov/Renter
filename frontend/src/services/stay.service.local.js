@@ -17,7 +17,6 @@ export const stayService = {
 window.cs = stayService
 
 const gStays = stays
-console.log(gStays);
 
 _createStays()
 

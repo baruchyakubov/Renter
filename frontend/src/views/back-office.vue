@@ -26,7 +26,6 @@ export default {
   },
   async created() {
       const user = this.$store.getters.loggedinUser
-      console.log(user);
       if (!user || !user.isAdmin) this.$router.push('/')
       await this.$store.dispatch({ type: 'loadOrders' , from:'back-office-view' })
       this.isLoaded = true

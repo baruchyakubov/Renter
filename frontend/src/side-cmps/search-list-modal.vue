@@ -28,7 +28,6 @@ export default {
     },
     computed: {
         searchCountryList() {
-            console.log(this.$store.getters.searchCountryList);
             return this.$store.getters.searchCountryList
         },
     },

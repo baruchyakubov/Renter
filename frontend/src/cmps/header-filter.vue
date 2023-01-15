@@ -1,44 +1,49 @@
 <template>
-    <section class="search">
-        <div class="search-input" tabindex="1">
-            <h1>Where</h1>
-            <input @input="getCountryList" ref="myinput" v-model="country" type="search" placeholder="Search destinations">
-        </div>
-        <span class="sep seperator1"></span>
-        <div class="check-in" tabindex="1">
-            <h1>Check in</h1>
-            <input v-model="dates.from" type="text" placeholder="Add dates">
-        </div>
-        <span class="sep seperator2"></span>
-        <div class="check-out" tabindex="1">
-            <h1>Check out</h1>
-            <input v-model="dates.to" type="text" placeholder="Add dates">
-        </div>
-        <span class="sep seperator3"></span>
-        <div class="add-guests flex-box align-center space-between" tabindex="1" @click="toggleGuestModal">
-            <section>
-                <h1>Who</h1>
-                <p>{{ addGuests }} Guests</p>
-            </section>
-            <div class="alternateSearch" @click="search($event)">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                    focusable="false"
-                    style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
-                    <g fill="none">
-                        <path
-                            d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
-                        </path>
-                    </g>
-                </svg>
-                <p>Search</p>
+    <div>
+        <section class="search">
+            <div class="search-input" tabindex="1">
+                <h1>Where</h1>
+                <input @input="getCountryList" ref="myinput" v-model="country" type="search"
+                    placeholder="Search destinations">
             </div>
-        </div>
-        <calendar @sendDates="sendDates" class="date-picker"></calendar>
-    </section>
-    <guest-modal v-click-outside="toggleGuestModal" @increment="increment" @decrement="decrement"
-        @toggleModal="toggleGuestModal" :counter="counter" v-if="isGuestsShown"></guest-modal>
-        <country-modal @setFilterSearch="setFilterSearch"  v-click-outside="toggleCountryModal" v-if="isCountryModalShown && !isListModalShown "></country-modal>
-        <search-list-modal @setInputBySearch="setInputBySearch"  v-if="isListModalShown"></search-list-modal>
+            <span class="sep seperator1"></span>
+            <div class="check-in" tabindex="1">
+                <h1>Check in</h1>
+                <input v-model="dates.from" type="text" placeholder="Add dates">
+            </div>
+            <span class="sep seperator2"></span>
+            <div class="check-out" tabindex="1">
+                <h1>Check out</h1>
+                <input v-model="dates.to" type="text" placeholder="Add dates">
+            </div>
+            <span class="sep seperator3"></span>
+            <div class="add-guests flex-box align-center space-between" tabindex="1" @click="toggleGuestModal">
+                <section>
+                    <h1>Who</h1>
+                    <p>{{ addGuests }} Guests</p>
+                </section>
+                <div class="alternateSearch" @click="search($event)">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                        <g fill="none">
+                            <path
+                                d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
+                            </path>
+                        </g>
+                    </svg>
+                    <p>Search</p>
+                </div>
+            </div>
+            <calendar @sendDates="sendDates" class="date-picker"></calendar>
+        </section>
+        <guest-modal v-click-outside="toggleGuestModal" @increment="increment" @decrement="decrement"
+            @toggleModal="toggleGuestModal" :counter="counter" v-if="isGuestsShown"></guest-modal>
+        <country-modal @setFilterSearch="setFilterSearch" v-click-outside="toggleCountryModal"
+            v-if="isCountryModalShown && !isListModalShown"></country-modal>
+        <search-list-modal @setInputBySearch="setInputBySearch" v-if="isListModalShown"></search-list-modal>
+    </div>
+
 </template>
 
 <script>
@@ -88,10 +93,10 @@ export default {
         })
 
         document.querySelector('.el-date-editor :nth-child(2)').addEventListener("click", (event) => {
-            if(this.isListModalShown){
+            if (this.isListModalShown) {
                 this.isListModalShown = false
                 this.isCountryModalShown = false
-            } 
+            }
             if (this.isGuestsShown) this.toggleGuestModal()
             document.querySelector('.check-in').classList.add('focus')
             document.querySelector('.check-out').classList.remove('focus')
@@ -101,7 +106,7 @@ export default {
             event.preventDefault()
         })
         document.querySelector('.el-date-editor :nth-child(4)').addEventListener("click", (event) => {
-            if(this.isListModalShown )this.isListModalShown = false
+            if (this.isListModalShown) this.isListModalShown = false
             if (this.isGuestsShown) this.toggleGuestModal()
             document.querySelector('.check-out').classList.add('focus')
             document.querySelector('.check-in').classList.remove('focus')
@@ -111,30 +116,30 @@ export default {
             event.preventDefault()
         })
         document.querySelector('.add-guests').addEventListener("click", () => {
-            if(this.isListModalShown){
+            if (this.isListModalShown) {
                 this.isListModalShown = false
                 this.isCountryModalShown = false
-            } 
+            }
             document.querySelector('.check-out').classList.remove('focus')
             document.querySelector('.check-in').classList.remove('focus')
             document.querySelector('.search-input').classList.remove('focus')
         })
         document.querySelector('.search-input').addEventListener("click", () => {
             if (this.isGuestsShown) this.toggleGuestModal()
-            if(!this.isCountryModalShown)this.toggleCountryModal()
+            if (!this.isCountryModalShown) this.toggleCountryModal()
             document.querySelector('.check-out').classList.remove('focus')
             document.querySelector('.check-in').classList.remove('focus')
             document.querySelector('.add-guests').classList.remove('focus')
         })
         document.querySelector('.search-input input').addEventListener("click", () => {
             document.querySelector('.search-input').classList.add('focus')
-            if(!this.isCountryModalShown )this.toggleCountryModal()
+            if (!this.isCountryModalShown) this.toggleCountryModal()
         })
     },
-    unmounted(){
-        window.removeEventListener("scroll" ,() => {
+    unmounted() {
+        window.removeEventListener("scroll", () => {
             this.$emit('toggleFilter')
-        }); 
+        });
     },
     methods: {
         search(e) {
@@ -142,16 +147,16 @@ export default {
             sessionStorage.setItem('filter', JSON.stringify({ dates: this.dates, guests: this.counter }))
             this.$emit('setFilterByTxt', { country: this.country, guestsCount: this.totalGuestsCount })
         },
-        getCountryList(){
+        getCountryList() {
             this.isListModalShown = (this.country === '') ? false : true
             this.$store.dispatch({ type: 'getCountryList', txt: this.country })
         },
-        setInputBySearch(input){
+        setInputBySearch(input) {
             this.country = input
             this.setFocus('check-in')
         },
-        setFilterSearch(region){
-            this.country = region.name 
+        setFilterSearch(region) {
+            this.country = region.name
             this.setFocus('check-in')
         },
         toggleGuestModal() {
@@ -174,7 +179,7 @@ export default {
             if (!this.counter[guestTyoe]) return
             this.counter[guestTyoe]--
         },
-        toggleCountryModal(){
+        toggleCountryModal() {
             this.isCountryModalShown = !this.isCountryModalShown
         },
         setFocus(focus) {
@@ -184,12 +189,12 @@ export default {
                 setTimeout(() => {
                     this.toggleCountryModal()
                 }, 250)
-              
+
             }
             if (focus === 'check-in') {
                 document.querySelector('.check-in').classList.add('focus')
                 document.querySelector('.search-input').classList.remove('focus')
-                if(this.isCountryModalShown )this.toggleCountryModal()
+                if (this.isCountryModalShown) this.toggleCountryModal()
                 setTimeout(() => {
                     document.querySelector('.el-date-editor :nth-child(2)').click()
                 }, 250)
@@ -197,7 +202,7 @@ export default {
             }
             if (focus === 'guests') {
                 document.querySelector('.add-guests').classList.add('focus')
-                if(this.isCountryModalShown )this.toggleCountryModal()
+                if (this.isCountryModalShown) this.toggleCountryModal()
                 setTimeout(() => {
                     this.toggleGuestModal()
                 }, 250)

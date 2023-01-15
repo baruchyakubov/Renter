@@ -3,7 +3,9 @@
   display: inline-block;
   position: fixed;
   top: 50%; right: 50%;
-  transform: translate(50%,-50%);
+  margin-inline-end: 40px;
+  margin-bottom: 40px;
+  transform: translate(-50%,-50%);
 }
 .lds-spinner div {
   transform-origin: 40px 40px;

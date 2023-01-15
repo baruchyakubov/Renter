@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="stay-details-imgs-container">
-      <img v-for="(img, idx) in imgsToRender" :src="img" :class="'stay-details-img' + idx" />
+      <img v-for="(img, idx) in imgsToRender" :src="img" :key="img+idx" :class="'stay-details-img' + idx" />
     </div>
   </div>
 </template>

@@ -72,9 +72,7 @@ export default {
     methods: {
         setStatusToApproved() {
             var updatedOrder = { ...this.order }
-            console.log(updatedOrder);
             updatedOrder.status = 'approved'
-
             this.$store.dispatch({ type: 'updateOrder', updatedOrder: JSON.stringify(updatedOrder) })
         },
         setStatusToRejected() {

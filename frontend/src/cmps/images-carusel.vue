@@ -1,5 +1,5 @@
 <template>
-  <el-carousel interval="999999999" indicator-position="inside" v-if="stay">
+  <el-carousel :interval="999999999"  v-if="stay">
     <svg :class="{ red: isInWishlist }" v-if="$route.path === '/'" :id="stay._id"
       @click.prevent="saveStay($event, stay._id)" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true" role="presentation" focusable="false"

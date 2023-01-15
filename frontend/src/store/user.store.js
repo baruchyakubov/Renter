@@ -21,11 +21,9 @@ export const userStore = {
     mutations: {
         setIsLogged(state, { condition }) {
             condition ? state.isLogged = true : state.isLogged = false
-            console.log(state.isLogged);
         },
         setLoggedinUser(state, { user }) {
             state.loggedinUser = user
-            console.log(state.loggedinUser);
         },
         setWatchedUser(state, { user }) {
             state.watchedUser = user
@@ -105,7 +103,6 @@ export const userStore = {
         },
         async updateUser({ commit }, { user }) {
             try {
-                console.log(user);
                 user = await userService.update(user)
                 commit({ type: 'setUser', user })
             } catch (err) {
