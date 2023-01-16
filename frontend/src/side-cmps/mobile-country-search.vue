@@ -15,20 +15,28 @@
             opacity=".8"></path>
         </svg>
         <input type="search" placeholder="Search destinations">
-        <country-modal></country-modal>
       </div>
+      <country-modal v-if="!isListModalShown"></country-modal>
+      <search-list-modal v-else></search-list-modal>
     </div>
   </section>
 </template>
 
 <script>
 import countryModal from './country-modal.vue';
+import searchListModal from './search-list-modal.vue';
 export default {
+  data() {
+        return {
+            isListModalShown: false,
+        }
+    },
   props: {
     activeFilter: String
   },
   components: {
-    countryModal
+    countryModal,
+    searchListModal
   }
 }
 </script>

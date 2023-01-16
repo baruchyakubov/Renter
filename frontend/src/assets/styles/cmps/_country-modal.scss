@@ -79,15 +79,27 @@
     .country-modal {
         margin: 0;
         position: unset;
-        left: unset;
-        right: unset;
-        top: unset;
         width: 100%;
         height: fit-content;
         border: none;
         padding: 0;
+        box-shadow: unset;
+        border: none;
         h2{
             display: none;
+        }
+        .country-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            ul{
+                overflow: auto;
+                flex-wrap: nowrap;
+            }
         }
     }
 }
