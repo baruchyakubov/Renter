@@ -21,8 +21,13 @@ export const store = Vuex.createStore({
     setFilterFocus(state , { value }){
       state.filterFocus = value
     },
+<<<<<<< HEAD
     setMobileFilter(state , { value }){
       state.activeMobileFilter = value
+=======
+    setActiveFilter(state , { activeFilter }){
+      state.activeMobileFilter = activeFilter
+>>>>>>> d7827332cee5af4138cda84f6f66051207126fed
     }
   },
   getters:{

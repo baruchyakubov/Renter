@@ -1,18 +1,19 @@
 <template>
   <section class="mobile-calendar-filter">
-    <div class="preview-filter flex-box space-between">
+    <div v-if="activeFilter !== 'mobileCalenderFilter'" @click="$emit('setActiveFilter' , 'mobileCalenderFilter')" class="preview-filter flex-box space-between">
       <span class="first">When</span>
       <span class="second">Add dates</span>
+    </div>
+    <div v-else class="country-search-active">
+      <h1>active</h1>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  computed: {
-    activeFilter() {
-      return this.$store.getters.activeMobileFilter
-    }
+  props: {
+    activeFilter : String
   }
 }
 </script>
