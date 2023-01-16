@@ -14,7 +14,8 @@ export const store = Vuex.createStore({
     orderStore
   },
   state: {
-    filterFocus:''
+    filterFocus:'',
+    activeMobileFilter: 'mobileCountrySearch'
   },
   mutations: {
     setFilterFocus(state , { value }){
@@ -23,6 +24,7 @@ export const store = Vuex.createStore({
   },
   getters:{
     filterFocus({ filterFocus }) { return filterFocus },
+    activeMobileFilter({ activeMobileFilter }) { return activeMobileFilter },
   },
   actions: {
   }

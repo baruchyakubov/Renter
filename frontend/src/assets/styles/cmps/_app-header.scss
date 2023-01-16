@@ -192,7 +192,7 @@ header {
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:950px) {
     .mobile-menu {
         display: flex;
         background-color: #FFFFFF;
@@ -234,6 +234,7 @@ header {
     }
 
     .mobile-header {
+        cursor: pointer;
         font-family: cereal-semi-light;
         font-size: 14px;
         font-weight: 600;
