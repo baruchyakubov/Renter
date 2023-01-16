@@ -4,7 +4,7 @@
       <span class="first">When</span>
       <span class="second">Add dates</span>
     </div>
-    <div v-else class="country-search-active">
+    <div v-else class="country-search active">
       <h1>active</h1>
     </div>
   </section>

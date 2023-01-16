@@ -4,7 +4,7 @@
       <span class="first">Who</span>
       <span class="second">Add guests</span>
     </div>
-    <div v-else class="country-search-active">
+    <div v-else class="country-search active">
       <h1>active</h1>
     </div>
   </section>

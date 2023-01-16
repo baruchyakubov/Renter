@@ -74,3 +74,20 @@
 
     }
 }
+
+@media (max-width:950px){
+    .country-modal {
+        margin: 0;
+        position: unset;
+        left: unset;
+        right: unset;
+        top: unset;
+        width: 100%;
+        height: fit-content;
+        border: none;
+        padding: 0;
+        h2{
+            display: none;
+        }
+    }
+}
