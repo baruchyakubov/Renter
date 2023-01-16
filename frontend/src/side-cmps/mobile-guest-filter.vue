@@ -9,7 +9,11 @@
 
 <script>
 export default {
-
+  computed: {
+    activeFilter() {
+      return this.$store.getters.activeMobileFilter
+    }
+  }
 }
 </script>
 

@@ -4,9 +4,6 @@
       <span class="first">Where</span>
       <span class="second">I'm flexible</span>
     </div>
-    <div class="country-search-active">
-      <h1>active</h1>
-    </div>
   </section>
 </template>
 
