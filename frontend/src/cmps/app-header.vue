@@ -56,7 +56,7 @@
           </button>
         </div>
       </div>
-      <div class="mobile-header">
+      <div @click="isFilterMobileOpened = true" class="mobile-header">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
           focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
           <path
@@ -72,16 +72,19 @@
           </div>
         </div>
       </div>
+      <mobile-filter @closeMobileFilter="isFilterMobileOpened = false" :class="{opened:isFilterMobileOpened}"></mobile-filter>
     </header>
   </div>
 
 </template>
 <script>
+import mobileFilter from '../side-cmps/mobile-filter.vue';
 import headerFilter from './header-filter.vue';
 import hamburger from '../side-cmps/header-user-hamb.vue'
 import worldIcon from '../side-cmps/header-world-icon.vue'
 import userIcon from '../side-cmps/header-user-icon.vue'
 import { eventBus } from '../services/event-bus.service';
+
 export default {
   data() {
     return {
@@ -92,7 +95,8 @@ export default {
       isSearchActivated: false,
       filterDetails: '',
       datesSearched: null,
-      scrollBefore: 0
+      scrollBefore: 0,
+      isFilterMobileOpened:false
     }
   },
   created() {
@@ -174,7 +178,8 @@ export default {
     headerFilter,
     hamburger,
     userIcon,
-    worldIcon
+    worldIcon,
+    mobileFilter
   }
 
 

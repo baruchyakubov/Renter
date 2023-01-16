@@ -154,7 +154,7 @@
         <p class="footer">Report this listing</p>
       </section>
       <calendar @sendDates="receiveDates" class="OutsideCalendar"></calendar>
-      <modal :stay="stay" :guests="guests" v-if="isModalShown" @toggleModal="toggleModal" @increment="increment"
+      <modal  v-click-outside="toggleModal" :stay="stay" :guests="guests" v-if="isModalShown" @toggleModal="toggleModal" @increment="increment"
         @decrement="decrement"></modal>
     </div>
   </div>

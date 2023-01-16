@@ -1,9 +1,12 @@
 .country-modal {
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     top: 8rem;
-    right: 11.1rem;
+    left: auto;
+    right: 10rem;
     width: 494px;
-    height: 450px;
+    height: max-content;
     background: #FFFFFF;
     border-radius: 32px;
     box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
