@@ -4,9 +4,9 @@
         <close-btn @click="$emit('closeMobileFilter')" class="closeBtn"></close-btn>
     </div>
     <section class="main-mobile-filter">
-        <mobile-country-search></mobile-country-search>
-        <mobile-calender-filter></mobile-calender-filter>
-        <mobile-guest-filter></mobile-guest-filter>
+        <mobile-country-search @setActiveFilter="setActiveFilter" :activeFilter="activeFilter"></mobile-country-search>
+        <mobile-calender-filter @setActiveFilter="setActiveFilter" :activeFilter="activeFilter"></mobile-calender-filter>
+        <mobile-guest-filter @setActiveFilter="setActiveFilter" :activeFilter="activeFilter"></mobile-guest-filter>
     </section>
   </section>
 </template>
@@ -23,6 +23,12 @@ components:{
     mobileCountrySearch,
     mobileCalenderFilter,
     mobileGuestFilter
+},
+methods:{
+    setActiveFilter(activeFilter){
+        console.log(activeFilter);
+        this.$store.commit({ type: 'setActiveFilter', activeFilter})
+    }
 },
 computed:{
     activeFilter(){

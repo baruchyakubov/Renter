@@ -20,6 +20,9 @@ export const store = Vuex.createStore({
   mutations: {
     setFilterFocus(state , { value }){
       state.filterFocus = value
+    },
+    setActiveFilter(state , { activeFilter }){
+      state.activeMobileFilter = activeFilter
     }
   },
   getters:{
