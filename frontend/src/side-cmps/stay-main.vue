@@ -1,9 +1,11 @@
 <template>
   <div v-if="stay">
+    <images-carousel :stay="stay" :images="stay.imgUrls" :loop="false"></images-carousel>
     <h2 class="stay-details-name">{{ stay.name }}</h2>
     <div class="headerFlex flex-box">
       <div class="stay-details-basicInfo">
-        <p><img class="star" src="../assets/svg/review-start-svg.svg"><span class="rating">{{ rating }}</span> <span class="bullet1">•</span></p>
+        <p><img class="star" src="../assets/svg/review-start-svg.svg"><span class="rating">{{ rating }}</span> <span
+            class="bullet1">•</span></p>
         <p class="reviews">{{ reviews }}</p>
         <p v-if="isSuperHost"><span class="bullet">•</span> Superhost</p>
         <p class="location"><span class="bullet">•</span> <span>{{ stay.loc.address }}, {{ stay.loc.city }},
@@ -15,31 +17,32 @@
       </div>
     </div>
     <div class="stay-details-imgs-container">
-      <img v-for="(img, idx) in imgsToRender" :src="img" :key="img+idx" :class="'stay-details-img' + idx" />
+      <img v-for="(img, idx) in imgsToRender" :src="img" :key="img + idx" :class="'stay-details-img' + idx" />
     </div>
   </div>
 </template>
 <script>
 import shareSvg from '../side-cmps/shareSvg.vue'
 import saveSvg from '../side-cmps/saveSvg.vue'
+import imagesCarousel from '../cmps/images-carusel.vue'
 export default {
   props: {
     stay: Object
   },
   data() {
     return {
-      isSuperHost: false
+      isSuperHost: false,
     }
   },
   created() {
     this.isSuperHost = this.isSuper()
   },
   methods: {
-    saveStay(e){
+    saveStay(e) {
       e.stopPropagation()
-      const user = JSON.parse(JSON.stringify(this.$store.getters.loggedinUser)) 
+      const user = JSON.parse(JSON.stringify(this.$store.getters.loggedinUser))
       user.wishList.push(this.stay._id)
-      this.$store.dispatch({type:"updateUser",user})
+      this.$store.dispatch({ type: "updateUser", user })
       showSuccessMsg('Added stay to wishlist')
     },
     isSuper() {
@@ -75,7 +78,8 @@ export default {
   },
   components: {
     saveSvg,
-    shareSvg
+    shareSvg,
+    imagesCarousel
   }
 }
 </script>
