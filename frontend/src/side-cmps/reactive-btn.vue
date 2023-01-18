@@ -103,7 +103,7 @@
           <div class="cell"></div>
           <div class="content">
             <button class="action-btn">
-              <span>{{content}}</span>
+              <span class="btn-content">{{content}}</span>
             </button>
           </div>
         </div>

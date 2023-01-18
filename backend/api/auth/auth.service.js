@@ -45,13 +45,14 @@ async function signup({ username, password, fullname, imgUrl, isAdmin }) {
   const userExist = await userService.getByUsername(username)
   if (userExist) return Promise.reject('Username already taken')
 
-  const hash = await bcrypt.hash(password, saltRounds)
+  // const hash = await bcrypt.hash(password, saltRounds)
   return userService.add({
     username,
-    password: hash,
+    password,
     fullname,
     imgUrl,
     isAdmin,
+    wishList:[]
   })
 }
 

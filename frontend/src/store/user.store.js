@@ -48,7 +48,6 @@ export const userStore = {
                 commit({ type: 'setLoggedinUser', user })
                 return user
             } catch (err) {
-                alert('console.log')
                 console.log('userStore: Error in login', err)
                 throw err
             }

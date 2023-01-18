@@ -158,3 +158,20 @@
     position: relative;
     bottom: 0.25rem;
 }
+
+@media (max-width:950px){
+    .guestsModalSearch{
+        position: unset;
+        padding: 0 !important;
+        border: unset !important ;
+        box-shadow: unset !important;
+        min-height: unset !important;
+        min-width: unset !important;
+        width: 100%;
+        >*{
+            padding: 0 !important;
+            padding-block: 16px !important;
+            margin: 0 !important;
+        }
+    }
+}

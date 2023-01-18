@@ -6,7 +6,6 @@
 @media (max-width:950px) {
     .mobile-menu {
         display: flex;
-        overflow-x: auto;
         background-color: #FFFFFF;
         z-index: 2000;
         position: fixed;
@@ -15,7 +14,7 @@
         height: 75px;
         align-items: center;
         justify-content: center;
-        gap: 70px;
+        gap: 10%;
         border-top: 1px solid #EBEBEB;
         div {
             cursor: pointer;

@@ -1,7 +1,7 @@
 export const focusDirective = {
-  mounted: (el) => {
+  mounted(el){
     el.focus()
-  },
+  }
 }
 
 export const rainbowDirective = {

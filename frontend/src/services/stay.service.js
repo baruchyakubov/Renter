@@ -1,9 +1,5 @@
-
-// import { storageService } from './async-storage.service.js'
 import { httpService } from './http.service.js'
-import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
-
 
 const STORAGE_KEY = 'stay'
 
@@ -15,7 +11,10 @@ export const stayService = {
   addStayMsg,
   getEmptyStay,
   getEmptyForm,
-  getSearchedStays
+  getSearchedStays,
+  checkIfIsInWishlist,
+  getEmptyWishlistStay,
+  removeFromWishList
 }
 window.cs = stayService
 
@@ -54,13 +53,34 @@ async function addStayMsg(stayId, txt) {
   return savedMsg
 }
 
+function checkIfIsInWishlist(wishList , stay){
+  return wishList.find(s => {
+    return stay._id === s._id
+  })
+}
 
-// function getEmptyStay() {
-//     return {
-//         vendor: 'Susita-' + (Date.now() % 1000),
-//         price: utilService.getRandomIntInclusive(1000, 9000),
-//     }
-// }
+function removeFromWishList(currUser , stay){
+ const idx = currUser.wishList.findIndex(s => {
+    return s._id === stay._id
+  })
+  currUser.wishList.splice(idx, 1)
+  return currUser
+}
+
+function getEmptyWishlistStay(stay) {
+    return {
+      _id: stay._id,
+      name: stay.name,
+      imgUrls: stay.imgUrls,
+      summary: stay.summary,
+      loc: {
+        country: stay.loc.country,
+        city: stay.loc.city
+      },
+      price: stay.price,
+      reviews: stay.reviews
+    }
+}
 
 function getEmptyForm() {
   return {

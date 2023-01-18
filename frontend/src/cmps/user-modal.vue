@@ -16,18 +16,19 @@
         </div>
         <div class="password">
           <label for="password">Password</label>
-          <input id="password" v-model="form.password" />
+          <input type="password" id="password" v-model="form.password" />
         </div>
       </div>
       <div class="toggle-login">
-        <a @click="$store.commit({ type: 'setIsLogged', condition: 'true' })" v-if="!signedup">Don't have an Account?</a>
-        <a @click="$store.commit({ type: 'setIsLogged', condition: '' })" v-else>Already have an Account?</a>
+        <a @click="toggleState" v-if="!signedup">Don't have an Account?</a>
+        <a @click="toggleState" v-else>Already have an Account?</a>
       </div>
 
       <p class="disclaimer">We'll call or text you to confirm your number. Standard message and data rates apply.
         Privacy Policy</p>
-      <reactive-btn :content='"Login"' v-if="!signedup" @click="login"></reactive-btn>
-      <reactive-btn :content='"Sign up"' @click="signup" v-if="signedup"></reactive-btn>
+      <reactive-btn :content="content" v-if="!signedup" @click="login"></reactive-btn>
+      <reactive-btn :content="content" @click="signup" v-if="signedup"></reactive-btn>
+
     </div>
   </div>
 
@@ -35,6 +36,7 @@
 <script>
 import reactiveBtn from '../side-cmps/reactive-btn.vue'
 import backBtn from '../side-cmps/approval-backBtn.vue';
+import { showErrorMsg } from '../services/event-bus.service';
 export default {
   data() {
     return {
@@ -42,26 +44,50 @@ export default {
         fullname: '',
         username: '',
         password: ''
-      }
+      },
+      content: ''
     }
   },
+  created() {
+    this.content = (!this.signedup) ? 'Login' : 'Sign up'
+  },
   methods: {
+    toggleState() {
+      if (!this.signedup) this.$store.commit({ type: 'setIsLogged', condition: 'true' })
+      else this.$store.commit({ type: 'setIsLogged', condition: '' })
+      this.content = (!this.signedup) ? 'Login' : 'Sign up'
+    },
     closeModal() {
       this.$emit('closeModal')
     },
     async login() {
       try {
+        document.querySelector('.btn-content').innerHTML = `<span class="loader"></span>`
         await this.$store.dispatch({ type: "login", userCred: this.form })
         this.closeModal()
       }
-      catch (err) {
-        console.log(err);
+      catch {
+        showErrorMsg('Login failed')
+        document.querySelector('.btn-content').innerHTML = ''
+        this.content = 'login'
+        this.form = { fullname: '', username: '', bpassword: '' }
       }
 
 
     },
-    signup() {
-      this.$store.dispatch({ type: "signup", userCred: this.form })
+    async signup() {
+      try {
+        document.querySelector('.btn-content').innerHTML = `<span class="loader"></span>`
+        await this.$store.dispatch({ type: "signup", userCred: this.form })
+        this.closeModal()
+      }
+      catch {
+        showErrorMsg('Signup failed')
+        document.querySelector('.btn-content').innerHTML = ''
+        this.content = 'Sign up'
+        this.form = { fullname: '', username: '', bpassword: '' }
+      }
+
     },
   },
   computed: {
