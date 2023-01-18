@@ -214,6 +214,19 @@
     padding-block-start: 0.1rem;
   }
 }
+.stay-details{
+  .details-carousel{
+    grid-column: 1/span 3;
+  }
+  .el-carousel__item{
+    display: flex;
+    align-items: center;
+    img{
+      width: 100%;
+      aspect-ratio: 1.5/1;
+    }
+  }
+}
 
 @media only screen and (max-width: 950px) {
   .reserveFormAll {
