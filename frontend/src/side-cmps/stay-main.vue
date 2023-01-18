@@ -1,5 +1,5 @@
 <template>
-      <images-carousel :stay="stay" :images="stay.imgUrls" :loop="false" class="details-carousel"></images-carousel>
+  <images-carousel :stay="stay" :images="stay.imgUrls" :loop="false" class="details-carousel"></images-carousel>
   <div v-if="stay">
     <h2 class="stay-details-name">{{ stay.name }}</h2>
     <div class="headerFlex flex-box">
