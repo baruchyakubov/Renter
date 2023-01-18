@@ -217,6 +217,9 @@
 .stay-details{
   .details-carousel{
     grid-column: 1/span 3;
+    path{
+      display: none;
+    }
   }
   .el-carousel__item{
     display: flex;
