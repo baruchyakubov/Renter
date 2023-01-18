@@ -37,7 +37,8 @@ export const stayStore = {
             guestsCount:0,
             page:1
         },
-        searchCountryList: []
+        searchCountryList: [],
+        isLoadingStays:false
     },
     getters: {
         stays({ stays }) {
@@ -48,7 +49,14 @@ export const stayStore = {
         },
         searchCountryList({ searchCountryList }){
             return searchCountryList
+        },
+        filterBy({ filterBy }){
+            return filterBy
+        },
+        isLoadingStays({ isLoadingStays }){
+            return isLoadingStays
         }
+        
     },
     mutations: {
         resetSearchList(state){
@@ -77,9 +85,13 @@ export const stayStore = {
         },
         setFilter(state, { filter }) {
             state.filterBy = filter
+            // state.stays = []
         },
         setCountryList(state , { searchList }){
             state.searchCountryList = searchList
+        },
+        setLoading(state ,{ value }){
+            state.isLoadingStays = value
         }
     },
     actions: {
@@ -124,8 +136,10 @@ export const stayStore = {
         },
         async loadStays({ state, commit }) {
             try {
+                commit({ type: 'setLoading', value:true })
                 const stays = await stayService.query(state.filterBy)
                 commit({ type: 'setStays', stays })
+                commit({ type: 'setLoading', value:false })
             } catch (err) {
                 console.log('stayStore: Error in loadStays', err)
                 throw err

@@ -3,7 +3,7 @@
     <stay-filter></stay-filter>
     <div class="mainContainer">
       <stay-list v-if="stays.length" :stays="stays"></stay-list>
-      <div v-else class="lds-spinner">
+      <!-- <div v-else class="lds-spinner">
         <div></div>
         <div></div>
         <div></div>
@@ -16,11 +16,15 @@
         <div></div>
         <div></div>
         <div></div>
-      </div>
+      </div> -->
+      <ul :style="{ 'margin-top': loaderMargin }" v-if="isLoadingStays" id="loading-cards" class="stay-list card-grid">
+        <li v-for="index in 20" :key="index" >
+            <skeleton-loader-stays></skeleton-loader-stays>
+        </li>
+    </ul>
       <hr />
     </div>
   </div>
-
 </template>
 
 <script>
@@ -29,10 +33,12 @@ import stayList from '../cmps/stay-list.vue'
 import { showErrorMsg, showSuccessMsg, eventBus } from '../services/event-bus.service'
 import { stayService } from '../services/stay.service'
 import { getActionRemoveStay, getActionUpdateStay, getActionAddStayMsg } from '../store/stay.store'
+import skeletonLoaderStays from '../side-cmps/skeleton-loader-stays.vue'
 export default {
   data() {
     return {
       stayToAdd: stayService.getEmptyStay(),
+      loaderMargin: '90px'
     }
   },
   computed: {
@@ -41,13 +47,21 @@ export default {
     },
     stays() {
       return this.$store.getters.stays
+    },
+    isLoadingStays(){
+      return this.$store.getters.isLoadingStays
     }
   },
   created() {
     this.$store.dispatch({ type: 'loadStays' })
     eventBus.on('toggleMenuModal', this.toggleMenuModal)
+    eventBus.on('setLoaderMargin' , this.setLoaderMargin)
   },
   methods: {
+    setLoaderMargin(margin){
+      console.log(margin);
+      this.loaderMargin = margin
+    },
     async removeStay(stayId) {
       try {
         await this.$store.dispatch(getActionRemoveStay(stayId))
@@ -84,9 +98,8 @@ export default {
   },
   components: {
     stayList,
-    stayFilter
+    stayFilter,
+    skeletonLoaderStays
   }
-
-
 }
 </script>

@@ -35,7 +35,7 @@
           <p>Renter your home</p>
           <world-icon class="world-icon"></world-icon>
           <button @click="toggleMenuModal" class="menu-button flex-box align-center">
-            <div  class="menudiv">
+            <div class="menudiv">
               <div v-click-outside="toggleMenuModal" v-if="isMenuOpen" class="menu-modal">
                 <div @click="$router.push('/')">Explore</div>
                 <div v-if="!loggedInUser" @click="openModal('log')">Log in</div>
@@ -46,7 +46,6 @@
                   <div @click="this.$router.push('/userOrders')">Your orders</div>
                   <div @click="logout">Logout</div>
                 </div>
-
               </div>
             </div>
             <hamburger class="menu-icon" />
@@ -56,7 +55,7 @@
           </button>
         </div>
       </div>
-      <div @click="isFilterMobileOpened = true" class="mobile-header">
+      <div @click="toggleFilterMobile" class="mobile-header">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
           focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;">
           <path
@@ -64,15 +63,18 @@
             opacity=".8"></path>
         </svg>
         <div>
-          <div>Anywhere</div>
+          <div v-if="!filterBy.country">Anywhere</div>
+          <div v-else>{{ filterBy.country }}</div>
           <div class="flex-box col-2">
-            <p>Any week</p>
+            <p v-if="!datesSearched">Any week</p>
+            <p v-else>{{ dateFormat }}</p>
             <p>·</p>
-            <p>Add Guests</p>
+            <p v-if="!filterBy.guestsCount">Add Guests</p>
+            <p v-else>{{ filterBy.guestsCount }} Guests</p>
           </div>
         </div>
       </div>
-      <mobile-filter @closeMobileFilter="isFilterMobileOpened = false" :class="{opened:isFilterMobileOpened}"></mobile-filter>
+      <mobile-filter @closeMobileFilter="toggleFilterMobile" :class="{ opened: isFilterMobileOpened }"></mobile-filter>
     </header>
   </div>
 
@@ -83,7 +85,7 @@ import headerFilter from './header-filter.vue';
 import hamburger from '../side-cmps/header-user-hamb.vue'
 import worldIcon from '../side-cmps/header-world-icon.vue'
 import userIcon from '../side-cmps/header-user-icon.vue'
-import { eventBus } from '../services/event-bus.service';
+import { eventBus, showErrorMsg, showSuccessMsg } from '../services/event-bus.service';
 
 export default {
   data() {
@@ -96,18 +98,25 @@ export default {
       filterDetails: '',
       datesSearched: null,
       scrollBefore: 0,
-      isFilterMobileOpened:false
+      isFilterMobileOpened: false
     }
   },
   created() {
     eventBus.on('toggleLayout', this.toggleLayout)
     eventBus.on('openModal', () => this.openModal('log'))
+    eventBus.on('setFilterByTxt', () => {
+      this.datesSearched = JSON.parse(sessionStorage.getItem('filter'))?.dates
+    })
   },
   methods: {
     openModal(type) {
       this.$emit('openModal')
       if (type === 'log') this.$store.commit({ type: 'setIsLogged', condition: '' })
       if (type === 'sign') this.$store.commit({ type: 'setIsLogged', condition: 'true' })
+    },
+    toggleFilterMobile() {
+      this.isFilterMobileOpened = !this.isFilterMobileOpened
+      eventBus.emit('toggleMobileMenu')
     },
     home() {
       this.$router.push('/')
@@ -122,8 +131,13 @@ export default {
       this.isMenuOpen = !this.isMenuOpen
     },
     async logout() {
-      await this.$store.dispatch({ type: 'logout' })
-      this.$router.push('/')
+      try {
+        await this.$store.dispatch({ type: 'logout' })
+        this.$router.push('/')
+        showSuccessMsg('Logged out succesfully')  
+      } catch {
+        showErrorMsg('Failed to logout')
+      }
     },
     openBackOffice() {
       this.$router.push('/backOffice')
@@ -138,6 +152,9 @@ export default {
     }
   },
   computed: {
+    filterBy() {
+      return this.$store.getters.filterBy
+    },
     layout() {
       return { detailsContainer: this.isDetailsLayout }
     },

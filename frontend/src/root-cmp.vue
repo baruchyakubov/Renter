@@ -3,7 +3,7 @@
     <section class="container home mainContainerr">
       <user-modal v-if="isUserModal" @closeModal="closeModal"></user-modal>
       <user-msg />
-      <app-header @openModal="openModal" />
+      <app-header v-if="isHeaderShown" @openModal="openModal" />
       <router-view />
     </section>
     <div style="display:grid;">
@@ -36,16 +36,18 @@ export default {
         page: 1
       },
       currRoute: this.$route.path,
-      isMenuShown: true 
+      isMenuShown: true,
+      isHeaderShown: true
     }
   },
   created() {
-    if(this.$route.path === '/stay/:id') this.isMenuShown = false
+    if (this.$route.path === '/stay/:id') this.isMenuShown = false
     sessionStorage.removeItem('filter');
     socketService.on(SOCKET_EVENT_SEND_ORDER, this.addOrder)
     eventBus.on('setFilterByPage', this.setFilterByPage)
     eventBus.on('setFilterByLabel', this.setFilterByLabel)
     eventBus.on('setFilterByTxt', this.setFilterByTxt)
+    eventBus.on('toggleMobileMenu', () => this.isMenuShown = !this.isMenuShown)
     const user = authService.getLoggedinUser()
     if (user) store.commit({ type: 'setLoggedinUser', user })
   },
@@ -72,22 +74,33 @@ export default {
     setFilterByLabel(label) {
       this.filterBy.page = 1
       this.filterBy.label = label
+      eventBus.emit('setLoaderMargin' , '90px')
+      this.$store.commit({ type: 'setStays', stays:[]})
+      this.$store.commit({ type: 'setLoading', value:true})
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
     setFilterByTxt(filter) {
       this.filterBy.country = filter.country
       this.filterBy.guestsCount = filter.guestsCount
+      eventBus.emit('setLoaderMargin' , '90px')
+      this.$store.commit({ type: 'setStays', stays:[]})
+      this.$store.commit({ type: 'setLoading', value:true})
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
     setFilterByPage() {
       this.filterBy.page++
+      eventBus.emit('setLoaderMargin' , '0px')
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     }
   },
-  watch:{
-    '$route': function (){
-      if(this.$route.path.includes('stay')) this.isMenuShown = false
-      else this.isMenuShown = true
+  watch: {
+    '$route': function () {
+      if (this.$route.path.includes('stay') && window.innerWidth <= 950){
+        this.isMenuShown = false
+      } 
+      else {
+        this.isMenuShown = true
+      }
     }
   },
   components: {

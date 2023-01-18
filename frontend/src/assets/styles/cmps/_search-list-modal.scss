@@ -12,21 +12,25 @@
     box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
     margin-top: 12px;
     padding: 16px 8px 24px;
-    ul{
+
+    ul {
         padding: 0;
         padding-inline-start: 8px;
     }
+
     .search-item {
         cursor: pointer;
         display: flex;
         align-items: center;
         padding: 8px 32px 8px 24px;
-        p{
+
+        p {
             font-size: 16px;
             line-height: 20px;
             font-weight: 500;
-            color: rgb(34, 34, 34) ;
+            color: rgb(34, 34, 34);
         }
+
         .search-icon {
             min-width: 48px;
             aspect-ratio: 1/1;
@@ -34,8 +38,25 @@
             background-color: rgb(235, 235, 235);
             margin-inline-end: rem(16px);
         }
-        &:hover{
+
+        &:hover {
             background-color: rgb(247, 247, 247);
+        }
+    }
+}
+
+@media (max-width:950px) {
+    .search-list-modal {
+        margin: 0;
+        position: unset;
+        width: 100%;
+        height: fit-content;
+        border: none;
+        padding: 0;
+        box-shadow: unset;
+        border: none;
+        ul{
+            padding: 0;
         }
     }
 }

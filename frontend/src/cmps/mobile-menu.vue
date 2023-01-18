@@ -89,7 +89,7 @@
 
 <script>
 import { authService } from '../services/auth.service'
-import { eventBus, showErrorMsg } from '../services/event-bus.service'
+import { eventBus, showErrorMsg ,showSuccessMsg } from '../services/event-bus.service'
 
 export default {
   data() {
@@ -122,8 +122,13 @@ export default {
       this.$router.push('/userOrders')
     },
     async logout() {
-      await this.$store.dispatch({ type: 'logout' })
-      this.$router.push('/')
+      try {
+        await this.$store.dispatch({ type: 'logout' })
+        this.$router.push('/')
+        showSuccessMsg('Logged out succesfully')
+      } catch {
+        showErrorMsg('Failed to logout')
+      }
     },
     checkRoute() {
       if (this.$route.path === '/') {

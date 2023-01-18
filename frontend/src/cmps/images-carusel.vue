@@ -1,6 +1,6 @@
 <template>
-  <el-carousel :interval="999999999"  v-if="stay">
-    <svg :class="{ red: isInWishlist }" v-if="$route.path === '/'" :id="stay._id"
+  <el-carousel :interval="999999999" v-if="stay">
+    <svg :class="{ red: isInWishlist }"  :id="stay._id"
       @click.prevent="saveStay($event, stay._id)" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true" role="presentation" focusable="false"
       style="position: absolute; z-index: 20; left: 95%; top: 5%; transform: translate(-95% , -5%);  display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: white; stroke-width: 2; overflow: visible;">
@@ -15,81 +15,17 @@
 </template>
 
 <script>
-import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
-import { authService } from '../services/auth.service';
 export default {
   name: 'carousel',
   props: {
     images: Array,
-    stay: Object
-  },
-  data() {
-    return {
-      isInWishlist: false
-    }
-  },
-  mounted() {
-    const user = authService.getLoggedinUser()
-    if (this.$route.path === '/' && this.currUser) {
-      const stay = this.currUser.wishList.find(stay => {
-        return this.stay._id === stay._id
-      })
-      if (stay) this.isInWishlist = true
-    }
+    stay: Object,
+    isInWishlist: Boolean
   },
   methods: {
-    async saveStay(e, stayId) {
+    async saveStay(e) {
       e.stopPropagation()
-      const user = authService.getLoggedinUser()
-      if (!user) {
-        showErrorMsg('Login required')
-        return
-      }
-      const isExcised = this.currUser.wishList.find(stay => {
-        return stay._id === stayId
-      })
-      if (isExcised) {
-        const idx = this.currUser.wishList.findIndex(stay => {
-          return stay._id === this.stay._id
-        })
-        user.wishList.splice(idx, 1)
-        await this.$store.dispatch({ type: "updateUser", user: { ...user } })
-        this.isInWishlist = false
-        showSuccessMsg('removed successfully wishlist')
-        return
-      }
-      this.isInWishlist = true
-      const stay = {
-        _id: this.stay._id,
-        name: this.stay.name,
-        imgUrls: this.stay.imgUrls,
-        summary: this.stay.summary,
-        loc: {
-          country: this.stay.loc.country,
-          city: this.stay.loc.city
-        },
-        price: this.stay.price,
-        reviews: this.stay.reviews
-      }
-      user.wishList.push(stay)
-      await this.$store.dispatch({ type: "updateUser", user: { ...user } })
-      showSuccessMsg('Added stay to wishlist')
-    }
-  },
-  computed: {
-    currUser() {
-      return this.$store.getters.loggedinUser
-    }
-  },
-  watch: {
-    currUser() {
-      if (!this.currUser) this.isInWishlist = false
-      else {
-        const stay = this.currUser.wishList.find(stay => {
-          return this.stay._id === stay._id
-        })
-        if (stay) this.isInWishlist = true
-      }
+      this.$emit('saveStay')
     }
   }
 }
