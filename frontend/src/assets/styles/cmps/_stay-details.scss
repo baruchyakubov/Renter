@@ -217,7 +217,7 @@
 }
 
 .stay-details {
-  overflow: hidden;
+  // overflow: hidden;
 
   .details-carousel {
     grid-column: 1/span 3;
@@ -246,20 +246,15 @@
   .details-carousel{
     display: unset;
   }
-  .saveShare{
-    display: none;
-  }
   .stay-details-imgs-container{
     display: none;
   }
 }
 
 @media only screen and (max-width: 950px) {
-  // .stay-details {
-  //   position: absolute;
-  //   z-index: 2000;
-  //   height: 100%;
-  // }
+  .saveShare{
+    display: none;
+  }
   .stay-details-name{
     margin-top: 24px;
   }
@@ -306,7 +301,7 @@
   .stay-details {
     margin-top: 0;
   }
-  .reserveFormAll {
+  .wholeOrder {
     display: none;
   }
 
