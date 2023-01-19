@@ -180,16 +180,11 @@ header {
     }
 }
 
-@media (max-width:750px){
-    header{
-        &.removeHeader{
-            display: none;
-        }
-    }
-}
+
+
 
 @media (max-width:950px) {
-    header {
+     header {
         .header-main {
             gap: 10px;
         }
@@ -197,11 +192,10 @@ header {
         .logo {
             width: max-content;
         }
-       
     }
-}
-
-@media (max-width:950px) {
+    .removeHeader{
+        display: none;
+    }
     .mobile-menu {
         display: flex;
         background-color: #FFFFFF;
