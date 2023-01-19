@@ -3,7 +3,7 @@
     <section class="container home mainContainerr">
       <user-modal v-if="isUserModal" @closeModal="closeModal"></user-modal>
       <user-msg />
-      <app-header :class="{ removeHeader: !isHeaderShown }" v-if="isHeaderShown" @openModal="openModal" />
+      <app-header :class="{ removeHeader: !isHeaderShown }"  @openModal="openModal" />
       <router-view />
     </section>
     <div style="display:grid;">
@@ -91,11 +91,10 @@ export default {
       this.filterBy.page++
       eventBus.emit('setLoaderMargin', '0px')
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
-    }
-  },
-  watch: {
-    '$route': function () {
-      if (this.$route.path.includes('stay') && window.innerWidth <= 950) {
+    },
+    toggleHeader() {
+      if (this.$route.path.includes('stay')) {
+        console.log(this.$route.path);
         this.isMenuShown = false
         this.isHeaderShown = false
         document.querySelector('body').classList.add('remove-margin')
@@ -107,12 +106,17 @@ export default {
       }
     }
   },
+  watch: {
+    '$route': function () {
+      this.toggleHeader()
+    }
+  },
   components: {
     appHeader,
     userMsg,
     userModal,
     appFooter,
     mobileMenu
-  },
+  }
 }
 </script>

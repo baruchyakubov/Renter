@@ -249,15 +249,20 @@
   .saveShare{
     display: none;
   }
-  .stay-details-name{
-    margin-top: 24px;
-  }
   .stay-details-imgs-container{
     display: none;
   }
 }
 
 @media only screen and (max-width: 950px) {
+  // .stay-details {
+  //   position: absolute;
+  //   z-index: 2000;
+  //   height: 100%;
+  // }
+  .stay-details-name{
+    margin-top: 24px;
+  }
    .mobile-header-details {
     border-bottom: 1px solid rgb(235, 235, 235);
     height: rem(64px);
