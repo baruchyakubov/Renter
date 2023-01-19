@@ -180,6 +180,14 @@ header {
     }
 }
 
+@media (max-width:750px){
+    header{
+        &.removeHeader{
+            display: none;
+        }
+    }
+}
+
 @media (max-width:950px) {
     header {
         .header-main {
@@ -189,6 +197,7 @@ header {
         .logo {
             width: max-content;
         }
+       
     }
 }
 

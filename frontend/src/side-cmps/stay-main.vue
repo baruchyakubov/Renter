@@ -8,8 +8,8 @@
             class="bullet1">•</span></p>
         <p class="reviews">{{ reviews }}</p>
         <p v-if="isSuperHost"><span class="bullet">•</span> Superhost</p>
-        <p class="location"><span class="bullet">•</span> <span>{{ stay.loc.address }}, {{ stay.loc.city }},
-            {{ stay.loc.country }}</span></p>
+        <p class="location"><span class="bullet">•</span> 
+          <span>{{ stay.loc.address }}</span></p>
       </div>
       <div class="saveShare flex-box">
         <p><share-svg></share-svg> <span>Share</span></p>

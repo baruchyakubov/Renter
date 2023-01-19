@@ -171,7 +171,7 @@
   max-height: 33.9rem;
   max-width: 100%;
   overflow: hidden;
-  
+
   img {
     object-fit: cover;
     aspect-ratio: 1/1;
@@ -179,6 +179,7 @@
     max-height: 100%;
     cursor: pointer;
     transition: all 0.2s;
+
     &:hover {
       filter: saturate(0.7)
     }
@@ -214,22 +215,92 @@
     padding-block-start: 0.1rem;
   }
 }
-.stay-details{
+
+.stay-details {
   overflow: hidden;
-  .details-carousel{
+
+  .details-carousel {
     grid-column: 1/span 3;
   }
-  .el-carousel__item{
+
+  .el-carousel__item {
     display: flex;
     align-items: center;
-    img{
+
+    img {
       width: 100%;
       aspect-ratio: 1.0526 !important;
     }
   }
 }
 
+.mobile-header-details{
+  display: none;
+}
+
+.details-carousel{
+  display: none;
+}
+
+@media (max-width:750px){
+  .details-carousel{
+    display: unset;
+  }
+  .saveShare{
+    display: none;
+  }
+  .stay-details-name{
+    margin-top: 24px;
+  }
+  .stay-details-imgs-container{
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 950px) {
+   .mobile-header-details {
+    border-bottom: 1px solid rgb(235, 235, 235);
+    height: rem(64px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >* {
+      display: flex;
+      align-items: center;
+    }
+
+    .share-save {
+      >*{
+        cursor: pointer;
+      }
+      gap: 20px;
+    }
+
+    .back-to-list-btn {
+      cursor: pointer;
+      svg {
+        color: rgb(34, 34, 34);
+      }
+
+      p {
+        white-space: nowrap;
+        color: rgb(34, 34, 34);
+        font-size: rem(14px);
+        font-weight: 600;
+      }
+
+      gap: 8px;
+    }
+  }
+  body{
+    &.remove-margin{
+      margin: 0;
+    }
+  }
+  .stay-details {
+    margin-top: 0;
+  }
   .reserveFormAll {
     display: none;
   }

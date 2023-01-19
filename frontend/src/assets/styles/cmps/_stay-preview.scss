@@ -96,6 +96,18 @@
     }
 }
 
+@media (max-width:750px){
+    .el-carousel__arrow--left,
+.el-carousel__arrow--right{
+    background-color: rgba(197, 191, 191, 0.985);
+    color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+.el-carousel__arrow--right{
+    display: unset !important;
+}
+}
+
 .el-carousel_item {
     height: auto;
     aspect-ratio: 1.0526 !important;
