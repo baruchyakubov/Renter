@@ -3,7 +3,7 @@
     <section class="container home mainContainerr">
       <user-modal v-if="isUserModal" @closeModal="closeModal"></user-modal>
       <user-msg />
-      <app-header v-if="isHeaderShown" @openModal="openModal" />
+      <app-header :class="{ removeHeader: !isHeaderShown }" v-if="isHeaderShown" @openModal="openModal" />
       <router-view />
     </section>
     <div style="display:grid;">
@@ -74,32 +74,36 @@ export default {
     setFilterByLabel(label) {
       this.filterBy.page = 1
       this.filterBy.label = label
-      eventBus.emit('setLoaderMargin' , '90px')
-      this.$store.commit({ type: 'setStays', stays:[]})
-      this.$store.commit({ type: 'setLoading', value:true})
+      eventBus.emit('setLoaderMargin', '90px')
+      this.$store.commit({ type: 'setStays', stays: [] })
+      this.$store.commit({ type: 'setLoading', value: true })
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
     setFilterByTxt(filter) {
       this.filterBy.country = filter.country
       this.filterBy.guestsCount = filter.guestsCount
-      eventBus.emit('setLoaderMargin' , '90px')
-      this.$store.commit({ type: 'setStays', stays:[]})
-      this.$store.commit({ type: 'setLoading', value:true})
+      eventBus.emit('setLoaderMargin', '90px')
+      this.$store.commit({ type: 'setStays', stays: [] })
+      this.$store.commit({ type: 'setLoading', value: true })
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     },
     setFilterByPage() {
       this.filterBy.page++
-      eventBus.emit('setLoaderMargin' , '0px')
+      eventBus.emit('setLoaderMargin', '0px')
       this.$store.dispatch({ type: 'setFilterBy', filterBy: { ...this.filterBy } })
     }
   },
   watch: {
     '$route': function () {
-      if (this.$route.path.includes('stay') && window.innerWidth <= 950){
+      if (this.$route.path.includes('stay') && window.innerWidth <= 950) {
         this.isMenuShown = false
-      } 
+        this.isHeaderShown = false
+        document.querySelector('body').classList.add('remove-margin')
+      }
       else {
         this.isMenuShown = true
+        this.isHeaderShown = true
+        document.querySelector('body').classList.remove('remove-margin')
       }
     }
   },

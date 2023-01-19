@@ -1,6 +1,7 @@
 <template>
   <div>
     <div v-if="stay" class="stay-details detailsContainer">
+      <mobile-header-details></mobile-header-details>
       <stay-main :stay="stay"></stay-main>
       <div class="detailsColumnsContainer">
         <div class="column1">
@@ -48,6 +49,7 @@ import stayReviews from '../side-cmps/stay-reviews.vue'
 import calendar from '../side-cmps/calendar.vue'
 import hostDetails from '../side-cmps/stay-host-details.vue'
 import mobileFooter from '../cmps/mobile-footer.vue'
+import mobileHeaderDetails from '../side-cmps/mobile-header-details.vue'
 export default {
   data() {
     return {
@@ -94,7 +96,8 @@ export default {
     calendar,
     hostDetails,
     locationMap,
-    mobileFooter
+    mobileFooter,
+    mobileHeaderDetails
   }
 }
 </script>
