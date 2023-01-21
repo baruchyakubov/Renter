@@ -1,13 +1,13 @@
 <template>
   <images-carousel :stay="stay" :images="stay.imgUrls" :loop="false" class="details-carousel"></images-carousel>
   <div v-if="stay">
-    <h2 class="stay-details-name">{{ stay.name }}</h2>
+    <h2 ref="photos" class="stay-details-name">{{ stay.name }}</h2>
     <div class="headerFlex flex-box">
       <div class="stay-details-basicInfo">
         <p><img class="star" src="../assets/svg/review-start-svg.svg"><span class="rating">{{ rating }}</span> <span
             class="bullet1">•</span></p>
         <p class="reviews">{{ reviews }}</p>
-        <p v-if="isSuperHost"><span class="bullet">•</span> Superhost</p>
+        <p class="Superhost" v-if="isSuperHost"><span class="bullet">•</span> Superhost</p>
         <p class="location"><span class="bullet">•</span> 
           <span>{{ stay.loc.address }}</span></p>
       </div>
@@ -16,7 +16,7 @@
         <p @click="saveStay"><save-svg></save-svg> <span>Save</span></p>
       </div>
     </div>
-    <div class="stay-details-imgs-container">
+    <div class="stay-details-imgs-container scroll-trigger">
       <img v-for="(img, idx) in imgsToRender" :src="img" :key="img + idx" :class="'stay-details-img' + idx" />
     </div>
   </div>

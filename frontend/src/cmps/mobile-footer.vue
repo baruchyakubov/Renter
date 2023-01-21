@@ -1,14 +1,20 @@
 <template>
-  <section v-if="stay">
-    <reserve-form :stay="stay" class="wholeOrderMobile"/>
-    <div class="mobile-footer">
+  <div class="detailsContainer mobile-footer-container">
+    <div class="mobile-footer" v-if="stay">
       <div class="details">
         <h4 class="price">{{ price }} <span>night</span></h4>
         <span class="dates" v-if="session.dates.to">{{ month }} {{ startDate }} - {{ endDate }}</span>
       </div>
+<<<<<<< HEAD
       <reactive-btn class="btn-container" :content="'Reserve'" @click="toggleFormModal()">Reserve</reactive-btn>
     </div>
   </section>
+=======
+      <reactive-btn class="btn-container" :content="'Reserve'">Reserve</reactive-btn>
+    </div>
+  </div>
+
+>>>>>>> 6ab4e408181e357569d0961b7381151dbc6fe195
 </template>
 <script>
 import { utilService } from '../services/util.service';

@@ -1,6 +1,6 @@
 <template>
   <section class="stay-details-amenities-section">
-    <h3>What this place offers</h3>
+    <h3 class="amenities-title">What this place offers</h3>
     <div class="container flex-box">
       <div v-for="index in 10" :key="index" class="item"> 
         <p><img  class="svgImg" v-bind:src="amenities[index].img"/>{{ amenities[index].txt }}</p>

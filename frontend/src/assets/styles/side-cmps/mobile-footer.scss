@@ -1,103 +1,114 @@
-.mobile-footer {
+.mobile-footer-container {
   position: fixed;
   z-index: 10;
   bottom: 0;
   padding-block: 0.4rem;
-  min-width: 100%;
   border-top: 1px solid rgb(225, 225, 225);
   background-color: white;
   display: none;
-  padding-inline: 1.7rem;
+  // padding-inline: 1.7rem;
   padding-block: 1rem;
-  .price{
-    font-family: cereal-semi-light;
-  }
-  .details {
-    font-size: 16px;
-    .dates{
-      text-decoration: underline;
-      color: black;
-      font-family: cereal-semi-light;
-    }
-  }
-  h4:not(span){
-    letter-spacing: 1px;
-    color: black;
-  }
-  .details span {
-    font-size: 14px;
-    font-family: cereal-light;
-    color: rgb(44, 44, 44);
-    font-weight: 100;
-  }
-  .btn-container {
-    color: white;
-    position: relative;
-    width: 7rem;
-    height: 2.9rem;
-    padding: 0 0;
-    margin-left: auto;
-    cursor: pointer;
-    border: none;
-    display: grid;
-    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-
-    @for $i from 0 to 10 {
-      .cell:nth-child(10n + #{$i + 1}):hover~.content {
-        --positionX: #{$i};
-      }
-
-      .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
-        --positionY: #{$i};
-      }
-    }
-  }
-
-  .cell {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .content {
-    --positionX: 0;
-    --positionY: 5;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    border-radius: 8px;
-
-    background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
-        rgb(241, 37, 75) 0%,
-        rgb(230, 30, 77) 27.5%,
-        rgb(227, 28, 95) 40%,
-        rgb(215, 4, 102) 57.5%,
-        rgb(189, 30, 89) 75%,
-        rgb(189, 30, 89) 100%);
-  }
-
-  .action-btn {
-    padding: 0 0;
-    margin: 0 0;
-    width: 100%;
-    height: 100%;
-    font-size: 1rem;
-    font-family: cereal-medium;
-    background-color: transparent;
-    border: none;
-  }
-}
-
-@media only screen and (max-width: 950px) {
   .mobile-footer {
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
+  
+    .price {
+      font-family: cereal-semi-light;
+    }
+  
+    .details {
+      font-size: 16px;
+  
+      .dates {
+        text-decoration: underline;
+        color: black;
+        font-family: cereal-semi-light;
+      }
+    }
+  
+    h4:not(span) {
+      letter-spacing: 1px;
+      color: black;
+    }
+  
+    .details span {
+      font-size: 14px;
+      font-family: cereal-light;
+      color: rgb(44, 44, 44);
+      font-weight: 100;
+    }
+  
+    .btn-container {
+      color: white;
+      position: relative;
+      width: 7rem;
+      height: 2.9rem;
+      padding: 0 0;
+      margin-left: auto;
+      cursor: pointer;
+      border: none;
+      display: grid;
+      grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+  
+      @for $i from 0 to 10 {
+        .cell:nth-child(10n + #{$i + 1}):hover~.content {
+          --positionX: #{$i};
+        }
+  
+        .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
+          --positionY: #{$i};
+        }
+      }
+    }
+  
+    .cell {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  
+    .content {
+      --positionX: 0;
+      --positionY: 5;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      border-radius: 8px;
+  
+      background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
+          rgb(241, 37, 75) 0%,
+          rgb(230, 30, 77) 27.5%,
+          rgb(227, 28, 95) 40%,
+          rgb(215, 4, 102) 57.5%,
+          rgb(189, 30, 89) 75%,
+          rgb(189, 30, 89) 100%);
+    }
+  
+    .action-btn {
+      padding: 0 0;
+      margin: 0 0;
+      width: 100%;
+      height: 100%;
+      font-size: 1rem;
+      font-family: cereal-medium;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 950px) {
+  .mobile-footer-container{
+    display: grid;
   }
 }
