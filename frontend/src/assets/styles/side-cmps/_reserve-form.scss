@@ -1,9 +1,10 @@
-.reserveFormAll{
+.reserveFormAll {
   position: sticky;
   top: 6.2rem;
   max-height: 35rem;
   overflow: hidden;
 }
+
 .order-container {
   border: 1px solid #00000030;
   border-radius: 13px;
@@ -12,6 +13,7 @@
   max-width: 362px;
   box-shadow: 0 0 5px 5px #00000015;
   color: rgb(34, 34, 34);
+
   .totalCalc {
     margin-inline-start: 0.4rem;
     font-size: 1rem;
@@ -92,7 +94,8 @@
   }
 }
 
-.guestsModal,.guestsModalSearch {
+.guestsModal,
+.guestsModalSearch {
   color: rgb(34, 34, 34);
   box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px;
   z-index: 999 !important;
@@ -103,39 +106,48 @@
   right: 0.23rem;
   bottom: 25rem;
   border-radius: 0.8rem;
-  width: 87%; 
+  width: 87%;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-  .adultDiv, .childrenDiv ,.infantsDiv,.petsDiv{
+
+  .adultDiv,
+  .childrenDiv,
+  .infantsDiv,
+  .petsDiv {
     letter-spacing: 0.4px;
     padding-inline: 1.1rem;
     margin-top: 1.44rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    h4{
+
+    h4 {
       font-family: cereal-semi-light;
       font-size: 1rem;
-      margin-bottom:0 ;
+      margin-bottom: 0;
       padding-bottom: 0.3rem;
     }
-    p{
+
+    p {
       font-size: 0.87rem;
     }
-    .counter{
+
+    .counter {
       display: flex;
       align-items: center;
-      p{
+
+      p {
         position: relative;
         bottom: 0.1rem;
         font-size: 1rem;
         color: rgb(34, 34, 34);
       }
-      button{
+
+      button {
         cursor: pointer;
         position: relative;
-        color:rgb(102, 102, 102) ;
+        color: rgb(102, 102, 102);
         border: 1px solid rgb(176, 176, 176);
         background-color: white;
         left: 0.05rem;
@@ -147,37 +159,43 @@
         height: 2rem;
         width: 2rem;
         justify-content: center;
-        margin-inline-start:0.9rem ;
+        margin-inline-start: 0.9rem;
       }
-      .minusBtn{
+
+      .minusBtn {
         font-size: 2rem;
         font-family: cereal-light;
-        margin-inline-end:0.9rem ;
-        span{
+        margin-inline-end: 0.9rem;
+
+        span {
           position: relative;
           bottom: 0.15rem;
         }
       }
     }
   }
-  .adultDiv{
+
+  .adultDiv {
     margin-top: 2.1rem;
   }
-  .petsDiv{
-    p{
+
+  .petsDiv {
+    p {
       text-decoration: underline;
       font-family: cereal-semi-light;
       color: black;
     }
   }
-  .disclaimer{
+
+  .disclaimer {
     font-size: 0.71rem;
     letter-spacing: 0.4px;
     padding-inline: 1.1rem;
     margin-top: 1.23rem;
     line-height: 1rem;
   }
-  .closeBtn{
+
+  .closeBtn {
     letter-spacing: 0.3px;
     font-family: cereal-semi-light;
     text-decoration: underline;
@@ -239,6 +257,7 @@
   color: gray;
   font-size: 0.75rem;
   cursor: pointer;
+
   svg {
     position: absolute;
     height: 20px;
@@ -251,10 +270,12 @@
 
 .wholeOrder {
   max-width: fit-content;
+
   .OutsideCalendar {
     position: relative;
     bottom: 27.7rem;
   }
+
   .btn-container {
     position: relative;
     width: 100%;
@@ -265,28 +286,28 @@
     border: none;
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-  
+
     @for $i from 0 to 10 {
       .cell:nth-child(10n + #{$i + 1}):hover~.content {
         --positionX: #{$i};
       }
-  
+
       .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover~.content {
         --positionY: #{$i};
       }
     }
   }
-  
+
   .cell {
     width: 100%;
     height: 100%;
     z-index: 1;
   }
-  
+
   .content {
     --positionX: 0;
     --positionY: 5;
-  
+
     position: absolute;
     top: 0;
     right: 0;
@@ -297,7 +318,7 @@
     align-items: center;
     height: 100%;
     border-radius: 8px;
-  
+
     background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
         rgb(241, 37, 75) 0%,
         rgb(230, 30, 77) 27.5%,
@@ -306,7 +327,7 @@
         rgb(189, 30, 89) 75%,
         rgb(189, 30, 89) 100%);
   }
-  
+
   .action-btn {
     padding: 0 0;
     margin: 0 0;
@@ -315,10 +336,54 @@
     background-color: transparent;
     border: none;
   }
-  
+
 }
 
+.wholeOrderMobile {
+  display: none;
+}
 
+@media (max-width:950px) {
+  .wholeOrderMobile {
+    &.reserveFormMobile {
+      display: unset;
+      position: fixed;
+      bottom: 0;
+      z-index: 100;
+      .reserveFormAll {
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: white;
+      }
+
+      .order-container {
+        padding-inline: 3rem;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+        border: none;
+        box-shadow: none;
+        .order-data{
+          max-width: none;
+        }
+        .date-input{
+          width: 50%;
+        }
+      }
+
+      .chargeDisclaimer,
+      .payout,
+      .totalCalc,
+      .footer {
+        display: none;
+      }
+    }
+  }
+}
 
 p.footer {
   position: relative;
