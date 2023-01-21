@@ -1,32 +1,5 @@
 import { stayService } from '../services/stay.service'
 
-export function getActionRemoveStay(stayId) {
-    return {
-        type: 'removeStay',
-        stayId
-    }
-}
-export function getActionAddStay(stay) {
-    return {
-        type: 'addStay',
-        stay
-    }
-}
-export function getActionUpdateStay(stay) {
-    return {
-        type: 'updateStay',
-        stay
-    }
-}
-
-export function getActionAddStayMsg(stayId) {
-    return {
-        type: 'addStayMsg',
-        stayId,
-        txt: 'Stam txt',
-    }
-}
-
 export const stayStore = {
     state: {
         stays: [],
@@ -78,14 +51,8 @@ export const stayStore = {
         removeStay(state, { stayId }) {
             state.stays = state.stays.filter(stay => stay._id !== stayId)
         },
-        addStayMsg(state, { stayId, msg }) {
-            const stay = state.stays.find(stay => stay._id === stayId)
-            if (!stay.msgs) stay.msgs = []
-            stay.msgs.push(msg)
-        },
         setFilter(state, { filter }) {
             state.filterBy = filter
-            // state.stays = []
         },
         setCountryList(state , { searchList }){
             state.searchCountryList = searchList
@@ -157,16 +124,6 @@ export const stayStore = {
                 console.log('stayStore: Error in removeStay', err)
                 throw err
             }
-        },
-        async addStayMsg(context, { stayId, txt }) {
-            try {
-                const msg = await stayService.addStayMsg(stayId, txt)
-                context.commit({ type: 'addStayMsg', stayId, msg })
-            } catch (err) {
-                console.log('stayStore: Error in addStayMsg', err)
-                throw err
-            }
-        },
-
+        }
     }
 }

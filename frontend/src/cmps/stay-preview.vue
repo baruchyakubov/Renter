@@ -51,8 +51,7 @@ export default {
         showErrorMsg('Login required')
         return
       }
-      const isExcised = stayService.checkIfIsInWishlist(this.currUser.wishList, this.stay)
-      if (isExcised) {
+      if (this.isInWishlist) {
         const User = stayService.removeFromWishList(user, this.stay)
         await this.$store.dispatch({ type: "updateUser", user: { ...User } })
         this.isInWishlist = false

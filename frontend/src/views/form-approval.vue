@@ -71,7 +71,6 @@ export default {
     this.stay = await this.getStay()
     this.form.stay.imgUrl = this.stay.imgUrls[0]
     this.form.stay.loc = this.stay.loc
-    console.log(this.form);
   },
   data() {
     return {

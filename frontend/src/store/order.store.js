@@ -1,6 +1,4 @@
-import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from '../services/socket.service'
 import { orderService } from '../services/order.service'
-import { stayService } from '../services/stay.service.local'
 import { utilService } from '../services/util.service'
 import { showSuccessMsg , showErrorMsg  } from '../services/event-bus.service'
 
@@ -25,9 +23,6 @@ export const orderStore = {
         },
         setOrders(state, { orders }) {
            state.orders = orders
-            // state.orders =   orders.sort((a,b)=>{
-            //     return (b.createdAt-a.createdAt)
-            // })
         },
         updatedOrder(state, { order }) {
             const idx = state.orders.findIndex(Order => Order._id === order._id)
@@ -45,7 +40,6 @@ export const orderStore = {
         async sendForm(state,{ form }) {
             try {
                 const currForm = await orderService.save(form)
-                console.log(currForm)
                 showSuccessMsg('order successfully delivered')
                 return currForm
             }

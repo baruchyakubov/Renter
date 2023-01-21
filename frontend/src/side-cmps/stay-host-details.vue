@@ -10,7 +10,7 @@
           <h2 class="capacity baths-capacity">{{ stay.bathrooms }} baths</h2>
         </div>
       </div>
-      <div>
+      <div class="host-picture-container">
         <img class="host-picture" v-bind:src="stay.host.pictureUrl" 
         onerror="this.src='https://robohash.org/57515702?set=set1'" />
         <host-svg class="hostSvg" v-if="isSuperHost"></host-svg>

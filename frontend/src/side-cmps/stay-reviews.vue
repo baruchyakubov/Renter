@@ -1,5 +1,5 @@
 <template >
-  <div ref="reviews" v-if="stay" class="stay-details-reviews">
+  <div v-if="stay" class="stay-details-reviews">
     <h3><img class="star" src="../assets/svg/review-start-svg.svg" />{{ rating }}<span class="bullet">•</span>{{
       reviews
     }}</h3>

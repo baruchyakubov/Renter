@@ -10,7 +10,8 @@
           <stay-attributes />
           <div class="aircover">
             <img src="https://res.cloudinary.com/dgvpl7cdq/image/upload/v1674293987/czcblqj1okmht5xmeuq3.png" alt="">
-            <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
+            <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues
+              like trouble checking in.</p>
             <div>Learn more</div>
           </div>
           <div class="stay-details-summary">
@@ -80,10 +81,7 @@ export default {
   },
   mounted() {
     eventBus.emit('toggleLayout', true)
-    var scrollTop = function () {
-      window.scrollTo(0, 0);
-    }
-    this.scrollTop()
+    window.scrollTo(0, 0);
   },
   async created() {
     await this.setStay()
@@ -105,9 +103,6 @@ export default {
       document.querySelectorAll('.scroll-trigger').forEach((el) => {
         this.Observer.observe(el);
       })
-    },
-    scrollTop() {
-      window.scrollTo(0, 0)
     },
     async setStay() {
       const stayId = this.$route.params.id

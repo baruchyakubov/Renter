@@ -2,7 +2,6 @@ import Vuex from 'vuex'
 
 import { userStore } from './user.store.js'
 import { stayStore } from './stay.store.js'
-import { reviewStore } from './review.store.js'
 import { orderStore } from './order.store.js'
 
 export const store = Vuex.createStore({
@@ -10,7 +9,6 @@ export const store = Vuex.createStore({
   modules: {
     userStore,
     stayStore,
-    reviewStore,
     orderStore
   },
   state: {

@@ -25,9 +25,6 @@ export default {
       return item
     }
   },
-  created(){
-    console.log(this.amenities);
-  },
   components:{
     closeBtn
   }

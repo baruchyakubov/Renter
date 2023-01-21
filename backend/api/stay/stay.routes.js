@@ -1,7 +1,6 @@
 const express = require('express')
 const {
   requireAuth,
-  requireAdmin,
 } = require('../../middlewares/requireAuth.middleware')
 const {
   getStays,
@@ -9,7 +8,6 @@ const {
   addStay,
   updateStay,
   removeStay,
-  addReview,
   getSearchedStays
 } = require('./stay.controller')
 const router = express.Router()
@@ -22,6 +20,5 @@ router.post('/', addStay) //,
 router.put('/:id', requireAuth, updateStay)
 
 router.delete('/:id', removeStay) 
-router.post('/:id/review', addReview)
 
 module.exports = router

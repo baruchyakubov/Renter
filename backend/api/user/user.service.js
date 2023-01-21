@@ -7,7 +7,7 @@ module.exports = {
   getByUsername,
   remove,
   update,
-  add,
+  add
 }
 
 async function query(filterBy = {}) {

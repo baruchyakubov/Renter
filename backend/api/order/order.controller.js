@@ -1,5 +1,4 @@
 const authService = require('../auth/auth.service.js')
-const logger = require('../../services/logger.service')
 const socketService = require('../../services/socket.service.js')
 const orderService = require('./order.service.js')
 

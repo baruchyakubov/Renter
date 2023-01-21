@@ -1,4 +1,3 @@
-import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { store } from '../store/store'
 import { socketService, SOCKET_EVENT_USER_UPDATED, SOCKET_EMIT_USER_WATCH } from './socket.service'
@@ -20,11 +19,6 @@ window.userService = userService
 function getUsers() {
     return storageService.query('user')
     // return httpService.get(`user`)
-}
-
-function onUserUpdate(user) {
-    showSuccessMsg(`This user ${user.fullname} just got updated from socket, new score: ${user.score}`)
-    store.dispatch({ type: 'setWatchedUser', user })
 }
 
 async function getById(userId) {

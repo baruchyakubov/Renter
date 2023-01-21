@@ -7,26 +7,40 @@
             </li>
         </ul>
     </section>
-    <div v-else class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div v-else class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </template>
 
 <script>
 import { eventBus } from '../services/event-bus.service'
 import userOrderPreview from '../side-cmps/user-order-preview.vue'
 export default {
-    data(){
+    data() {
         return {
-            isLoaded:false
+            isLoaded: false
         }
     },
     async created() {
         const user = this.$store.getters.loggedinUser
         if (!user) this.$router.push('/')
-        await this.$store.dispatch({ type: 'loadOrders' , from:'orders-view' })
+        await this.$store.dispatch({ type: 'loadOrders', from: 'orders-view' })
         this.isLoaded = true
     },
     mounted() {
         eventBus.emit('toggleLayout', true)
+        window.scrollTo(0, 0);
     },
     computed: {
         orders() {
@@ -35,7 +49,7 @@ export default {
     },
     components: {
         userOrderPreview
-}
+    }
 }
 </script>
 

@@ -1,21 +1,15 @@
 import { userService } from '../services/user.service'
-import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from '../services/socket.service'
 import { authService } from '../services/auth.service'
-
-// var localLoggedinUser = null
-// if (sessionStorage.user) localLoggedinUser = JSON.parse(sessionStorage.user || null)
 
 export const userStore = {
     state: {
         isLogged: false,
         loggedinUser: null,
-        users: [],
-        watchedUser: null
+        users: []
     },
     getters: {
         users({ users }) { return users },
         loggedinUser({ loggedinUser }) { return loggedinUser },
-        watchedUser({ watchedUser }) { return watchedUser },
         isLogged(state) { return state.isLogged }
     },
     mutations: {
@@ -25,9 +19,6 @@ export const userStore = {
         setLoggedinUser(state, { user }) {
             state.loggedinUser = user
         },
-        setWatchedUser(state, { user }) {
-            state.watchedUser = user
-        },
         setUsers(state, { users }) {
             state.users = users
         },
@@ -36,10 +27,7 @@ export const userStore = {
         },
         removeUser(state, { userId }) {
             state.users = state.users.filter(user => user._id !== userId)
-        },
-        setUserScore(state, { score }) {
-            state.loggedinUser.score = score
-        },
+        }
     },
     actions: {
         async login({ commit }, { userCred }) {
@@ -81,16 +69,6 @@ export const userStore = {
                 throw err
             }
         },
-        async loadAndWatchUser({ commit }, { userId }) {
-            try {
-                const user = await userService.getById(userId)
-                commit({ type: 'setWatchedUser', user })
-
-            } catch (err) {
-                console.log('userStore: Error in loadAndWatchUser', err)
-                throw err
-            }
-        },
         async removeUser({ commit }, { userId }) {
             try {
                 await userService.remove(userId)
@@ -109,11 +87,6 @@ export const userStore = {
                 throw err
             }
 
-        },
-        // Keep this action for compatability with a common user.service ReactJS/VueJS
-        setWatchedUser({ commit }, payload) {
-            commit(payload)
-        },
-
+        }
     }
 }

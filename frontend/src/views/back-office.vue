@@ -33,6 +33,7 @@ export default {
   },
   mounted() {
     eventBus.emit('toggleLayout', false)
+    window.scrollTo(0, 0);
   },
   computed: {
     orders() {

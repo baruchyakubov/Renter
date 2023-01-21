@@ -1,5 +1,4 @@
 const dbService = require('../../services/db.service')
-const utilService = require('../../services/utilService.js')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy) {
@@ -46,29 +45,6 @@ async function update(stay) {
   return stay
 }
 
-async function addReview(review, stayId) {
-  try {
-    const collection = await dbService.getCollection('stay')
-    review.id = utilService.makeId()
-    review.createdAt = Date.now()
-    await collection.updateOne(
-      { _id: ObjectId(stayId) },
-      { $push: { reviews: review } }
-    )
-    return review
-  } catch (err) {
-    console.log(err)
-    throw err
-  }
-}
-
-async function addMsg(stayId, msg) {
-  const stay = await getById(stayId)
-  stay.msgs = stay.msgs || []
-  stay.msgs.push(msg)
-  update(stay)
-}
-
 function _buildCriteria(filterBy) {
   var criteria = {}
   if (filterBy.country) {
@@ -92,7 +68,5 @@ module.exports = {
   getById,
   add,
   update,
-  addReview,
-  addMsg,
   querySearchedStays
 }

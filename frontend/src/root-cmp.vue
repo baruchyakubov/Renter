@@ -7,7 +7,7 @@
       <router-view />
     </section>
     <div style="display:grid;">
-      <app-footer ref="infiniteScrollTrigger" id="scrollTrigger"></app-footer>
+      <app-footer id="scrollTrigger"></app-footer>
     </div>
     <mobile-menu v-if="isMenuShown"></mobile-menu>
   </div>
@@ -53,6 +53,7 @@ export default {
   },
   mounted() {
     socketService.on('set-order-status', this.setOrderStatus)
+    document.querySelector('.mobile-filter').style.height = window.innerHeight + 'px'
   },
   methods: {
     setOrderStatus(order) {
@@ -94,7 +95,6 @@ export default {
     },
     toggleHeader() {
       if (this.$route.path.includes('stay')) {
-        console.log(this.$route.path);
         this.isMenuShown = false
         this.isHeaderShown = false
         document.querySelector('body').classList.add('remove-margin')

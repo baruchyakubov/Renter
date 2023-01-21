@@ -26,6 +26,9 @@ export default {
     eventBus.emit('toggleLayout', true)
     this.setWishlist()
   },
+  mounted(){
+    window.scrollTo(0, 0);
+  },
   methods: {
     setWishlist(){
       let user = {...this.currUser}

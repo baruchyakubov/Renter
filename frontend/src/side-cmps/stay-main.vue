@@ -1,7 +1,7 @@
 <template>
   <images-carousel :stay="stay" :images="stay.imgUrls" :loop="false" class="details-carousel"></images-carousel>
   <div v-if="stay">
-    <h2 ref="photos" class="stay-details-name">{{ stay.name }}</h2>
+    <h2 class="stay-details-name">{{ stay.name }}</h2>
     <div class="headerFlex flex-box">
       <div class="stay-details-basicInfo">
         <p><img class="star" src="../assets/svg/review-start-svg.svg"><span class="rating">{{ rating }}</span> <span

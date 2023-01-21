@@ -1,6 +1,5 @@
 const stayService = require('./stay.service.js')
 const authService = require('../auth/auth.service.js')
-const logger = require('../../services/logger.service')
 const { broadcast } = require('../../services/socket.service.js')
 
 async function getStays(req, res) {
@@ -67,16 +66,7 @@ async function removeStay(req, res) {
   }
 }
 
-async function addReview(req, res) {
-  const stayId = req.params.id
-  const review = req.body
-  try {
-    const addedReview = await stayService.addReview(review, stayId)
-    res.send(addedReview)
-  } catch (err) {
-    res.status(500).send(err)
-  }
-}
+
 
 module.exports = {
   getStays,
@@ -84,6 +74,5 @@ module.exports = {
   addStay,
   updateStay,
   removeStay,
-  addReview,
   getSearchedStays
 }

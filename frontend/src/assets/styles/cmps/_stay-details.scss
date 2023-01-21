@@ -106,7 +106,8 @@
     line-height: 1.48rem;
     margin-top: 0.1rem;
     border-bottom: 1px solid rgb(210, 210, 210);
-    height: 14.5rem;
+    // height: 14.5rem;
+    padding-bottom: 32px;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -140,7 +141,8 @@
     top: 1rem;
     z-index: 1;
   }
-
+.host-picture-container{
+  padding-inline-start: 10px;
   .host-picture {
     width: 3.7rem;
     height: 3.7rem;
@@ -149,6 +151,8 @@
     position: relative;
     top: 2.4rem;
   }
+}
+  
 
   .hostedBy {
     font-family: cereal-medium;
