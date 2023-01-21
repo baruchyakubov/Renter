@@ -14,12 +14,15 @@
             <div class="date-input">
               <label>CHECK-IN</label>
               <input :value=startDateComp />
+              <input class="mobile-date-input check-in">
             </div>
             <div class="date-input">
               <label>CHECKOUT</label>
               <input :value=endDateComp />
+              <input class="mobile-date-input check-out">
             </div>
           </div>
+          <mobileDateInputs @sendDates="receiveDates" v-if="isMobile" :dates="{'to':form.endDate,'from':form.startDate}"></mobileDateInputs>
           <div class="guest-input" @click="toggleModal">
             <label>GUESTS</label>
             <input :value="totalGuests"/>
@@ -166,10 +169,11 @@ import modal from '../side-cmps/reserve-form-modal.vue'
 import svgFlag from '../side-cmps/footer-logo.vue'
 import { showErrorMsg, showUserMsg, showSuccessMsg } from '../services/event-bus.service'
 import { utilService } from '../services/util.service'
+import mobileDateInputs from '../side-cmps/mobile-reserve-date-inputs.vue'
 export default {
   name: "reserve-form",
   props: {
-    stay: Object
+    stay: Object,
   },
   data() {
     return {
@@ -182,7 +186,8 @@ export default {
         infants: 0,
       },
       maxGuests: null,
-      areDatesSelected:false
+      areDatesSelected:false,
+      isMobile:window.innerWidth < 950
     }
   },
   created() {
@@ -294,7 +299,8 @@ export default {
   components: {
     calendar,
     modal,
-    svgFlag
+    svgFlag,
+    mobileDateInputs
   }
 }
 </script>

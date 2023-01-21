@@ -14,6 +14,13 @@
   box-shadow: 0 0 5px 5px #00000015;
   color: rgb(34, 34, 34);
 
+  .date-picker-mobile {
+    .date-input:last-of-type {
+      border-left: none;
+    }
+    display: none;
+  }
+
   .totalCalc {
     margin-inline-start: 0.4rem;
     font-size: 1rem;
@@ -350,6 +357,7 @@
       position: fixed;
       bottom: 0;
       z-index: 100;
+
       .reserveFormAll {
         min-width: 100vw;
         min-height: 100vh;
@@ -367,18 +375,29 @@
         margin-top: 5rem;
         border: none;
         box-shadow: none;
-        .order-data{
+
+        .order-data {
           max-width: none;
         }
-        .date-input{
+
+        .date-input {
           width: 50%;
+        }
+
+        .date-picker-mobile {
+          display: block;
+        }
+
+        .date-picker {
+          display: none;
         }
       }
 
       .chargeDisclaimer,
       .payout,
       .totalCalc,
-      .footer {
+      .footer,
+      .OutsideCalendar {
         display: none;
       }
     }

@@ -1,11 +1,12 @@
 <template>
-  <div class="detailsContainer mobile-footer-container">
+  <reserve-form class="wholeOrderMobile" :stay="stay"/>
+  <div class="detailsContainer mobile-footer-container ">
     <div class="mobile-footer" v-if="stay">
       <div class="details">
         <h4 class="price">{{ price }} <span>night</span></h4>
         <span class="dates" v-if="session.dates.to">{{ month }} {{ startDate }} - {{ endDate }}</span>
       </div>
-      <reactive-btn class="btn-container" :content="'Reserve'">Reserve</reactive-btn>
+      <reactive-btn class="btn-container" :content="'Reserve'" @click="toggleFormModal()">Reserve</reactive-btn>
     </div>
   </div>
 
