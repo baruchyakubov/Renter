@@ -7,11 +7,11 @@
                 <h5 class="reviewTime"> {{ year(review) }} {{ month(review) }}</h5>
             </div>
         </div>
-        <p :class="{ preview: isPreviewReview }" ref="reviewInsight" class="reviewInsight">{{ review.txt }}</p>
+        <p ref="previewParagraph" :class="{ preview: isPreviewReview }" class="reviewInsight">{{ review.txt }}</p>
         <div @click="isPreviewReview = !isPreviewReview" class="toggleReview">
-            <span v-if="isPreviewReview">Show more</span>
-            <span v-else>Show less</span>
-            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+            <span v-if="isPreviewReview && isOverflowing">Show more</span>
+            <span v-else-if="isOverflowing">Show less</span>
+            <svg v-if="isOverflowing" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                 focusable="false"
                 style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
                 <g fill="none">
@@ -30,9 +30,16 @@ export default {
     props: {
         review: Object
     },
+    mounted() {
+        const el = this.$refs['previewParagraph']
+
+        this.isOverflowing = el.clientWidth < el.scrollWidth
+            || el.clientHeight < el.scrollHeight
+    },
     data() {
         return {
-            isPreviewReview: true
+            isPreviewReview: true,
+            isOverflowing: false
         }
     },
     methods: {

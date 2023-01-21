@@ -8,8 +8,8 @@
         <review-preview :review="review"></review-preview>
       </div>
     </div>
-    <button v-if="reviewsCount !==stay.reviews" class="reviewsBtn" @click="toggleReviewsCount">Show all {{ stay.reviews.length }} reviews</button>
-    <button v-else class="reviewsBtn" @click="toggleReviewsCount">Show less reviews</button>
+    <button v-if="reviewsCount !==stay.reviews && stay.reviews.length>6" class="reviewsBtn" @click="toggleReviewsCount">Show all {{ stay.reviews.length }} reviews</button>
+    <button v-else-if="stay.reviews.length>6" class="reviewsBtn" @click="toggleReviewsCount">Show less reviews</button>
   </div>
 </template>\
 
