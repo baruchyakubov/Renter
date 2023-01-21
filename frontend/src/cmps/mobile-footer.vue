@@ -13,6 +13,7 @@
 <script>
 import { utilService } from '../services/util.service';
 import reactiveBtn from '../side-cmps/reactive-btn.vue'
+import reserveForm from '../side-cmps/stay-reserve-form.vue';
 export default {
   props: {
     stay: Object,
@@ -30,7 +31,13 @@ export default {
     }
   },
   components: {
-    reactiveBtn
+    reactiveBtn,
+    reserveForm
+  },
+  methods:{
+    toggleFormModal(){
+      document.querySelector('.wholeOrderMobile').classList.toggle('reserveFormMobile')
+    }
   },
   computed: {
     price() {
