@@ -22,7 +22,8 @@ export default {
                 totalResults: 200,
                 showLoader: false,
             },
-            isPaging:null
+            isPaging:null,
+            observer: null
         }
     },
     created() {
@@ -34,19 +35,20 @@ export default {
         this.scrollTrigger()
     },
     unmounted() {
+        this.observer.unobserve(document.getElementById('scrollTrigger'))
         this.isPaging = false
     },
     methods: {
          scrollTrigger() {
             if(!this.isPaging) return
-            let Observer = new IntersectionObserver((entries) => {
+            this.observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0 && this.filterBy.currentPage < this.pageCount) {
                             eventBus.emit('setFilterByPage')
                     }
                 })
-            })
-            Observer.observe(document.getElementById('scrollTrigger'))
+            }, { rootMargin: "0px 0px 100px" })
+            this.observer.observe(document.getElementById('scrollTrigger'))
         },
     },
     computed: {

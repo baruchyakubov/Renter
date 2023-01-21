@@ -3,20 +3,7 @@
     <stay-filter></stay-filter>
     <div class="mainContainer">
       <stay-list v-if="stays.length" :stays="stays"></stay-list>
-      <!-- <div v-else class="lds-spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div> -->
+      <p class="stay-list" v-else-if="!isLoadingStays">Didn't found stays</p>
       <ul :style="{ 'margin-top': loaderMargin }" v-if="isLoadingStays" id="loading-cards" class="stay-list card-grid">
         <li v-for="index in 20" :key="index" >
             <skeleton-loader-stays></skeleton-loader-stays>

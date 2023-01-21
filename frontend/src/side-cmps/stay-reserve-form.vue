@@ -1,5 +1,5 @@
 <template>
-  <div v-if="form" class="wholeOrder">
+  <div v-if="form" id="reserve" class="wholeOrder">
     <div class="reserveFormAll">
       <section class="order-container">
         <div class="order-form-header">
@@ -29,7 +29,7 @@
             </svg>
           </div>
         </div>
-        <div class="btn-container" @click="onSubmit">
+        <div class="btn-container scroll-trigger" @click="onSubmit">
           <div class="cell"></div>
           <div class="cell"></div>
           <div class="cell"></div>

@@ -1,10 +1,11 @@
 .mobile-header {
     display: none;
 }
+
 header {
     position: fixed;
     left: 0;
-    z-index: 60 !important;
+    z-index: 3000 !important;
     background-color: #fff;
     top: 0;
     width: 100%;
@@ -139,7 +140,9 @@ header {
 
     .logo {
         gap: 5px;
-        width: 200px;
+        width: 250px;
+        padding-block: 7px;
+        cursor: pointer;
 
         img {
             height: 35px;
@@ -147,7 +150,6 @@ header {
         }
 
         h1 {
-            cursor: pointer;
             font-size: 1.4rem;
             font-family: cereal-bold;
             color: $clr1;
@@ -161,11 +163,25 @@ header {
     .right-header {
         flex-direction: row;
         align-items: center;
-        gap: 1.2rem;
+        gap: 5px;
 
-        p {
-            font-family: cereal-semi-light;
-            font-size: 0.86rem;
+        .renter-your-home,
+        .world-icon {
+            padding: 12px;
+            border-radius: rem(22px);
+            cursor: pointer;
+            &:hover {
+                background-color: #F7F7F7;
+            }
+        }
+        .renter-your-home{
+            p {
+                font-family: cereal-semi-light;
+                font-size: 0.86rem;
+                color: #222222;
+                font-weight: 600;
+                white-space: nowrap;
+            }
         }
     }
 }
@@ -184,7 +200,7 @@ header {
 
 
 @media (max-width:950px) {
-     header {
+    header {
         .header-main {
             gap: 10px;
         }
@@ -193,9 +209,11 @@ header {
             width: max-content;
         }
     }
-    .removeHeader{
+
+    .removeHeader {
         display: none;
     }
+
     .mobile-menu {
         display: flex;
         background-color: #FFFFFF;
@@ -208,6 +226,7 @@ header {
         justify-content: center;
         gap: 50px;
         border-top: 1px solid #EBEBEB;
+
         div {
             cursor: pointer;
             display: flex;
@@ -215,6 +234,7 @@ header {
             justify-content: center;
             align-items: center;
             gap: 5px;
+
             p {
                 font-size: 10px;
                 line-height: 12px;
@@ -222,11 +242,13 @@ header {
                 color: $clr7;
             }
         }
-        .active-page{
-            svg{
+
+        .active-page {
+            svg {
                 stroke: #FF385C !important;
             }
-            p{
+
+            p {
                 color: $clr2;
             }
         }

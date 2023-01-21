@@ -7,6 +7,7 @@ async function query(filterBy) {
   const collection = await dbService.getCollection('stay')
   if (filterBy.page) var stays = await collection.find(criteria).limit(filterBy.page * 20).toArray()
   else var stays = await collection.find(criteria).toArray()
+  console.log(stays.length);
   return stays
 }
 

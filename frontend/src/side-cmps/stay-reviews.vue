@@ -1,42 +1,35 @@
 <template >
-  <div v-if="stay" class="stay-details-reviews">
-    <h3><img class="star" src="../assets/svg/review-start-svg.svg" />{{ rating }}<span class="bullet">•</span>{{ reviews}}</h3>
+  <div ref="reviews" v-if="stay" class="stay-details-reviews">
+    <h3><img class="star" src="../assets/svg/review-start-svg.svg" />{{ rating }}<span class="bullet">•</span>{{
+      reviews
+    }}</h3>
     <div class="previewContainer">
-    <div v-for="review,idx in stay.reviews.slice(0,6)" :key="review+idx" class="reviewPreview">
-      <div class="flex-box">
-        <img class="reviewerImg" :src="review.by.imgUrl" />
-        <div>
-          <h4>{{ review.by.fullname }}</h4>
-          <h5 class="reviewTime"> {{year(review)}} {{month(review)}}</h5>
-        </div>
+      <div v-for="review, idx in reviewsCount" :key="review + idx" class="reviewPreview">
+        <review-preview :review="review"></review-preview>
       </div>
-      <p class="reviewInsight">{{ review.txt }}</p>
     </div>
-    <button class="reviewsBtn" @click="openModal">Show all {{stay.reviews.length}} reviews</button>
+    <button v-if="reviewsCount !==stay.reviews" class="reviewsBtn" @click="toggleReviewsCount">Show all {{ stay.reviews.length }} reviews</button>
+    <button v-else class="reviewsBtn" @click="toggleReviewsCount">Show less reviews</button>
   </div>
-</div>
-</template>
+</template>\
+
 <script>
+import reviewPreview from './review-preview.vue'
+
 export default {
   name: "stay-details-reviews",
-  created(){
-    const date = this.stay.reviews[0].at
-  },
   props: {
     stay: Object,
   },
-  methods:{
-   
+  data(){
+    return {
+      reviewsCount: this.stay.reviews.slice(0, 6)
+    }
   },
   methods:{
-    month(review) {
-      let month = +review.at.substring(5,7)
-      let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-      let currMonth = months[month]
-      return currMonth
-    },
-    year(review){
-      return review.at.substring(0,4)
+    toggleReviewsCount(){
+      if(this.reviewsCount.length === 6) this.reviewsCount = this.stay.reviews
+      else this.reviewsCount = this.stay.reviews.slice(0, 6)
     }
   },
   computed: {
@@ -53,6 +46,9 @@ export default {
       if (average === 4 || average === 5 || average === 3) return average + '.0'
       else return average
     }
+  },
+  components:{
+    reviewPreview
   }
 }
 </script>
