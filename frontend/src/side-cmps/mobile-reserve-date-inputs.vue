@@ -25,12 +25,6 @@ export default {
       isSetingDate: false
     }
   },
-<<<<<<< HEAD
-  mounted(){
-    setTimeout(() => {
-      console.log(this.dates)
-    }, 1000);
-=======
   mounted() {
     console.log(this.dates.from);
     if (!this.dates.from || !this.dates.to) {
@@ -44,7 +38,6 @@ export default {
       this.Dates.to = arrEnd.join('-')
       this.isSetingDate = true
     }
->>>>>>> 0a0bc3ac4a3796bff0a6554fded9de1bafb765a7
   },
   methods: {
     setStartDate(el) {
