@@ -1,7 +1,7 @@
 # Renter
 ## About
 This is the Last project of my course that is based on airbnb website and manages
-marketplace of stays, and was built with another partner in 10 days with vue
+marketplace of stays, and was built with my partner [matan bibi](https://www.linkedin.com/in/matan-bibi-0a095624a/) in 10 days with vue
 framework and node.js. Also has integration with buyer and host of stay using
 websockets.
 Link to project - https://renter-mqln.onrender.com/#/
