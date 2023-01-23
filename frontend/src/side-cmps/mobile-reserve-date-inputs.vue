@@ -1,5 +1,5 @@
 <template>
-  <div v-if="dates.to">
+  <div>
     <div class="date-picker-mobile">
       <div class="date-input">
         <label>CHECK-IN</label>
@@ -23,7 +23,9 @@ export default {
     }
   },
   mounted(){
-    console.log(this.datesTo);
+    setTimeout(() => {
+      console.log(this.dates)
+    }, 1000);
   },
   methods: {
     setStartDate(el) {
