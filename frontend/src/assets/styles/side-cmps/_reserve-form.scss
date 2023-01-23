@@ -18,6 +18,7 @@
     .date-input:last-of-type {
       border-left: none;
     }
+
     display: none;
   }
 
@@ -350,59 +351,94 @@
   display: none;
 }
 
+.mobile-date-inputs {
+  display: none;
+}
+
+.backBtnReserve {
+  display: none;
+}
+
 @media (max-width:950px) {
-  .wholeOrderMobile {
-    &.reserveFormMobile {
+  .guestsModal {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+  }
+
+  .wholeOrder {
+    display: none;
+
+    .mobile-date-inputs {
+      display: none;
+    }
+  }
+
+  .openedReserve {
+    display: unset;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 !important;
+    z-index: 100;
+
+    .reserveFormAll {
+      min-width: 100vw;
+      min-height: 100vh;
+      background-color: white;
+    }
+
+    .mobile-date-inputs {
       display: unset;
-      position: fixed;
-      bottom: 0;
-      z-index: 100;
+    }
 
-      .reserveFormAll {
-        min-width: 100vw;
-        min-height: 100vh;
-        background-color: white;
+    .order-container {
+      margin: 0;
+
+      .backBtnReserve {
+        display: unset;
+        margin-bottom: 10px;
+        cursor: pointer;
       }
 
-      .order-container {
-        padding-inline: 3rem;
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
+      padding-inline: 2rem;
+      display: flex;
+      flex-direction: column;
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+
+      border: none;
+      box-shadow: none;
+
+      .order-data {
         max-width: none;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5rem;
-        border: none;
-        box-shadow: none;
-
-        .order-data {
-          max-width: none;
-        }
-
-        .date-input {
-          width: 50%;
-        }
-
-        .date-picker-mobile {
-          display: block;
-        }
-
-        .date-picker {
-          display: none;
-        }
       }
 
-      .chargeDisclaimer,
-      .payout,
-      .totalCalc,
-      .footer,
-      .OutsideCalendar {
+      .date-input {
+        width: 50%;
+      }
+
+      .date-picker-mobile {
+        display: block;
+      }
+
+      .date-picker {
         display: none;
       }
     }
+
+    .chargeDisclaimer,
+    .payout,
+    .totalCalc,
+    .footer,
+    .OutsideCalendar {
+      display: none;
+    }
   }
 }
+
+// }
 
 p.footer {
   position: relative;

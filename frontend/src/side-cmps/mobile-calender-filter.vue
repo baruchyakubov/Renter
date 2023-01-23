@@ -65,12 +65,12 @@ export default {
     dateFormat() {
       var arrStart = this.dates.from.split('/')
       var arrEnd = this.dates.to.split('/')
-      const event = new Date(Date.UTC(arrStart[2], arrStart[1], arrStart[0]))
+      const event = new Date(Date.UTC(arrStart[2], +arrStart[0] - 1, arrStart[1]))
       const options = { month: 'short', day: 'numeric' };
-      if (arrStart[1] === arrEnd[1]) {
-        return event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[0]
+      if (arrStart[0] === arrEnd[0]) {
+        return event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[1]
       } else {
-        const event2 = new Date(Date.UTC(arrEnd[2], arrEnd[1], arrEnd[0]))
+        const event2 = new Date(Date.UTC(arrEnd[2], +arrEnd[0] - 1, arrEnd[1]))
         const options2 = { month: 'short', day: 'numeric' };
         return event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
       }

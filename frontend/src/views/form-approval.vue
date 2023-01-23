@@ -11,7 +11,8 @@
         <div class="trip-details">
           <h3 class="title">Your trip</h3>
           <h5 class="dates">Dates</h5>
-          <p>{{ month }} {{ startDate }} - {{ endDate }}</p>
+          <!-- <p>{{ month }} {{ startDate }} - {{ endDate }}</p> -->
+          <p>{{ dateFormat }}</p>
           <h5 class="guests">Guests</h5>
           <p>{{ guests }} guests</p>
         </div>
@@ -117,17 +118,30 @@ export default {
       if (average === 4 || average === 5 || average === 3) return average + '.0'
       else return average
     },
-    month() {
-      let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      let currMonth = +this.form.endDate.substring(0, 2)
-      return months[currMonth - 1]
+    dateFormat() {
+      var arrStart = this.form.startDate.split('/')
+      var arrEnd = this.form.endDate.split('/')
+      const event = new Date(Date.UTC(arrStart[2], +arrStart[0] - 1, arrStart[1]))
+      const options = { month: 'short', day: 'numeric' };
+      if (arrStart[0] === arrEnd[0]) {
+        return event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[1]
+      } else {
+        const event2 = new Date(Date.UTC(arrEnd[2], +arrEnd[0] - 1, arrEnd[1]))
+        const options2 = { month: 'short', day: 'numeric' };
+       return event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
+      }
     },
-    startDate() {
-      return this.form.startDate.substring(0, 2)
-    },
-    endDate() {
-      return this.form.endDate.substring(0, 2)
-    },
+    // month() {
+    //   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    //   let currMonth = +this.form.endDate.substring(0, 2)
+    //   return months[currMonth - 1]
+    // },
+    // startDate() {
+    //   return this.form.startDate.substring(0, 2)
+    // },
+    // endDate() {
+    //   return this.form.endDate.substring(0, 2)
+    // },
     guests() {
       return Object.values(this.form.guests).reduce((a, b) => a + b, 0)
     }
