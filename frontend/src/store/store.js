@@ -13,11 +13,15 @@ export const store = Vuex.createStore({
   },
   state: {
     filterFocus:'',
-    activeMobileFilter: 'mobileCountrySearch'
+    activeMobileFilter: 'mobileCountrySearch',
+    isOpenReserveMobile: false
   },
   mutations: {
     setFilterFocus(state , { value }){
       state.filterFocus = value
+    },
+    setOpenReserveMobile(state , { value }){
+      state.isOpenReserveMobile = value
     },
     setActiveFilter(state , { activeFilter }){
       state.activeMobileFilter = activeFilter
@@ -26,6 +30,7 @@ export const store = Vuex.createStore({
   getters:{
     filterFocus({ filterFocus }) { return filterFocus },
     activeMobileFilter({ activeMobileFilter }) { return activeMobileFilter },
+    isOpenReserveMobile({ isOpenReserveMobile }) { return isOpenReserveMobile }
   },
   actions: {
   }

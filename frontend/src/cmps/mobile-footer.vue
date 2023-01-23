@@ -1,12 +1,14 @@
 <template>
-  <reserve-form class="wholeOrderMobile" :stay="stay"/>
-  <div class="detailsContainer mobile-footer-container ">
-    <div class="mobile-footer" v-if="stay">
-      <div class="details">
-        <h4 class="price">{{ price }} <span>night</span></h4>
-        <span class="dates" v-if="session.dates.to">{{ month }} {{ startDate }} - {{ endDate }}</span>
+  <div>
+    <div class="detailsContainer mobile-footer-container ">
+      <div class="mobile-footer" v-if="stay">
+        <div class="details">
+          <h4 class="price">{{ price }} <span>night</span></h4>
+          <!-- <span class="dates" v-if="session.dates.to">{{ month }} {{ startDate }} - {{ endDate }}</span> -->
+          <span class="dates" v-if="session.dates.to">{{ dateFormat }}</span>
+        </div>
+        <reactive-btn class="btn-container" :content="'Reserve'" @click="toggleFormModal()">Reserve</reactive-btn>
       </div>
-      <reactive-btn class="btn-container" :content="'Reserve'" @click="toggleFormModal()">Reserve</reactive-btn>
     </div>
   </div>
 
@@ -35,9 +37,10 @@ export default {
     reactiveBtn,
     reserveForm
   },
-  methods:{
-    toggleFormModal(){
-      document.querySelector('.wholeOrderMobile').classList.toggle('reserveFormMobile')
+  methods: {
+    toggleFormModal() {
+      this.$store.commit({ type: 'setOpenReserveMobile', value:true})
+      // document.querySelector('.wholeOrderMobile').classList.toggle('reserveFormMobile')
     }
   },
   computed: {
@@ -46,17 +49,30 @@ export default {
         ((+this.session.dates.to.substring(3, 5)) - (+this.session.dates.from.substring(3, 5))) *
         this.stay.price : this.stay.price)
     },
-    month() {
-      let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      let currMonth = +this.session.dates.to.substring(0, 2)
-      return months[currMonth - 1]
+    dateFormat() {
+      var arrStart = this.session.dates.from.split('/')
+      var arrEnd = this.session.dates.to.split('/')
+      const event = new Date(Date.UTC(arrStart[2], +arrStart[0] - 1, arrStart[1]))
+      const options = { month: 'short', day: 'numeric' };
+      if (arrStart[0] === arrEnd[0]) {
+        return event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[1]
+      } else {
+        const event2 = new Date(Date.UTC(arrEnd[2], +arrEnd[0] - 1, arrEnd[1]))
+        const options2 = { month: 'short', day: 'numeric' };
+        return event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
+      }
     },
-    startDate() {
-      return this.session.dates ? this.session.dates.from.substring(0, 2) : 'Select Dates'
-    },
-    endDate() {
-      return this.session.dates ? this.session.dates.to.substring(0, 2) : ''
-    }
+    // month() {
+    //   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    //   let currMonth = +this.session.dates.to.substring(0, 2)
+    //   return months[currMonth - 1]
+    // },
+    // startDate() {
+    //   return this.session.dates ? this.session.dates.from.substring(0, 2) : 'Select Dates'
+    // },
+    // endDate() {
+    //   return this.session.dates ? this.session.dates.to.substring(0, 2) : ''
+    // }
   }
 }
 </script>

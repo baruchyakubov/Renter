@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="date-picker-mobile">
+    <div v-if="isSetingDate" class="date-picker-mobile">
       <div class="date-input">
         <label>CHECK-IN</label>
-        <input type="text" @input="setStartDate" :value="dates.from" class="mobile-date-input check-in">
+        <input type="date" @input="setStartDate" v-model="Dates.from" class="mobile-date-input check-in">
       </div>
       <div class="date-input">
         <label>CHECKOUT</label>
-        <input type="text" @input="setEndDate" :value="dates.to" class="mobile-date-input check-out">
+        <input type="date" @input="setEndDate" v-model="Dates.to" class="mobile-date-input check-out">
       </div>
     </div>
   </div>
@@ -19,62 +19,60 @@ export default {
   },
   data() {
     return {
-      Dates: { from: '', to: '' }
+      Dates: { from: 'yyyy-MM-dd', to: 'yyyy-MM-dd' },
+      startDate: null,
+      endDate: null,
+      isSetingDate: false
     }
   },
+<<<<<<< HEAD
   mounted(){
     setTimeout(() => {
       console.log(this.dates)
     }, 1000);
+=======
+  mounted() {
+    console.log(this.dates.from);
+    if (!this.dates.from || !this.dates.to) {
+      this.isSetingDate = true
+    } else {
+      const tempArrStart = this.dates.from.split('/')
+      const arrStart = [tempArrStart[2], tempArrStart[0], tempArrStart[1]]
+      this.Dates.from = arrStart.join('-')
+      const tempArrEnd = this.dates.to.split('/')
+      const arrEnd = [tempArrEnd[2], tempArrEnd[0], tempArrEnd[1]]
+      this.Dates.to = arrEnd.join('-')
+      this.isSetingDate = true
+    }
+>>>>>>> 0a0bc3ac4a3796bff0a6554fded9de1bafb765a7
   },
   methods: {
     setStartDate(el) {
-      const date = new Date(el.target.value)
-      this.Dates.from = date.toLocaleDateString().split('.')
-      if (+this.Dates.from[1] < 10) {
-        this.Dates.from[1] = '0' + this.Dates.from[1]
-      }
-      if (+this.Dates.from[0] < 10) {
-        this.Dates.from[0] = '0' + this.Dates.from[0]
-      }
-      this.Dates.from = [this.Dates.from[1], this.Dates.from[0], this.Dates.from[2]]
-      this.Dates.from = this.Dates.from.join('/')
-      if (this.Dates.to) this.$emit('setDates', { ...this.Dates })
+      const date = new Date(this.Dates.from)
+      this.startDate = this.setDateFormat(date)
+      console.log(this.Dates.from);
+      if (this.endDate) this.$emit('sendDates', {from:this.startDate , to:this.endDate} )
     },
     setEndDate(el) {
-      const date = new Date(el.target.value)
-      this.Dates.to = date.toLocaleDateString().split('.')
-      if (+this.Dates.to[1] < 10) {
-        this.Dates.to[1] = '0' + this.Dates.to[1]
+      const date = new Date(this.Dates.to)
+      this.endDate = this.setDateFormat(date)
+      if (this.startDate) this.$emit('sendDates', {from:this.startDate , to:this.endDate})
+    },
+    setDateFormat(date) {
+      let Date = date.toLocaleDateString().split('.')
+      if (+Date[1] < 10) {
+        Date[1] = '0' + Date[1]
       }
-      if (+this.Dates.to[0] < 10) {
-        this.Dates.to[0] = '0' + this.Dates.to[0]
+      if (+Date[0] < 10) {
+        Date[0] = '0' + Date[0]
       }
-      this.Dates.to = [this.Dates.to[1], this.Dates.to[0], this.Dates.to[2]]
-      this.Dates.to = this.Dates.to.join('/')
-      if (this.Dates.from) this.$emit('setDates', { ...this.Dates })
-    }
-  },
-  computed: {
-    // dateFormat() {
-    //   var arrStart = this.dates.from.split('/')
-    //   var arrEnd = this.dates.to.split('/')
-    //   const event = new Date(Date.UTC(arrStart[2], arrStart[1], arrStart[0]))
-    //   const options = { month: 'short', day: 'numeric' };
-    //   if (arrStart[1] === arrEnd[1]) {
-    //     return event.toLocaleDateString("en-US", options) + ' - ' + arrEnd[0]
-    //   } else {
-    //     const event2 = new Date(Date.UTC(arrEnd[2], arrEnd[1], arrEnd[0]))
-    //     const options2 = { month: 'short', day: 'numeric' };
-    //     return event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
-    //   }
-    // },
-    datesTo(){
-      return this.dates
+      Date = [Date[1], Date[0], Date[2]]
+      Date = Date.join('/')
+      return Date
     }
   }
 }
 </script>
 <style>
-  
+
 </style>

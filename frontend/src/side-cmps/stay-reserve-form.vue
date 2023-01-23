@@ -2,6 +2,7 @@
   <div v-if="form" id="reserve" class="wholeOrder">
     <div class="reserveFormAll">
       <section class="order-container">
+        <back-btn class="backBtnReserve" @click="closeModal"></back-btn>
         <div class="order-form-header">
           <p><span class="cost">${{ stay.price }}</span> night</p>
           <p><span class="averageRate"><img class="formStar" src="../assets/svg/review-start-svg.svg" />{{ rating
@@ -14,15 +15,13 @@
             <div class="date-input">
               <label>CHECK-IN</label>
               <input :value=startDateComp />
-              <input class="mobile-date-input check-in">
             </div>
             <div class="date-input">
               <label>CHECKOUT</label>
               <input :value=endDateComp />
-              <input class="mobile-date-input check-out">
             </div>
           </div>
-          <mobileDateInputs @sendDates="receiveDates" v-if="isMobile" :dates="{'to':form.endDate,'from':form.startDate}"></mobileDateInputs>
+          <mobileDateInputs @sendDates="receiveDates" class="mobile-date-inputs" :dates="{'to':form.endDate,'from':form.startDate}"></mobileDateInputs>
           <div class="guest-input" @click="toggleModal">
             <label>GUESTS</label>
             <input :value="totalGuests"/>
@@ -170,6 +169,7 @@ import svgFlag from '../side-cmps/footer-logo.vue'
 import { showErrorMsg, showUserMsg, showSuccessMsg } from '../services/event-bus.service'
 import { utilService } from '../services/util.service'
 import mobileDateInputs from '../side-cmps/mobile-reserve-date-inputs.vue'
+import backBtn from './approval-backBtn.vue';
 export default {
   name: "reserve-form",
   props: {
@@ -186,15 +186,12 @@ export default {
         infants: 0,
       },
       maxGuests: null,
-      areDatesSelected:false,
-      isMobile:window.innerWidth < 950
+      areDatesSelected:false
     }
   },
   created() {
     this.maxGuests = this.stay.capacity
     this.form = stayService.getEmptyForm()
-  },
-  mounted(){
     let sessionStats= utilService.loadFromSession('filter')
     if(sessionStats) {
       this.form.startDate = sessionStats.dates.from
@@ -205,6 +202,9 @@ export default {
     }
   },
   methods: {
+    closeModal(){
+      this.$store.commit({ type: 'setOpenReserveMobile', value:false})
+    },
     increment(guests) {
       if (this.total >= this.maxGuests) return
       if (guests === 'infantGuests') return this.guests.infants++
@@ -225,6 +225,7 @@ export default {
       this.form.endDate = dates.to
     },
     async onSubmit() {
+      this.closeModal()
       try {
         if (!this.currUser) {
           showErrorMsg('Login required')
@@ -300,7 +301,8 @@ export default {
     calendar,
     modal,
     svgFlag,
-    mobileDateInputs
+    mobileDateInputs,
+    backBtn
   }
 }
 </script>

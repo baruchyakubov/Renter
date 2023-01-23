@@ -31,7 +31,7 @@
           </div>
           <stay-amenities :amenities=stay.amenities></stay-amenities>
         </div>
-        <reserve-form :stay="stay"></reserve-form>
+        <reserve-form :class="{openedReserve:IsOpenedReserveMobile}" :stay="stay"></reserve-form>
       </div>
       <div ref="location" class="map-container">
         <h1>Where you'll be</h1>
@@ -87,6 +87,11 @@ export default {
     await this.setStay()
     if (this.rating > 4.6 && this.stay.reviews.length > 3) this.isSuperHost = true
     this.ScrollTrigger()
+  },
+  computed:{
+    IsOpenedReserveMobile(){
+      return this.$store.getters.isOpenReserveMobile
+    }
   },
   methods: {
     ScrollTrigger() {
