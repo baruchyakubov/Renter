@@ -54,7 +54,7 @@ export default {
 }
 .block {
   display:block;
-  width:271px;
+  width:90%;
   height:16px;
   color: black;
 }
