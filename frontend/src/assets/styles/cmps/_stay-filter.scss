@@ -10,20 +10,20 @@
     box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.29);
     -webkit-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.29);
     -moz-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.29);
+
     .stay-filter-div {
         display: flex;
         justify-content: center;
         align-items: center;
         border-bottom: 1.5px solid transparent;
-     
         cursor: pointer;
         position: relative;
-        top: 0.4rem;
+        top: 0.3rem;
+
         &:hover {
             div {
                 color: black;
-                border-bottom: 1.5px solid black !important;
-         
+                box-shadow: 0 12px 1px -1px #717171;
             }
 
             img {
@@ -34,7 +34,7 @@
         &.activeLabel {
             div {
                 color: black;
-                border-bottom: 1.5px solid black !important;
+                box-shadow: 0 12px 1px -1px black;
             }
 
             img {
@@ -65,10 +65,12 @@
     margin-bottom: 6px;
     padding-bottom: 13px;
 }
-.carousel__viewport{
+
+.carousel__viewport {
     margin-inline: 1.4rem !important;
 }
+
 /****MAY CAUSE PROBLEM***/
-.carousel__slide{
-    max-height: 6rem;
-}
+// .carousel__slide{
+//     max-height: 6rem;
+// }
