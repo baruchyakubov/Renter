@@ -11,7 +11,6 @@
         <div class="trip-details">
           <h3 class="title">Your trip</h3>
           <h5 class="dates">Dates</h5>
-          <!-- <p>{{ month }} {{ startDate }} - {{ endDate }}</p> -->
           <p>{{ dateFormat }}</p>
           <h5 class="guests">Guests</h5>
           <p>{{ guests }} guests</p>
@@ -131,17 +130,6 @@ export default {
        return event.toLocaleDateString("en-US", options) + ' - ' + event2.toLocaleDateString("en-US", options2)
       }
     },
-    // month() {
-    //   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    //   let currMonth = +this.form.endDate.substring(0, 2)
-    //   return months[currMonth - 1]
-    // },
-    // startDate() {
-    //   return this.form.startDate.substring(0, 2)
-    // },
-    // endDate() {
-    //   return this.form.endDate.substring(0, 2)
-    // },
     guests() {
       return Object.values(this.form.guests).reduce((a, b) => a + b, 0)
     }
