@@ -5,27 +5,27 @@ marketplace of stays, and was built with my partner [matan bibi](https://www.lin
 framework and node.js. Also has integration with buyer and host of stay using
 websockets.
 Link to project - https://renter-mqln.onrender.com/#/
-![image](https://user-images.githubusercontent.com/114091759/224542917-fc956ba5-1d24-4444-90d1-69bf0af13ec8.png)
+![image](https://user-images.githubusercontent.com/114091759/224543030-6fe87c4f-db13-4bdd-b6b6-17f570af0a18.png)
 
 ## Features
 ### Advanced filter for stays with search engine , date range and guests capacity.
-![Filter](https://user-images.githubusercontent.com/114091759/224542464-f25e0260-b7e6-436b-b1b5-bed180cabfaa.png)
+![image](https://user-images.githubusercontent.com/114091759/224543057-faa33b2d-6e0b-48e5-a71f-e127307d34fa.png)
 ### Details page for each stay.
-![Details page](https://user-images.githubusercontent.com/114091759/224542538-be761ac0-c18d-41b3-a7fc-dbafea4d81ed.png)
+![image](https://user-images.githubusercontent.com/114091759/224543088-bc666c57-0625-404f-b05c-1f76fd7f35a8.png)
 ### Full login and signup system with full validation by using bcrypt. 
-![Login-signup modal](https://user-images.githubusercontent.com/114091759/224542602-b630e145-2da6-4b68-b7a7-2e9d460c64af.png)
+![image](https://user-images.githubusercontent.com/114091759/224543104-dfcb68ea-891c-4062-bfd4-f604dc0667fe.png)
 ### Each user has a wishlist page , which he can save there stays that he liked.
-![Wishlist page](https://user-images.githubusercontent.com/114091759/224542563-227ed2e7-569d-4a93-b303-6e493ff13b87.png)
+![image](https://user-images.githubusercontent.com/114091759/224543131-97d26f01-1eac-4697-819d-026fb15682db.png)
 ### Reservation feature with full integration between the host and the user using websockets.
-![Resarve modal](https://user-images.githubusercontent.com/114091759/224542671-43437d67-4163-4917-962c-f28761808d98.png)
+![image](https://user-images.githubusercontent.com/114091759/224543167-fe711561-7d70-4f5b-8339-286050875c3f.png)
 ### Back office page for hosts to manage reservations of users with aprrove or reject features
 ![Back-office page](https://user-images.githubusercontent.com/114091759/224542783-2a7e68bf-6273-4b8f-93a1-291fedc6fbe1.png)
 ### Orders page list for look up your reservations and their status.
-![Orders page](https://user-images.githubusercontent.com/114091759/224542709-0aa817b5-2a8b-4f8b-94e6-56ee75251431.png)
+![image](https://user-images.githubusercontent.com/114091759/224543197-ddabed1c-87b9-400b-8415-4f96975e73ab.png)
 ### full responsive design
-![image](https://user-images.githubusercontent.com/114091759/224542852-e6517449-630d-4ef7-92f5-860065ef676b.png)
-![image](https://user-images.githubusercontent.com/114091759/224542884-115ce624-b9d0-4718-8d72-eb681dff9b73.png)
-![image](https://user-images.githubusercontent.com/114091759/224542896-59d5bdf5-2585-433e-ae06-bb06b99d81ad.png)
+![image](https://user-images.githubusercontent.com/114091759/224543226-ba502a77-3379-496e-83a7-4e5edabc8684.png)
+![image](https://user-images.githubusercontent.com/114091759/224543240-3f5bf1c2-e922-4443-b9a7-96e2f9b1a2ca.png)
+![image](https://user-images.githubusercontent.com/114091759/224543255-f956adbc-6286-48da-8e52-42515d59f70a.png)
 
 ## Technologies and conventions
 1. vue
