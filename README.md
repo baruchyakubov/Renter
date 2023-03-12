@@ -4,7 +4,7 @@ This is the final project of my course that is based on airbnb website and manag
 marketplace of stays, and was built with my partner [matan bibi](https://www.linkedin.com/in/matan-bibi-0a095624a/) in 10 days with vue
 framework and node.js. Also has integration with buyer and host of stay using
 websockets.
-Link to project - [Renter](https://renter-mqln.onrender.com/#/)
+Link to website - [Renter](https://renter-mqln.onrender.com/#/)
 
 ![image](https://user-images.githubusercontent.com/114091759/224543030-6fe87c4f-db13-4bdd-b6b6-17f570af0a18.png)
 
