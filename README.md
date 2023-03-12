@@ -4,8 +4,12 @@ This is the final project of my course that is based on airbnb website and manag
 marketplace of stays, and was built with my partner [matan bibi](https://www.linkedin.com/in/matan-bibi-0a095624a/) in 10 days with vue
 framework and node.js. Also has integration with buyer and host of stay using
 websockets.
-Link to project - https://renter-mqln.onrender.com/#/
+Link to project - [Renter](https://renter-mqln.onrender.com/#/)
 ![image](https://user-images.githubusercontent.com/114091759/224543030-6fe87c4f-db13-4bdd-b6b6-17f570af0a18.png)
+
+## Setup
+1. Frontend - npm i , npm run dev.
+2. backend - npm i , npm start.
 
 ## Features
 ### Advanced filter for stays with search engine , date range and guests capacity.
@@ -26,6 +30,10 @@ Link to project - https://renter-mqln.onrender.com/#/
 ![image](https://user-images.githubusercontent.com/114091759/224543226-ba502a77-3379-496e-83a7-4e5edabc8684.png)
 ![image](https://user-images.githubusercontent.com/114091759/224543240-3f5bf1c2-e922-4443-b9a7-96e2f9b1a2ca.png)
 ![image](https://user-images.githubusercontent.com/114091759/224543255-f956adbc-6286-48da-8e52-42515d59f70a.png)
+
+## Motivation
+The will to learn new Technologies such us Websockets , and to improve my UI/UX skills , and the ability to manage complex 
+end to end projects. 
 
 ## Technologies and conventions
 1. vue
