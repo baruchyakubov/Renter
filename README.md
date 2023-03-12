@@ -27,7 +27,7 @@ Link to website - [Renter](https://renter-mqln.onrender.com/#/)
 ![image](https://user-images.githubusercontent.com/114091759/224543446-e1c3415c-6fe8-49ea-989e-f787f44268a5.png)
 ### Orders page list for look up your reservations and their status.
 ![image](https://user-images.githubusercontent.com/114091759/224543197-ddabed1c-87b9-400b-8415-4f96975e73ab.png)
-### full responsive design
+### Full responsive design
 ![image](https://user-images.githubusercontent.com/114091759/224543226-ba502a77-3379-496e-83a7-4e5edabc8684.png)
 ![image](https://user-images.githubusercontent.com/114091759/224543240-3f5bf1c2-e922-4443-b9a7-96e2f9b1a2ca.png)
 ![image](https://user-images.githubusercontent.com/114091759/224543255-f956adbc-6286-48da-8e52-42515d59f70a.png)
