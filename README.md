@@ -11,15 +11,15 @@ Link to project - https://renter-mqln.onrender.com/#/
 ### Advanced filter for stays with search engine , date range and guests capacity.
 ![image](https://user-images.githubusercontent.com/114091759/224543057-faa33b2d-6e0b-48e5-a71f-e127307d34fa.png)
 ### Details page for each stay.
-![image](https://user-images.githubusercontent.com/114091759/224543088-bc666c57-0625-404f-b05c-1f76fd7f35a8.png)
+![image](https://user-images.githubusercontent.com/114091759/224543378-7970f331-c18a-4a83-915e-51c8292fa4fb.png)
 ### Full login and signup system with full validation by using bcrypt. 
-![image](https://user-images.githubusercontent.com/114091759/224543104-dfcb68ea-891c-4062-bfd4-f604dc0667fe.png)
+![image](https://user-images.githubusercontent.com/114091759/224543401-59b81f0a-3e89-4e0b-96d6-2c2189e5e531.png)
 ### Each user has a wishlist page , which he can save there stays that he liked.
 ![image](https://user-images.githubusercontent.com/114091759/224543131-97d26f01-1eac-4697-819d-026fb15682db.png)
 ### Reservation feature with full integration between the host and the user using websockets.
 ![image](https://user-images.githubusercontent.com/114091759/224543167-fe711561-7d70-4f5b-8339-286050875c3f.png)
 ### Back office page for hosts to manage reservations of users with aprrove or reject features
-![Back-office page](https://user-images.githubusercontent.com/114091759/224542783-2a7e68bf-6273-4b8f-93a1-291fedc6fbe1.png)
+![image](https://user-images.githubusercontent.com/114091759/224543446-e1c3415c-6fe8-49ea-989e-f787f44268a5.png)
 ### Orders page list for look up your reservations and their status.
 ![image](https://user-images.githubusercontent.com/114091759/224543197-ddabed1c-87b9-400b-8415-4f96975e73ab.png)
 ### full responsive design
