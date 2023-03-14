@@ -8,6 +8,24 @@ Link to website - [Renter](https://renter-mqln.onrender.com/#/)
 
 ![image](https://user-images.githubusercontent.com/114091759/224543030-6fe87c4f-db13-4bdd-b6b6-17f570af0a18.png)
 
+## Motivation
+The will to learn new Technologies such us Websockets , and to improve my UI/UX skills , and the ability to manage complex 
+end to end projects.
+
+## Technologies and conventions
+1. vue
+2. vuex
+3. SCSS
+4. cors
+5. mongoDB
+6. vue router
+7. vite
+8. node.js
+9. express
+10. cookie-parser
+11. socket.io
+12. rest API
+
 ## Setup
 1. Frontend - npm i , npm run dev.
 2. backend - npm i , npm start.
@@ -31,21 +49,3 @@ Link to website - [Renter](https://renter-mqln.onrender.com/#/)
 ![image](https://user-images.githubusercontent.com/114091759/224543226-ba502a77-3379-496e-83a7-4e5edabc8684.png)
 ![image](https://user-images.githubusercontent.com/114091759/224543240-3f5bf1c2-e922-4443-b9a7-96e2f9b1a2ca.png)
 ![image](https://user-images.githubusercontent.com/114091759/224543255-f956adbc-6286-48da-8e52-42515d59f70a.png)
-
-## Motivation
-The will to learn new Technologies such us Websockets , and to improve my UI/UX skills , and the ability to manage complex 
-end to end projects. 
-
-## Technologies and conventions
-1. vue
-2. vuex
-3. SCSS
-4. cors
-5. mongoDB
-6. vue router
-7. vite
-8. node.js
-9. express
-10. cookie-parser
-11. socket.io
-12. rest API
